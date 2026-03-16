@@ -1,0 +1,188 @@
+//////////////////////////////////
+/// Steps indicator
+
+.steps{
+    display: flex;
+    justify-content: center;
+
+    &__container-indicator{
+        z-index: 1;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 24px;
+
+        &::before{
+            content: '';
+            z-index: -1;
+            position: absolute;
+            left: 60px;
+            top: 14px;
+            width: 100%;
+            height: 4px;
+            background: $light; 
+            width: calc(100% - 120px);
+        }
+    }
+
+    &__progress-bar{
+        z-index: -1;
+        position: absolute;
+        
+        top: 14px;
+        left: 60px;
+        //width: calc((100% - 120px)/2);
+        height: 4px;
+        background: $primary;
+        transition: width 0.4s; 
+
+        &.step-1-done{
+          width: 120px;
+        }
+        &.step-2-done{
+          width: 240px;
+        }
+    }
+
+    .step{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 120px;
+
+        &__number{
+            width: 32px;
+            aspect-ratio: 1;
+            background: $light;
+            border-radius: 50%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &__name{
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            margin-top: 8px;
+        }
+
+        &.active {
+
+            .step__number{
+                background: $primary;
+                color: $white;
+                font-weight: 600;
+            }
+
+            .step__name{
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+.step-heading{
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.help-container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0.25rem 0.5rem;
+    background-color: $primary-100;
+    text-align: center;
+    border-radius: 0.5rem;
+    margin-bottom: 10px;
+    font-size: 0.75rem;
+    text-align: left;
+}
+.help-container.success{
+    background-color: #9efeeb;
+}
+.help-container.white{
+    background-color: #fff;
+    border: 1px solid $gray-200;
+}
+
+.step-content{
+
+    table {
+        background-color: #fff;
+
+        .input-group-sm{
+            width: auto;
+            
+            .form-control{
+                width: 100%;
+            }
+        }
+
+        th{
+            vertical-align: middle;
+        }
+    }
+}
+
+//////////////////////////////////////////////
+/// Overwrite
+.step-app.h-wizard-demo4>.step-steps>li.active span{
+    background: $primary;
+}
+.step-app.h-wizard-demo4>.step-steps>li.done span{
+    background: $success;
+}
+.step-app.h-wizard-demo4>.step-steps>li.done::after{
+    background: $success;
+}
+.step-app.h-wizard-demo4>.step-steps>li.done,
+.step-app.h-wizard-demo4>.step-steps>li.active{
+    font-weight: bold;
+}
+
+.step-app.h-wizard-demo4>.step-steps>li {
+    text-transform: uppercase;
+    font-size: 10px;
+    line-height: 12px;
+}
+
+.step-app.h-wizard-demo4>.step-steps>li span{
+    font-size: 14px;
+    background: $gray-100;
+    color: $gray-500;
+    box-shadow: none;
+    height: 36px;
+    width: 36px;
+    font-weight: bold;
+    top: 4px;
+    margin-bottom: 10px;
+}
+.step-app.h-wizard-demo4>.step-steps>li::after,
+.step-app.h-wizard-demo4>.step-steps::after{
+    background: $gray-200;
+}
+
+.step-app.h-wizard-demo4>.step-footer>.step-btn{
+    background-color: $primary;
+    border:1px solid $primary;
+}
+.step-app.h-wizard-demo4 > .step-content{
+    background: $gray-100;
+}
+
+.step-app.h-wizard-demo4>.step-content{
+    padding: 0.5rem;
+}
+
+.step-app>.step-steps>li{
+    padding: 0;
+}
+.step-app.h-wizard-demo4>.step-steps>li::after,
+.step-app.h-wizard-demo4>.step-steps::after {
+    top: 22px;
+}
+

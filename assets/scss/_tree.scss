@@ -1,0 +1,43 @@
+.tree,
+.tree ul {
+  list-style: none;
+  padding-left: 18px;
+  margin: 0;
+}
+
+.tree li {
+  line-height: 22px;
+  white-space: nowrap;
+}
+
+.arrow {
+  display: inline-flex;
+  width: 16px;
+  cursor: pointer;
+  color: #777;
+}
+
+.arrow.empty {
+  cursor: default;
+}
+
+.arrow.empty::before {
+  content: "";
+}
+
+.tree ul {
+  display: none;
+}
+
+.tree li.open > ul {
+  display: block;
+}
+
+.node-link {
+  text-decoration: none;
+  color: #000;
+}
+
+.node-link:hover {
+  text-decoration: underline;
+}

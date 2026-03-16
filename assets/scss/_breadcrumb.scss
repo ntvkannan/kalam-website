@@ -1,0 +1,31 @@
+
+
+//
+.breadcrumb-item {
+    color: $primary-950;
+    display: flex;
+    align-items: center;
+
+    .text-secondary{
+        color: $primary-400 !important;
+        transition: all 0.3s;
+
+        &:hover{
+            color: $secondary-400 !important;
+        }
+    }
+
+    &.active{
+        font-size: 14px;
+        font-weight: 800;
+        color: $gray-950;
+    }
+}
+
+// > used instead of /
+.breadcrumb-item+.breadcrumb-item::before {
+    content: "\e606" !important;
+    font-family: simple-line-icons;
+    font-size: 10px;
+    margin-top: 2px;
+}

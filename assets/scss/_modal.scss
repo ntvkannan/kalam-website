@@ -1,0 +1,58 @@
+.modal{
+    .modal-header{
+        border-bottom: 0;
+        background-color: $primary-50;
+        padding: 10px;
+    
+        .modal-title{
+            font-weight: 800;
+            color: $primary-400;
+            font-size: 1rem !important;
+        }
+    }
+    
+    .modal-body{
+        
+    }
+    
+    .modal-footer{
+        border-top: 0;
+
+        .btn-secondary{
+            background-color: $gray-200;
+            border-color: $gray-200;
+            color: $gray-700;
+
+            &:hover{
+                background-color: $gray-300;
+                border-color: $gray-300;
+            }
+            &:focus{
+                background-color: $gray-300 !important;
+                border-color: $gray-300 !important;
+            }
+        }
+    }
+
+    &.attendance-modal{
+
+        .modal-content{
+            width: 320px;
+            margin: auto;
+        }
+
+        .modal-body{
+            padding: 0;
+        }
+
+        .attendance-btns{
+            position: relative;
+            left: auto;
+            top: auto;
+            transform: translate(0,0);
+            border: none;
+            margin: auto;
+        }
+    }
+}
+

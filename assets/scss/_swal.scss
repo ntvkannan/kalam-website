@@ -1,0 +1,66 @@
+.swal2-container.swal2-center>.swal2-popup{
+    padding: 1.5rem !important;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px !important;
+}
+
+.swal2-title{
+    font-size: 1.25rem !important;
+    font-weight: 500 !important;
+    padding: 0 !important;
+    text-align: left !important;
+}
+
+.swal2-actions{
+    justify-content: flex-end !important;
+    width: 100% !important;
+}
+
+.swal2-styled{
+    padding: 0.25em 1em !important;
+    font-size: 0.875rem !important;
+    font-weight: 500 !important;
+    text-transform: uppercase !important;
+
+    &.swal2-confirm{
+        background: $success !important;
+    }
+
+    &.swal2-deny{
+        background: $error !important;
+    }
+
+    &.swal2-cancel{
+        background: $primary !important;
+    }
+}
+
+.swal2-html-container{
+    margin:0 !important;
+}
+
+.custom-swal{
+    text-align: left;
+
+    &__title{
+        display: flex;
+        align-items: center;
+        font-size: 0.875rem;
+        font-weight: 600;
+        text-transform: uppercase;
+
+        i{
+            font-size: 32px;
+            margin-right: 10px;
+        }
+
+        &.success{ color: $success; }
+        &.warning{ color: $warning; }
+        &.error{ color: $error; }
+        &.info{ color: $info; }
+
+    }
+
+    &__msg{
+        font-size: 1rem;
+    }
+}

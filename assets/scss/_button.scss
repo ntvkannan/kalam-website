@@ -1,0 +1,145 @@
+.btn{
+    font-weight: bold;
+}
+
+.btn-primary{
+    background-color: $primary-400 !important;
+    border-color: $primary-400 !important;
+    
+
+    &:focus{
+        color: #fff;
+        background-color: $primary-600 !important;
+        border-color: $primary-600 !important;
+    }
+
+    &:hover{
+        background-color: $primary-500 !important;
+        border-color: $primary-500 !important;
+    }
+}
+
+.btn-outline-primary{
+    &.active{
+        color: #fff;
+        background-color: $primary;
+    }
+}
+
+
+
+.btn-secondary{
+    background-color: $secondary;
+    border-color: $secondary;
+
+    &:focus{
+        color: #fff;
+        background-color: $secondary-600 !important;
+        border-color: $secondary-600 !important;
+    }
+
+    &:hover{
+        background-color: $secondary-500;
+        border-color: $secondary-500;
+    }
+}
+
+.btn-outline-custom{
+    border-color: $gray-300;
+    background: #fff;
+    color: $gray-700;
+    padding:4px 12px;
+
+    &:hover{
+        border-color: $primary-200;
+        background: #fff;
+        color: $text-primary;
+    }
+
+    &.dropdown-toggle{
+        border-radius: $border-radius-xl;
+    }
+}
+
+.custom-dropdown{
+    border: 1px solid $gray-300;
+    background: #fff;
+    color: $gray-700;
+    padding:4px 12px;
+
+    &:hover{
+        border-color: $primary-200;
+        background: #fff;
+        color: $text-primary;
+    }
+
+    &.dropdown-toggle{
+        border-radius: $border-radius-xl;
+    }
+}
+
+.form-control,
+.form-select{
+    border-color: $gray-300;
+    border-radius: $border-radius-xl;
+
+    &:hover,
+    &:focus{
+        border-color: $primary-200;
+    }
+}
+
+.form-select-sm,
+.form-control-sm,
+.btn-sm,
+.input-group-sm{
+    font-size: 0.875rem;
+}
+
+.input-group-sm{
+    width: 120px;
+    flex-wrap: nowrap;
+
+    &.custom-search{
+        .form-control{
+            border-radius: 0 16px 16px 0;
+        }
+        .input-group-text{
+            border-radius: 16px 0 0 16px;
+        }
+    }
+}
+.input-group-sm,
+.input-group-sm .form-control{
+    width: 164px;
+}
+
+.input-group-sm>.input-group-text,
+.input-group-sm>.btn, .input-group-sm>.form-control, .input-group-sm>.form-select, .input-group-sm>.input-group-text  {
+    padding: 0.15rem 0.5rem;
+    font-size: 0.875rem;
+}
+
+.btn-sm {
+    &.filter-btn{
+        padding: 0 0.5rem;
+        font-size: 1rem;
+    }
+}
+
+.clear-filter{
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    background: #fff;
+}
+
+.optimise{
+    .btn-sm{
+        font-size: 0.6rem;
+        line-height: 1.5;
+        padding: 1px 2px;
+        font-size: 0.75rem;
+    }
+}
+
+

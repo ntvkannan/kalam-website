@@ -1,0 +1,143 @@
+// svg{
+//     &.two-color{
+//         fill: $secondary;
+//     }
+// }
+
+:root{
+    --border-color: #E2E8F0;
+    --body-color: #F1F5F9;
+    
+}
+
+body{
+    font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.min-container{
+    min-height: 480px;
+}
+
+.sub-info{
+    font-size: 0.75rem;
+}
+
+.or{
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.page-footer{
+    font-size: 0.75rem;
+}
+
+.upcomming_schedule{
+    div{
+        padding-left: 48px;
+        position: relative;
+
+        &:before{
+            content: "\f508";
+            font-family: 'Line Awesome Free';
+            font-weight: 900;
+            font-size: 2.5rem;
+            position: absolute;
+            left: 0;
+            top: -8px;
+            color: $gray-600 ;
+        }
+    }
+    span{
+        &:nth-child(1){
+            font-weight: 700;
+        }
+        &:nth-child(2){
+            display: block;
+            font-size: 0.75rem;
+            margin-bottom: 8px;
+        }
+    }
+}
+
+.filter-label{
+    color: $gray-500;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding-left: 6px;
+}
+
+.date-field{
+    width: 150px;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+img{
+    filter: none;
+}
+
+.tab-pane{
+    hr{
+        margin: 2.5rem 0;
+    }
+}
+.text-bg-light{
+    background: $bg-light !important;
+}
+
+.form-check-input{
+    background-color: #fff;
+}
+
+.accordion-button:not(.collapsed){
+    color: #fff;
+    background: linear-gradient(36deg, rgba(41,35,92,0.9) 0%, rgba(69,83,158,0.9) 35%, rgba(239,111,51,0.9) 100%), ;
+}
+
+.accordion-flush>.accordion-item{
+    color: #000;
+    margin: 16px 0;
+    border-radius: 16px;
+    box-shadow: none;
+}
+
+.accordion-flush>.accordion-item>.accordion-header .accordion-button.collapsed{
+    border-radius: 16px;
+}
+
+.accordion-flush>.accordion-item>.accordion-header .accordion-button {
+    border-radius: 16px 16px 0 0;
+}
+.accordion-body {
+    background: #fff;
+    border-radius:0 0 16px 16px;
+}
+
+.accordion.optimise{
+    border-radius: .75rem;
+
+    .accordion-item{
+        margin: 10px 0;
+        border-radius: 0.75rem;
+    }
+
+    .accordion-button{
+        align-items: center;
+        padding: 4px 12px;
+        font-size: 0.875rem;
+    }
+    .accordion-button:not(.collapsed){
+        color: $gray-600;
+        background: $gray-200;
+    }
+    .accordion-body{
+        padding: 12px;
+    }
+}
+.accordion-flush.optimise>.accordion-item>.accordion-header .accordion-button.collapsed {
+    border-radius: 0.75rem 0.75rem 0 0;
+}

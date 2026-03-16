@@ -1,0 +1,44 @@
+.navbar{
+    padding: 3px;
+}
+
+.layout-1 .wrapper{
+    background: $primary-50;
+}
+
+.layout-1 .wrapper .page-header{
+    background: linear-gradient(
+  150deg,
+  $primary-300,
+  $secondary-300
+);
+}
+
+.hamburger-icon .line{
+    background-color: #62748E;
+}
+
+.hamburger-icon .line:nth-child(2){
+    background-color: #62748E;
+}
+
+.hamburger-icon:hover .line:nth-child(1),
+.hamburger-icon:hover .line:nth-child(3){
+    background-color: #7F76CB;
+}
+.hamburger-icon.active .line:nth-child(1),
+.hamburger-icon.active .line:nth-child(3){
+    background-color: #7F76CB;
+}
+
+.layout-1 .wrapper .page-header .header-right>li .nav-link{
+    color: #62748E;
+}
+
+.layout-1 .wrapper .page-header .header-right>li .nav-link:hover{
+    color: #F28D5E;
+}
+
+.page-body{
+    min-height: 400px;
+}

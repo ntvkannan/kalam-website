@@ -1,0 +1,265 @@
+.attendance-card-box{
+    position: relative;
+}
+
+.attendance-btns-backdrop{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 100%;
+    height: 100%;
+    background: rgba($gray-900, 0.7);
+    border-radius: 16px;
+}
+
+.attendance-btns{
+    background: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 90%;
+    height: auto;
+    padding: 16px;
+    border: 1px solid $gray-200;
+    border-radius: 16px;
+
+    .min-field{
+        border:none ;
+        border-radius: 8px;
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .late-entry{
+        border: 1px solid #ffba33;
+        border-radius: 8px;
+    }
+}
+
+.stu-name{
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.stu-class{
+    font-size: 0.75rem;
+    color: $gray-500;
+}
+
+.att-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+    padding: 0;
+    text-align: center;
+
+    &.btn-sm{
+        width: 16px;
+        height: 16px;
+        font-size: 0.65rem;
+        line-height: 16px;
+    }
+}
+
+.staff-name{
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.staff-pos{
+    font-size: 0.75rem;
+    color: $gray-500;
+}
+
+.stu-name{
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.stu-class{
+    font-size: 0.75rem;
+    color: $gray-500;
+}
+
+.card-list{
+
+    .card{
+        transition: border 0.6s;
+
+        &:hover,
+        &.active{
+            border: 1px solid $primary-300;
+        }
+    }
+
+    .btn-sm{
+        font-size: 0.75rem;
+        padding: 0.35rem 0.7rem;
+    }
+}
+
+.header-card{
+    background: $gray-200;
+
+    .btn-outline-primary{
+        background: #fff;
+
+        &:hover{
+            background: $primary;
+        }
+
+        &.active{
+            background: $primary;
+            color:#fff;
+        }
+    }
+}
+
+.info-card{
+
+    cursor: pointer;
+    transition: border 0.6s;
+
+    &:hover,
+    &.active{
+        border: 1px solid $primary-300;
+    }
+
+    .card-body{
+        padding: 16px;
+    }
+}
+
+.list-group{
+    &.fixed-scroll{
+        margin-top: 16px;
+        height: 400px;
+        overflow-y: scroll;
+    }
+}
+
+.avatar.no-thumbnail{
+
+    &.new{
+        background-color: $new;
+        color: #fff;
+    }
+    &.enquiry{
+        background-color: $warning;
+        color: #fff;
+    }
+    &.scheduled{
+        background-color: $success;
+        color: #fff;
+    }
+    &.application{
+        background-color: #009FFD;
+        color: #fff;
+    }
+    &.submitted{
+        background-color: $new;
+        color: #fff;
+    }
+    &.paid{
+        background-color: #009FFD;
+        color: #fff;
+    }
+    &.admit{
+        background-color: $warning;
+        color: #fff;
+    }
+    &.exam-accepted{
+        background-color: $success;
+        color: #fff;
+    }
+}
+
+.badge{
+
+    &.bg-new{
+        background-color: $new;
+        color: #fff;
+    }
+    &.bg-enquiry{
+        background-color: $warning;
+        color: #fff;
+    }
+    &.bg-scheduled{
+        background-color: $success;
+        color: #fff;
+    }
+    &.bg-application{
+        background-color: #009FFD;
+        color: #fff;
+    }
+    &.bg-submitted{
+        background-color: $new;
+        color: #fff;
+    }
+    &.bg-paid{
+        background-color: #009FFD;
+        color: #fff;
+    }
+    &.bg-admit{
+        background-color: $warning;
+        color: #fff;
+    }
+    &.bg-exam-accepted{
+        background-color: $success;
+        color: #fff;
+    }
+}
+
+.character-box{
+    height: 320px;
+    overflow-y: auto;
+
+    ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li{
+            padding: 2px 0;
+            border-bottom: 1px solid $gray-200;
+            font-size: 0.875rem;
+        }
+    }
+}
+
+.report-box{
+    height: 320px;
+    overflow-y: auto;
+}
+
+.report-card{
+    display: flex;
+    gap: 24px;
+    align-items: start;
+    padding:10px;
+    border: 1px solid $success;
+
+    &.optimise-card{
+        font-size: 11px;
+        h6{
+            font-weight: 800;
+            font-size: 11px;
+            margin: 0;
+        }
+    }
+
+    &.complete{
+        background: rgba($success, 0.2);
+    }
+
+    .subject-col{
+        width: 140px;
+    }
+    .detail-col{
+        flex: 1;
+    }
+}
