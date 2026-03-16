@@ -1,0 +1,46 @@
+.loader-limitless{
+    z-index: 10000000000000;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+
+    svg{
+
+        path{
+            transform-origin: 50% 50%;
+        }
+
+        path:nth-child(2),
+        path:nth-child(3),
+        path:nth-child(4),
+        path:nth-child(5){
+            fill: transparent;
+            stroke: #81B337;
+            stroke-width: 2;
+            stroke-dasharray: 200;
+            animation: limitless 1s infinite alternate-reverse;
+        }
+    }
+
+    @keyframes limitless {
+        0%{
+            stroke-dashoffset: -200;
+            transform: scale(0.2);
+        }
+        85%{
+            fill: transparent;
+        }
+        90%{
+            stroke-dashoffset: 0;
+            stroke-width: 1;
+            
+        }
+        100%{
+            stroke-width: 0;
+            fill: #81B337;
+            transform: scale(1);
+        }
+    }
+}
+
+

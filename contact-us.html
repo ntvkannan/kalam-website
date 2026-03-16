@@ -1,0 +1,664 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalam Digital - Contact us</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1L7FQC3PLS"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-1L7FQC3PLS');
+    </script>
+
+    <link rel="icon" type="image/png" href="./assets/images/logos/kalam-black.png">
+    <link rel="apple-touch-icon" href="./assets/images/logos/kalam-black.png">
+    <link rel="shortcut icon" href="./assets/images/logos/kalam-black.png">
+
+    <link href="./assets/css/limitless.css" rel="stylesheet" />
+    <style>
+        .india-address-block,
+        .uae-address-block {
+            display: flex;
+            gap: 1rem;
+            align-items: stretch;
+        }
+
+        .india-address-image,
+        .uae-address-image {
+            width: 230px;
+            height: auto;
+            border-radius: 12px;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .india-address-content,
+        .uae-address-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .country-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+
+        .country-flag {
+            width: 54px;
+            height: 34px;
+            border-radius: 8px;
+            border: 1px solid rgba(15, 23, 42, 0.12);
+            box-shadow: 0 8px 18px rgba(15, 23, 42, 0.12);
+        }
+
+        .country-flag--india {
+            position: relative;
+            background: linear-gradient(to bottom, #ff9933 0 33.33%, #ffffff 33.33% 66.66%, #138808 66.66% 100%);
+        }
+
+        .country-flag--india::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 8px;
+            height: 8px;
+            margin: -4px 0 0 -4px;
+            border-radius: 50%;
+            border: 1.5px solid #1a4fa3;
+        }
+
+        .country-flag--uae {
+            background: linear-gradient(to right, #ff0000 0 24%, transparent 24% 100%), linear-gradient(to bottom, #00732f 0 33.33%, #ffffff 33.33% 66.66%, #000000 66.66% 100%);
+        }
+
+        #send-message .form-label {
+            font-family: 'Lora', serif;
+        }
+
+        #send-message .btn.btn-primary {
+            --bs-btn-bg: #000;
+            --bs-btn-border-color: #000;
+            --bs-btn-hover-bg: #111;
+            --bs-btn-hover-border-color: #111;
+            --bs-btn-active-bg: #000;
+            --bs-btn-active-border-color: #000;
+            --bs-btn-disabled-bg: #000;
+            --bs-btn-disabled-border-color: #000;
+        }
+
+        #send-message #captcha-container .refresh-button {
+            background: #000;
+            color: #fff;
+        }
+
+        @media (max-width: 767.98px) {
+
+            .india-address-block,
+            .uae-address-block {
+                flex-direction: column;
+            }
+
+            .india-address-image,
+            .uae-address-image {
+                width: 100%;
+                max-width: 100%;
+                max-height: 260px;
+            }
+        }
+            .scroll-up-btn {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            width: 44px;
+            height: 44px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 999px;
+            background: #87CEEB;
+            color: #ffffff;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.16);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(8px);
+            filter: saturate(72%) brightness(0.86);
+            transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease, filter 0.2s ease;
+            z-index: 999;
+        }
+
+        .scroll-up-btn.is-visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .scroll-up-btn:hover {
+            background: linear-gradient(135deg, #38bdf8 0%, #0ea5e9 52%, #0284c7 100%);
+            color: #ffffff;
+            filter: saturate(100%) brightness(1);
+        }
+
+        @media (max-width: 575.98px) {
+            .scroll-up-btn {
+                right: 16px;
+                bottom: 16px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="mega-menu">
+        <span class="close-menu"><i class="las la-times"></i></span>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <div class="left-menu">
+                        <ul class="all-menu">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about-us.html">About us</a></li>
+                            <li><a href="products.html">Products</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="process.html">Process</a></li>
+                            <li><a href="careers.html">Careers</a></li>
+                            <li><a href="contact-us.html">Contact us</a></li>
+                        </ul>
+                        <div>
+                            <p class="menu-title" style="font-family: 'Poppins', sans-serif; font-weight: 100;">Our Creative and Valuable</p>
+                            <ul class="solution-menu">
+                                <li><a href="services.html#ui-ux-design-development">UI/UX Design & Development</a></li>
+                                <li><a href="services.html#custom-web-applications">Custom Web Applications</a></li>
+                                <li><a href="services.html#mobile-app-development">Mobile App Development</a></li>
+                                <li><a href="services.html#architecture-and-devops-practice">Architecture and DevOps Practice</a></li>
+                                <li><a href="services.html#enterprise-consulting-automation">Enterprise Consulting & Automation</a>
+                                </li>
+                                <li><a href="services.html#erp-consulting-implementation">ERP Consulting & Implementation</a>
+                                </li>
+                                <li><a href="services.html#project-and-program-management">Project and Program Management</a>
+                                </li>
+                                <li><a href="services.html#resource-augmentation">Resource Augmentation</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-8">
+                    <p class="menu-title">Our game-changing Products</p>
+                    <ul class="icon-menu">
+                        <li style="order: 1;">
+                            <a href="products.html#mitron-ai" class="vendex">
+                                <svg width="98" height="98" viewBox="0 0 96 96" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" class="mitron-icon">
+                                    <circle class="mitron-ring" cx="48" cy="48" r="42" stroke="black"
+                                        stroke-width="2" />
+                                    <path class="mitron-bot" d="M38 18V24" stroke="black" stroke-width="2"
+                                        stroke-linecap="round" />
+                                    <rect class="mitron-bot" x="23" y="24" width="30" height="24" rx="6" stroke="black"
+                                        stroke-width="2" />
+                                    <circle class="mitron-msg" cx="33" cy="35.5" r="1.8" stroke="black"
+                                        stroke-width="2" />
+                                    <circle class="mitron-msg" cx="43" cy="35.5" r="1.8" stroke="black"
+                                        stroke-width="2" />
+                                    <path class="mitron-bot" d="M30 43H46" stroke="black" stroke-width="2"
+                                        stroke-linecap="round" />
+                                    <path class="mitron-bubble"
+                                        d="M56 36H74C77.3137 36 80 38.6863 80 42V54C80 57.3137 77.3137 60 74 60H66L60 66L61.5 60H56C52.6863 60 50 57.3137 50 54V42C50 38.6863 52.6863 36 56 36Z"
+                                        stroke="black" stroke-width="2" stroke-linejoin="round" />
+                                    <circle class="mitron-dot" cx="58.5" cy="48" r="1.5" stroke="black"
+                                        stroke-width="2" />
+                                    <circle class="mitron-dot" cx="65" cy="48" r="1.5" stroke="black"
+                                        stroke-width="2" />
+                                    <circle class="mitron-dot" cx="71.5" cy="48" r="1.5" stroke="black"
+                                        stroke-width="2" />
+                                </svg>
+                                <span style="text-transform: none;">
+                                    Mitron AI
+                                </span>
+                            </a>
+                        </li>
+                        <li style="order: 3;">
+                            <a href="products.html#smartidfy" class="track">
+                                <svg width="99" height="100" viewBox="0 0 99 100" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" class="smartidfy-icon">
+                                    <circle class="sid-ring" cx="49.5" cy="50" r="44" stroke="black" stroke-width="2" />
+                                    <g clip-path="url(#sid-clip-menu)">
+                                        <path class="sid-pin"
+                                            d="M60 18C65.5228 18 70 22.4772 70 28C70 34.5 63.5 40.9 60 44.7C56.5 40.9 50 34.5 50 28C50 22.4772 54.4772 18 60 18Z"
+                                            stroke="black" stroke-width="2" stroke-linejoin="round" />
+                                        <circle class="sid-pin-center" cx="60" cy="28" r="3.4" stroke="black"
+                                            stroke-width="2" />
+                                        <circle class="sid-face" cx="40" cy="66" r="12" stroke="black"
+                                            stroke-width="2" />
+                                        <circle class="sid-eye" cx="35.5" cy="63.5" r="1.4" stroke="black"
+                                            stroke-width="2" />
+                                        <circle class="sid-eye" cx="44.5" cy="63.5" r="1.4" stroke="black"
+                                            stroke-width="2" />
+                                        <path class="sid-smile"
+                                            d="M34.5 70.8C36 72.8 37.8 73.8 40 73.8C42.2 73.8 44 72.8 45.5 70.8"
+                                            stroke="black" stroke-width="2" stroke-linecap="round" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="sid-clip-menu">
+                                            <circle cx="49.5" cy="50" r="40" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <span style="text-transform: none;">
+                                    SmartIDfy
+                                </span>
+                            </a>
+                        </li>
+                        <li style="order: 2;">
+                            <a href="products.html#fathura" class="smart">
+                                <svg width="97" height="97" viewBox="0 0 97 97" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" class="fathura-icon">
+                                    <circle class="fathura-ring" cx="48.5" cy="48.5" r="43" stroke="black"
+                                        stroke-width="2" />
+                                    <g clip-path="url(#fathura-clip-menu)">
+                                        <rect class="fathura-pos" x="21" y="24" width="48" height="36" rx="5"
+                                            stroke="black" stroke-width="2" />
+                                        <rect class="fathura-screen" x="27" y="30" width="26" height="12" rx="2"
+                                            stroke="black" stroke-width="2" />
+                                        <path class="fathura-line" d="M29 47H53" stroke="black" stroke-width="2"
+                                            stroke-linecap="round" />
+                                        <path class="fathura-line" d="M29 52H48" stroke="black" stroke-width="2"
+                                            stroke-linecap="round" />
+                                        <rect class="fathura-card" x="56" y="34" width="10" height="16" rx="2"
+                                            stroke="black" stroke-width="2" />
+                                        <rect class="fathura-base" x="36" y="60" width="18" height="6" rx="2"
+                                            stroke="black" stroke-width="2" />
+                                        <path class="fathura-receipt" d="M61 22V30L58 28L55 30V22" stroke="black"
+                                            stroke-width="2" stroke-linejoin="round" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="fathura-clip-menu">
+                                            <circle cx="48.5" cy="48.5" r="40" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <span style="text-transform: none;">
+                                    Fathura
+                                </span>
+                            </a>
+                        </li>
+                        <li style="order: 4;">
+                            <a href="products.html#acadmaya" class="evmeeter">
+                                <svg width="98" height="98" viewBox="0 0 98 98" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" class="acadmaya-icon">
+                                    <circle class="acadmaya-ring" cx="49" cy="49" r="44" stroke="black"
+                                        stroke-width="2" />
+                                    <g clip-path="url(#acadmaya-clip-menu)">
+                                        <path class="acadmaya-roof" d="M18 42L49 26L80 42" stroke="black"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <rect class="acadmaya-body" x="24" y="42" width="50" height="34" rx="2"
+                                            stroke="black" stroke-width="2" />
+                                        <rect class="acadmaya-door" x="44" y="56" width="10" height="20" rx="1.5"
+                                            stroke="black" stroke-width="2" />
+                                        <rect class="acadmaya-win" x="30" y="50" width="8" height="8" rx="1"
+                                            stroke="black" stroke-width="2" />
+                                        <rect class="acadmaya-win" x="60" y="50" width="8" height="8" rx="1"
+                                            stroke="black" stroke-width="2" />
+                                        <path class="acadmaya-flag" d="M49 20V28" stroke="black" stroke-width="2"
+                                            stroke-linecap="round" />
+                                        <path class="acadmaya-flag" d="M49 20H58L55 23L58 26H49" stroke="black"
+                                            stroke-width="2" stroke-linejoin="round" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="acadmaya-clip-menu">
+                                            <circle cx="49" cy="49" r="40" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <span style="text-transform: none;">
+                                    Acadmaya
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==============================
+    Header
+    ============================== -->
+    <header class="page-header page-header--dynamic">
+        <div class="logo">
+            <a href="index.html"><img src="assets/images/logos/kalam-color.png" /></a>
+        </div>
+        <nav class="page-header__right">
+            <ul class="main-nav home-main-nav">
+                <li><a href="products.html">Products</a></li>
+                <li><a href="services.html">Services</a></li>
+            <li><a href="process.html">Process</a></li>
+            </ul>
+            <div class="toggle-menu"><i class="las la-bars"></i></div>
+        </nav>
+    </header>
+
+    <div class="container-fluid px-0 position-relative">
+        <img src="./assets/images/contact-banner.jpg" class="img-fluid w-100 page-banner-media" alt="Contact banner" style="max-height: 380px; width: 100%; object-fit: contain; background: #f5f5f5;" />
+        <h1 class="main-heading m-0 position-absolute top-50 start-50 translate-middle text-center">
+            <span style="font-size: 0.65em; font-family: 'Lato', sans-serif; font-weight: normal;">We are always
+                ready to assist
+                you.</span><br><b
+                style="border-bottom: 2px solid #ff6600; display: inline-block; margin-bottom: 0;">Contact Us</b>
+        </h1>
+    </div>
+
+    <div class="container mt-5" style="margin-bottom: 2rem;">
+        <div class="row row-cols-1 row-cols-md-2 g-4 mb-3">
+            <div class="col">
+                <div class="india-address-block">
+                    <img src="./assets/images/taj-india.png" class="india-address-image" alt="India office" />
+                    <div class="india-address-content">
+                        <div class="country-label"><span>India</span><div class="country-flag country-flag--india" aria-label="India"></div></div>
+                        <address style="font-family: 'Lato', sans-serif;">
+                            #1, Bethesda Street <br>
+                            Netaji Nagar, <br>
+                            RV Nagar Extension, <br>
+                            Chennai 600118 <br>
+                            Tamil Nadu - INDIA
+                        </address>
+                        <div><i class="las la-phone"></i> <a class="text-decoration-none"
+                                style="font-family: 'Lato', sans-serif; font-style: italic; font-weight: 700; font-size: 1.1rem; color: #000;"
+                                href="tel:+91 7358310221">+91 7358310221</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="uae-address-block">
+                    <img src="./assets/images/burj-dubai.png" class="uae-address-image" alt="UAE office" />
+                    <div class="uae-address-content">
+                        <div class="country-label"><span>UAE</span><div class="country-flag country-flag--uae" aria-label="United Arab Emirates"></div></div>
+                        <address style="font-family: 'Lato', sans-serif;">
+                            Apartment #322, <br>
+                            Building #SN3, <br>
+                            Muwailah Commercial, <br>
+                            Sharjah, <br>
+                            United Arab Emirates.
+                        </address>
+                        <div><i class="las la-phone"></i> <a class="text-decoration-none"
+                                style="font-family: 'Lato', sans-serif; font-style: italic; font-weight: 700; font-size: 1.1rem; color: #000;"
+                                href="tel:+971506608773">+971 506608773</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center mb-3">
+        <a href="mailto:contact@kalamdigital.com"
+            style="font-family: 'Lato', sans-serif; font-style: italic; font-weight: 700; font-size: 1.1rem; color: #000; text-decoration: none;">
+            <i class="las la-envelope" style="color: #000; margin-right: 6px;"></i>contact@kalamdigital.com
+        </a>
+        <div style="font-family: 'Lato', sans-serif; font-style: italic; font-weight: 700; font-size: 1.1rem; color: #000; margin-top: 6px;">
+            <i class="lab la-whatsapp" style="color: #000; margin-right: 6px;"></i>+971 506608773
+        </div>
+    </div>
+
+    <div class="container">
+        <div style="border-top: 1px solid #d9d9d9; margin-bottom: 12px;"></div>
+    </div>
+
+    <div class="container text-center mb-3">
+        <p
+            style="font-family: 'Poppins', sans-serif; color: #555; font-size: 1.75rem; line-height: 1.4; margin-bottom: 0;">
+            Ready to start your digital transformation journey?<br>Get in touch with us today.
+        </p>
+        <p style="font-family: 'Lato', sans-serif; color: #555; font-size: 1rem; line-height: 1.8; margin-bottom: 0;">
+            Let's get started, stop worrying about technology problems and focus on your business.<br>Let us provide the
+            support you deserve.
+        </p>
+    </div>
+
+    <div class="text-center mt-1 pt-1" style="font-size: 1.75rem; font-family: 'Poppins', sans-serif;">Drop us a line,
+        and we will
+        get back to you soon.
+    </div>
+
+    <div class="container py-5" id="send-message">
+        <div class="row align-items-center">
+            <div class="col-lg-7 bg-light rounded-4 p-5">
+                <form class="row row-cols-1 row-cols-md-2">
+                    <div class="mb-3">
+                        <label class="form-label">Name <span style="color: red;">*</span></label>
+                        <input type="text" class="form-control" placeholder="Enter your name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Designation</label>
+                        <input type="text" class="form-control" placeholder="Enter your designation">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Mobile <span style="color: red;">*</span></label>
+                        <div class="input-group">
+                            <!-- <div class="input-group-text">+91 </div> -->
+                            <input type="number" min="1000000000" max="9999999999" class="form-control"
+                                placeholder="Enter your contact number" required>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Email <span style="color: red;">*</span></label>
+                        <div class="input-group">
+                            <input type="email" name="email" id="email" class="form-control"
+                                placeholder="Enter your email id" required>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Company</label>
+                        <input type="text" class="form-control" placeholder="Enter company name">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Category</label>
+                        <select class="form-select" name="category" id="category">
+                            <option value="">Select category</option>
+                            <option value="retail">Retail</option>
+                            <option value="hospitality">Hospitality</option>
+                            <option value="real_estate">Real Estate</option>
+                            <option value="transportation_logistics">Transportation and Logistics</option>
+                            <option value="healthcare">Healthcare</option>
+                            <option value="education">Education</option>
+                            <option value="manufacturing">Manufacturing</option>
+                            <option value="entertainment_media">Entertainment and Media</option>
+                            <option value="corporate">Corporate</option>
+                            <option value="government_public_sector">Government and Public Sector</option>
+                            <option value="banking_financial">Banking and Financial</option>
+                            <option value="sports_fitness">Sports and Fitness</option>
+                            <option value="automotive_industry">Automotive Industry</option>
+                            <option value="technology_it_sector">Technology and IT Sector</option>
+                            <option value="food_beverage">Food and Beverage</option> <!-- Add more options -->
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Subcategory</label>
+                        <select class="form-select" name="subcategory" id="subcategory">
+                            <option value="">Select subcategory</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Country <span style="color: red;">*</span></label>
+                        <select class="form-select" name="country" required>
+                            <option value="">Select country</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">State <span style="color: red;">*</span></label>
+                        <select class="form-select" name="state" required>
+                            <option value="">Select state</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">City <span style="color: red;">*</span></label>
+                        <select class="form-select" name="city" required>
+                            <option value="">Select city</option>
+                        </select>
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <label class="form-label">Message</label>
+                        <textarea class="form-control" rows="3"></textarea>
+                    </div>
+
+                    <div class="col-md-12 mb-3">
+                        <div id="captcha-container" class="mb-3 ">
+                            <label for="captcha" class="form-label"><span id="captcha-question"></span></label>
+                            <input type="text" id="captcha-answer" class="form-control" placeholder="Enter CAPTCHA">
+                            <button type="button" class="refresh-button" id="reCabtchaBtn"><span
+                                    class="material-symbols-outlined"> refresh </span></button>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 text-end">
+                        <button class="btn btn-primary" type="submit" style="font-family: 'Poppins', sans-serif;">Contact Us</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-5">
+                <img src="./assets/images/contact.png" class="img-fluid p-4" style="border-radius: 40px;"
+                    alt="Contact us" />
+            </div>
+        </div>
+    </div>
+
+    <!-- ==============================
+    Footer
+    ============================== -->
+    <footer class="page-footer home-footer">
+    <div class="container">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; flex-wrap: wrap;">
+            <img src="assets/images/logos/kalam-color.png" class="logo-footer" />
+            <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 12px;">
+                <ul class="nav-foot" style="margin: 0; flex-direction: column; align-items: flex-end; gap: 0;">
+                    <li style="margin-left: 0;"><i class="las la-phone" style="margin-right: 8px; color: #9ca3af;"></i><a href="tel:+917358310221">+91 7358310221 (India)</a> <span style="color: #9ca3af;">|</span> <a href="tel:+971506608773">+971 506608773 (UAE)</a></li>
+                    <li style="margin-left: 0;"><i class="las la-envelope" style="margin-right: 8px; color: #9ca3af;"></i><a href="mailto:contact@kalamdigital.com">contact@kalamdigital.com</a></li>
+                    <li style="margin-left: 0;"><i class="lab la-whatsapp" style="margin-right: 8px; color: #9ca3af;"></i><a href="tel:+971506608773">+971 506608773</a></li>
+                </ul>
+            </div>
+        </div>
+        <ul class="nav-foot" style="display: flex; flex-wrap: wrap; width: 100%;">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about-us.html">About us</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="process.html">Process</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="contact-us.html">Contact us</a></li>
+            <li style="margin-left: auto;"><a href="disclaimer.html">Disclaimer</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        </ul>
+        <div class="copyright-row" style="margin-top: 8px; display: flex; justify-content: flex-end; width: 100%;">
+            <div class="copyright">
+                &copy; <span id="copyright-year"></span> Kalam Digital Solutions. All Rights Reserved.
+            </div>
+        </div>
+        <ul class="nav-foot nav-social" style="margin-top: -12px;">
+            <li><a href="#"><img src="assets/images/svg/social-media/linkedin.svg" /></a></li>
+            <li><a href="#"><img src="assets/images/svg/social-media/facebook.svg" /></a></li>
+            <li><a href="#"><img src="assets/images/svg/social-media/youtube.svg" /></a></li>
+            <li><a href="#"><img src="assets/images/svg/social-media/instagram.svg" /></a></li>
+        </ul>
+    </div>
+</footer>
+<button type="button" class="scroll-up-btn" id="scrollUpBtn" aria-label="Scroll to top">
+    <i class="las la-arrow-up" aria-hidden="true"></i>
+</button>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./assets/js/contactus.js"></script>
+
+    <script>
+        const megaMenu = document.querySelector('.mega-menu');
+        const toggleMenu = document.querySelector('.toggle-menu');
+        toggleMenu.addEventListener('click', function () {
+            megaMenu.classList.add('show');
+        });
+
+        const closeMenu = document.querySelector('.close-menu');
+        closeMenu.addEventListener('click', function () {
+            megaMenu.classList.remove('show');
+        });
+
+        const dynamicHeader = document.querySelector('.page-header--dynamic');
+        if (dynamicHeader) {
+            const EXPAND_AT = 8;
+            const SHRINK_AT = 20;
+            let isTicking = false;
+
+            const syncHeaderState = () => {
+                const y = window.scrollY || window.pageYOffset || 0;
+                if (dynamicHeader.classList.contains('is-scrolled')) {
+                    if (y <= EXPAND_AT) dynamicHeader.classList.remove('is-scrolled');
+                } else if (y >= SHRINK_AT) {
+                    dynamicHeader.classList.add('is-scrolled');
+                }
+            };
+
+            const onScroll = () => {
+                if (isTicking) return;
+                isTicking = true;
+                window.requestAnimationFrame(() => {
+                    syncHeaderState();
+                    isTicking = false;
+                });
+            };
+
+            syncHeaderState();
+            window.addEventListener('scroll', onScroll, { passive: true });
+        }
+    </script>
+
+
+
+
+<script>
+    const scrollUpBtn = document.getElementById('scrollUpBtn');
+    if (scrollUpBtn) {
+        const toggleScrollUpBtn = () => {
+            scrollUpBtn.classList.toggle('is-visible', window.scrollY > 220);
+        };
+        toggleScrollUpBtn();
+        window.addEventListener('scroll', toggleScrollUpBtn, { passive: true });
+        scrollUpBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+</script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

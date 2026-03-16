@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 640" width="720" height="640" fill="none">
+  <defs>
+    <style><![CDATA[
+      .soft-line { stroke:#DFE6E9; stroke-width:8; stroke-linecap:round; fill:none; }
+      .flow-in { stroke-dasharray:12 12; animation: flowIn 1.5s linear infinite; }
+      .flow-out { stroke-dasharray:12 12; animation: flowOut 1.5s linear infinite; }
+
+      @keyframes flowIn { to { stroke-dashoffset:-24; } }
+      @keyframes flowOut { to { stroke-dashoffset:24; } }
+
+      .float-1 { animation: floatAnim 4s ease-in-out infinite alternate; }
+      .float-2 { animation: floatAnim 5s ease-in-out infinite alternate-reverse; }
+      .float-3 { animation: floatAnim 4.5s ease-in-out 0.8s infinite alternate; }
+      .float-4 { animation: floatAnim 5.3s ease-in-out 0.4s infinite alternate-reverse; }
+      .float-5 { animation: floatAnim 6s ease-in-out 1s infinite alternate; }
+      @keyframes floatAnim {
+        0% { transform: translateY(0px); }
+        100% { transform: translateY(-12px); }
+      }
+
+      .pulse-core {
+        transform-box: fill-box;
+        transform-origin: center;
+        animation: pulseScale 2.6s ease-in-out infinite alternate;
+      }
+      @keyframes pulseScale {
+        0% { transform: scale(0.97); opacity: 0.9; }
+        100% { transform: scale(1.03); opacity: 1; }
+      }
+
+      .spin-ring {
+        transform-origin: 360px 285px;
+        animation: spinRight 12s linear infinite;
+      }
+      .spin-ring-fast {
+        transform-origin: 360px 285px;
+        animation: spinLeft 8s linear infinite;
+      }
+      @keyframes spinRight { 100% { transform: rotate(360deg); } }
+      @keyframes spinLeft { 100% { transform: rotate(-360deg); } }
+
+      .build-block {
+        animation: dockBlock 4s cubic-bezier(0.25, 1, 0.5, 1) infinite alternate;
+      }
+      @keyframes dockBlock {
+        0%, 20% { transform: translateY(20px); opacity: 0; }
+        80%, 100% { transform: translateY(0px); opacity: 1; }
+      }
+
+      .panel { opacity: 0.96; }
+      .icon-w { stroke:#FFFFFF; stroke-width:4; stroke-linecap:round; stroke-linejoin:round; fill:none; }
+      .icon-dot { fill:#FFFFFF; }
+    ]]></style>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#8EA3B0" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  
+
+  <!-- soft connector backbones -->
+  <path d="M225 190 Q270 215 306 236" class="soft-line"/>
+  <path d="M495 190 Q450 215 414 236" class="soft-line"/>
+  <path d="M218 365 Q272 340 309 325" class="soft-line"/>
+  <path d="M502 365 Q448 340 411 325" class="soft-line"/>
+
+  <!-- animated connector flows -->
+  <path d="M225 190 Q270 215 306 236" class="soft-line flow-in" stroke="#FD79A8"/>
+  <path d="M495 190 Q450 215 414 236" class="soft-line flow-out" stroke="#0984E3"/>
+  <path d="M218 365 Q272 340 309 325" class="soft-line flow-out" stroke="#FDCB6E"/>
+  <path d="M502 365 Q448 340 411 325" class="soft-line flow-in" stroke="#00B894"/>
+
+  <!-- orbit rings in attached style -->
+  <g class="spin-ring">
+    <circle cx="360" cy="285" r="116" fill="none" stroke="#DFE6E9" stroke-width="4" stroke-dasharray="20 15"/>
+    <circle cx="360" cy="169" r="6" fill="#6C5CE7"/>
+    <circle cx="360" cy="401" r="6" fill="#00CEC9"/>
+  </g>
+
+  <g class="spin-ring-fast">
+    <circle cx="360" cy="285" r="142" fill="none" stroke="#DFE6E9" stroke-width="2" stroke-dasharray="10 30"/>
+    <circle cx="502" cy="285" r="4" fill="#FD79A8"/>
+    <circle cx="218" cy="285" r="4" fill="#FDCB6E"/>
+  </g>
+
+  <!-- central bulb / same substance, new style -->
+  <g filter="url(#shadow)">
+    <g class="pulse-core">
+      <path d="M300 178C300 133 336 100 381 100C426 100 462 133 462 178C462 210 442 239 421 263C406 280 396 293 394 318H368H343C340 292 328 279 312 262C291 239 272 210 272 178C272 133 308 100 353 100H381Z" fill="#FFFFFF"/>
+      <path d="M360 175L360 318H343C340 292 328 279 312 262C291 239 272 210 272 178C272 133 308 100 353 100C356 100 358 100 360 100V175Z" fill="#00B894"/>
+      <path d="M360 175V100C362 100 364 100 367 100C412 100 448 133 448 178C448 210 430 238 410 261C395 278 384 291 381 318H360V175Z" fill="#0984E3"/>
+      <path d="M360 175L272 178C272 133 308 100 353 100C356 100 358 100 360 100V175Z" fill="#FDCB6E"/>
+      <path d="M360 175H448C448 210 430 238 410 261C395 278 384 291 381 318H360V175Z" fill="#FD79A8"/>
+
+      <!-- inner icons retained -->
+      <g transform="translate(301 139)">
+        <rect x="0" y="10" width="34" height="22" rx="4" class="icon-w"/>
+        <path d="M6 18H16M6 24H22M24 18L28 22L34 14" class="icon-w"/>
+      </g>
+      <g transform="translate(383 142)">
+        <path d="M0 28H34" class="icon-w"/>
+        <path d="M3 27L11 19L17 23L29 10" class="icon-w"/>
+        <circle cx="29" cy="10" r="3" class="icon-dot"/>
+      </g>
+      <g transform="translate(302 220)">
+        <circle cx="11" cy="8" r="6" class="icon-w"/>
+        <circle cx="27" cy="8" r="6" class="icon-w"/>
+        <path d="M3 28C5 21 11 18 19 18C27 18 33 21 35 28" class="icon-w"/>
+      </g>
+      <g transform="translate(383 218)">
+        <path d="M2 28V6M2 28H30M10 22L15 16L20 19L29 8" class="icon-w"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- bulb base retained, recolored to match attached style -->
+  <g class="float-5" filter="url(#shadow)">
+    <rect x="314" y="318" width="92" height="18" rx="9" fill="#6C5CE7"/>
+    <rect x="309" y="341" width="102" height="20" rx="10" fill="#6C5CE7"/>
+    <rect x="306" y="366" width="108" height="20" rx="10" fill="#6C5CE7"/>
+    <rect x="310" y="391" width="100" height="20" rx="10" fill="#6C5CE7"/>
+    <path d="M330 411H390L379 425C371 435 349 435 341 425L330 411Z" fill="#6C5CE7"/>
+  </g>
+
+  <!-- implementation blocks -->
+  <g transform="translate(360 285)">
+    <g class="build-block">
+      <path d="M -15 -116 L 15 -116 L 15 -101 L -15 -101 Z" fill="#00CEC9" opacity="0.85"/>
+      <path d="M -5 -101 L 5 -101 L 5 -96 L -5 -96 Z" fill="#00CEC9" opacity="0.85"/>
+    </g>
+    <g class="build-block" style="animation-delay:1s;">
+      <path d="M -15 123 L 15 123 L 15 138 L -15 138 Z" fill="#6C5CE7" opacity="0.85"/>
+      <path d="M -5 118 L 5 118 L 5 123 L -5 123 Z" fill="#6C5CE7" opacity="0.85"/>
+    </g>
+  </g>
+
+  <!-- surrounding cards: same module positions/substance, attached style -->
+  <g transform="translate(186,235)">
+    <g class="float-1" filter="url(#shadow)">
+      <rect x="-60" y="-50" width="120" height="100" rx="16" fill="#FCE4EC" class="panel"/>
+      <!-- procurement icon -->
+      <g transform="translate(-17,-15)">
+        <rect x="0" y="10" width="34" height="22" rx="4" stroke="#FD79A8" stroke-width="4" fill="none"/>
+        <path d="M6 18H16M6 24H22M24 18L28 22L34 14" stroke="#00B894" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+    </g>
+  </g>
+
+  <g transform="translate(566,232)">
+    <g class="float-2" filter="url(#shadow)">
+      <rect x="-60" y="-50" width="120" height="100" rx="16" fill="#E1F5FE" class="panel"/>
+      <!-- supply chain / delivery -->
+      <g transform="translate(-20,-12)">
+        <path d="M7 25H27C31 25 34 22 34 18V13C34 9 31 6 27 6H7C3 6 0 9 0 13V18C0 22 3 25 7 25Z" stroke="#0984E3" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M11 29L9 33M25 29L27 33M6 14H28" stroke="#0984E3" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <circle cx="11" cy="16" r="2" fill="#00B894"/>
+        <circle cx="17" cy="16" r="2" fill="#00B894"/>
+        <circle cx="23" cy="16" r="2" fill="#00B894"/>
+      </g>
+    </g>
+  </g>
+
+  <g transform="translate(179,309)">
+    <g class="float-3" filter="url(#shadow)">
+      <rect x="-60" y="-50" width="120" height="100" rx="16" fill="#FFF2CC" class="panel"/>
+      <!-- HR / people -->
+      <g transform="translate(-16,-10)">
+        <circle cx="11" cy="8" r="6" stroke="#F39C12" stroke-width="4" fill="none"/>
+        <circle cx="27" cy="8" r="6" stroke="#F39C12" stroke-width="4" fill="none"/>
+        <path d="M3 28C5 21 11 18 19 18C27 18 33 21 35 28" stroke="#F39C12" stroke-width="4" fill="none" stroke-linecap="round"/>
+      </g>
+    </g>
+  </g>
+
+  <g transform="translate(571,316)">
+    <g class="float-4" filter="url(#shadow)">
+      <rect x="-60" y="-50" width="120" height="100" rx="16" fill="#E8F8F5" class="panel"/>
+      <!-- finance -->
+      <g transform="translate(-18,-12)">
+        <path d="M2 28V6M2 28H30M10 22L15 16L20 19L29 8" stroke="#00B894" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- ambient floating accents -->
+  <circle cx="240" cy="118" r="5" fill="#6C5CE7" opacity="0.5" class="float-2"/>
+  <rect x="516" y="458" width="8" height="8" rx="2" fill="#FDCB6E" opacity="0.6" transform="rotate(45 520 462)" class="float-1"/>
+  <circle cx="528" cy="148" r="6" fill="#00B894" opacity="0.5" class="float-4"/>
+  <path d="M 272 468 L 282 453 L 292 468 Z" fill="#FD79A8" opacity="0.6" class="float-3"/>
+</svg>

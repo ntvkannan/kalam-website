@@ -1,0 +1,697 @@
+.solution-row{
+    padding: 80px 0;
+    border-bottom: 1px solid #eaeaea;
+
+    @include media-breakpoint-down(md) { 
+        text-align: center;
+     }
+}
+
+
+.svg-icon{
+    opacity: 0;
+}
+
+.embedded,
+.automation,
+.iot,
+.lbs,
+.mobility,
+.ai,
+.tech,
+.resaug {
+    @include media-breakpoint-down(lg) { 
+        width: 280px;
+    }
+    @include media-breakpoint-down(md) { 
+        width: 320px;
+        margin-top: 40px;
+    }
+}
+
+/////////////////////////////////////////////
+/// Embedded
+
+.embedded{
+
+    &.animate{
+        opacity: 1;
+
+        path:nth-child(1){
+            fill: #fff;
+            stroke: $secondary;
+            stroke-width: 1.3;
+            stroke-dasharray: 500;
+            stroke: #F78D56;
+
+            animation: draw-embedded 2s linear alternate;
+            //animation: name duration timing-function delay iteration-count direction fill-mode;
+        }
+
+        path:nth-child(2){
+            fill: #fff;
+            stroke: #099DDF;
+            stroke-width: 2;
+            stroke-dasharray: 2;
+            animation: draw-embedded-dotted 2s infinite;
+        }
+
+        path:nth-child(3){
+            fill: #fff;
+            stroke: #099DDF;
+            stroke-width: 2;
+            stroke-dasharray: 2;
+            animation: draw-embedded-dotted 2s infinite;
+        }
+
+        path:nth-child(4){
+            fill: #fff;
+            stroke: #F78D56;
+            stroke-width: 2;
+            stroke-dasharray: 250;
+            animation: draw-embedded-side 3s infinite alternate;
+        }
+
+        path:nth-child(5){
+            fill: #fff;
+            stroke: #F78D56;
+            stroke-width: 2;
+            stroke-dasharray: 250;
+            animation: draw-embedded-side 2s;
+        }
+
+        path:nth-child(6){
+            fill: #fff;
+            stroke: #F78D56;
+            stroke-width: 2;
+            stroke-dasharray: 250;
+            animation: draw-embedded-side 5s infinite alternate;
+        }
+
+        path:nth-child(7){
+            fill: #fff;
+            stroke: #F78D56;
+            stroke-width: 2;
+            stroke-dasharray: 250;
+            animation: draw-embedded-side 2s forwards ;
+        }
+
+        path{
+            stroke-width: 10;
+        }
+
+        rect{
+            stroke: #0778C6;
+            animation: draw-embedded-rect 1s;
+        }
+    }
+}
+
+@keyframes draw-embedded {
+    0%{
+        stroke-dashoffset: -500;
+    }
+
+    100%{
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes draw-embedded-side {
+    0%{
+        stroke-dashoffset: -250;
+    }
+
+    100%{
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes draw-embedded-dotted {
+    0%{
+        stroke-dashoffset: -2000;
+    }
+
+    100%{
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes draw-embedded-rect {
+    0%{
+        stroke-width: 14;
+        stroke: #F78D56;
+    }
+
+    100%{
+        stroke-width: 7;
+        stroke: #0778C6;
+    }
+}
+
+
+/////////////////////////////////////////////
+/// Automation
+
+.automation{
+
+    &.animate{
+        opacity: 1;
+
+        path:nth-child(1){
+            fill: #fff;
+            stroke: #F7CA3B;
+            stroke-width: 2;
+            stroke-dasharray: 2000;
+            
+            animation: draw-automation 2s linear;
+        }
+        path:nth-child(2){
+            fill: #fff;
+            stroke: #A94172;
+            stroke-width: 2;
+            stroke-dasharray: 2;
+            animation: draw-automation 2s linear infinite;
+        }
+        path:nth-child(3){
+            fill: #fff;
+            stroke: #A94172;
+            stroke-width: 2;
+            stroke-dasharray: 2;
+            animation: draw-automation 2s linear infinite;
+        }
+
+    }
+    
+}
+
+@keyframes draw-automation {
+    0%{
+        stroke-dashoffset: -2000;
+    }
+
+    100%{
+        stroke-dashoffset: 0;
+    }
+}
+
+/////////////////////////////////////////////
+/// IOT
+
+.iot{
+
+    &.animate{
+        opacity: 1;
+
+        path:nth-child(1){
+            fill: #fff;
+            stroke: #3CBCF7;
+            stroke-width: 2;
+            stroke-dasharray: 1000;
+            animation: draw-iot 2s linear;
+        }
+
+        path:nth-child(2){
+            fill: #fff;
+            stroke: #87BB45;
+            stroke-width: 1;
+            stroke-dasharray: 2;
+            animation: draw-iot 2s linear infinite;
+        }
+
+        path:nth-child(3),
+        path:nth-child(4),
+        path:nth-child(5){
+            fill: #fff;
+            stroke: #87BB45;
+            stroke-width: 1;
+            stroke-dasharray: 1;
+        }
+    }
+}
+
+@keyframes draw-iot {
+    0%{
+        stroke-dashoffset: -1000;
+    }
+
+    100%{
+        stroke-dashoffset: 0;
+    }
+}
+
+
+/////////////////////////////////////////////
+/// Location Based Solution
+
+.lbs{
+
+    &.animate{
+        opacity: 1;
+
+        path:nth-child(1),
+        path:nth-child(3){
+            fill: #fff;
+            stroke: #FFD72A;
+            stroke-width: 2;
+            stroke-dasharray: 2;
+            animation: draw-lbs 2s infinite;
+        }
+
+        path:nth-child(2),
+        path:nth-child(4){
+            fill: #F15733;
+            transform-origin:50% 50%;
+
+            animation: draw-lbs-locate 1s;
+        }
+
+        path:nth-child(5),
+        path:nth-child(6),
+        path:nth-child(7),
+        path:nth-child(8){
+            fill: #fff;
+            stroke: #FFD72A;
+            stroke-width: 1;
+            stroke-dasharray: 1500;
+
+            animation: draw-lbs 3s;
+        }
+        path:nth-child(9){
+            fill: #fff;
+            stroke: #FFD72A;
+            stroke-width: 1;
+            stroke-dasharray: 1500;
+
+            animation: draw-lbs 3s;
+        }
+    }
+}
+
+@keyframes draw-lbs {
+    0%{
+        stroke-dashoffset: -1500;
+    }
+
+    100%{
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes draw-lbs-locate {
+    0%{
+        fill: #FFD72A;
+        transform: scale(0);
+    }
+
+    100%{
+        fill: #F15733;
+        transform: scale(1);
+    }
+}
+
+
+/////////////////////////////////////////////
+/// Mobility Solution
+
+.mobility{
+
+    &.animate{
+        opacity: 1;
+
+        path:nth-child(1),
+        path:nth-child(2),
+        path:nth-child(3),
+        path:nth-child(4),
+        path:nth-child(5){
+            fill: #FFA039;
+
+            animation: draw-mobility-color 2s;
+        }
+        
+        path:nth-child(6){
+            fill:#fff;
+            stroke: #87684B;
+            stroke-width: 1;
+            stroke-dasharray: 800;
+
+            animation: draw-mobility 3s infinite alternate;
+        }
+
+        
+    }
+}
+
+@keyframes draw-mobility {
+    0%{
+        stroke-dashoffset: -800;
+    }
+
+    100%{
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes draw-mobility-color {
+    0%{
+        fill: #FEDE89;
+    }
+
+    100%{
+        fill: #FFA039;
+    }
+}
+
+/////////////////////////////////////////////
+/// AI
+
+.ai{
+
+    &.animate{
+        opacity: 1;
+
+        path:nth-child(1){
+            fill: #fff;
+            stroke: #FFAB5B;
+            stroke-width: 0.5;
+            stroke-dasharray: 500;
+            animation: draw-ai 2s linear;
+        }
+        path:nth-child(2){
+            fill: #fff;
+            stroke: #00879E;
+            stroke-width: 0.5;
+            stroke-dasharray: 500;
+            animation: draw-ai 2s linear;
+        }
+    }
+}
+
+@keyframes draw-ai {
+    0%{
+        stroke-dashoffset: -500;
+    }
+
+    100%{
+        stroke-dashoffset: 0;
+    }
+}
+
+
+/////////////////////////////////////////////
+/// Technology Consulting
+
+.tech{
+
+    &.animate{
+        opacity: 1;
+
+        path:nth-child(1){
+            fill:#fff;
+            stroke: #FBAC9B;
+            stroke-width: 2;
+            stroke-dasharray: 1500;
+
+            animation: draw-tech 2s;
+        }
+
+        path:nth-child(2){
+            fill:#fff;
+            stroke: #A94172;
+            stroke-width: 1;
+            stroke-dasharray: 500;
+
+            animation: draw-tech 3s;
+        }
+
+        
+        
+    }
+}
+
+@keyframes draw-tech {
+    0%{
+        stroke-dashoffset: -1500;
+    }
+
+    100%{
+        stroke-dashoffset: 0;
+    }
+}
+
+
+/////////////////////////////////////////////
+/// Resource Augmentation
+
+.resaug{
+
+    &.animate{
+        opacity: 1;
+
+        path:nth-child(1),
+        path:nth-child(2){
+            fill:#fff;
+            stroke: #008089;
+            stroke-width: 2;
+            stroke-dasharray: 1000;
+
+            animation: draw-resaug 3s;
+        }
+
+        path:nth-child(5),
+        path:nth-child(6){
+            fill:#fff;
+            stroke: #008089;
+            stroke-width: 1;
+            stroke-dasharray: 4;
+
+            animation: draw-resaug-dotted 2s infinite alternate;
+        }
+
+        path:nth-child(3),
+        path:nth-child(4),
+        path:nth-child(7){
+            fill:#fff;
+            stroke: #16A1FE;
+            stroke-width: 1;
+            stroke-dasharray: 500;
+
+            animation: draw-resaug-circle 2s;
+        }
+
+        
+    }
+}
+
+@keyframes draw-resaug {
+    0%{
+        stroke-dashoffset: -800;
+    }
+
+    100%{
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes draw-resaug-circle {
+    0%{
+        stroke-dashoffset: 500;
+    }
+
+    100%{
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes draw-resaug-dotted {
+    0%{
+        stroke-dashoffset: -100;
+    }
+
+    100%{
+        stroke-dashoffset: 0;
+    }
+}
+
+
+/////////////////////////////////////////////
+/// Others
+
+.signage-icon{
+    path,
+    circle{
+        stroke-width: 4;
+        stroke-dasharray: 120;
+    }
+    circle{
+        stroke-width: 1.5;
+        stroke-dasharray: 2;
+    }
+    path:nth-child(5),
+    path:nth-child(6){
+        stroke-width: 1.5;
+    }
+}
+
+@keyframes signage-icon {
+    0%{
+        stroke-dashoffset: -120;
+    }
+
+    100%{
+        stroke-dashoffset: 0;
+    }
+}
+
+.vendex-icon{
+    path,
+    line,
+    rect:nth-child(6),
+    rect:nth-child(7),
+    rect:nth-child(9),
+    rect:nth-child(12){
+        stroke-width: 2;
+        stroke-dasharray: 500;
+    }
+    rect:nth-child(5),
+    circle{
+        stroke-width: 1.5;
+        stroke-dasharray: 1;
+    }
+
+    path{
+        stroke-width: 8;
+    }
+}
+
+@keyframes vendex-icon {
+    0%{
+        stroke-dashoffset: -500;
+    }
+
+    100%{
+        stroke-dashoffset: 0;
+    }
+}
+
+.track-icon{
+    path:nth-child(3){
+        stroke-width: 1.5;
+        stroke-dasharray: 3;
+    }
+    path,
+    circle{
+        stroke-width: 4;
+        stroke-dasharray: 250;
+    }
+    circle{
+        stroke-width: 2;
+    }
+}
+
+@keyframes track-icon {
+    0%{
+        stroke-dashoffset: -250;
+    }
+
+    100%{
+        stroke-dashoffset: 0;
+    }
+}
+
+.smart-icon{
+    path:nth-child(1){
+    }
+
+    path:nth-child(2){
+        fill: transparent;
+        stroke: #000;
+        stroke-width: 4;
+        stroke-dasharray: 500;
+    }
+    path:nth-child(3),
+    path:nth-child(4){
+        stroke-width: 1.5;
+        stroke-dasharray: 3;
+    }
+}
+
+@keyframes smart-icon {
+    0%{
+        stroke-dashoffset: -500;
+    }
+
+    100%{
+        stroke-dashoffset: 0;
+    }
+}
+
+.evmeeter-icon{
+    path{
+        stroke-width: 4;
+        stroke-dasharray: 400;
+    }
+}
+
+@keyframes evmeeter-icon {
+    0%{
+        stroke-dashoffset: -400;
+    }
+
+    100%{
+        stroke-dashoffset: 0;
+    }
+}
+
+.park-icon {
+    path,
+    rect:nth-child(3),
+    rect:nth-child(4){
+        stroke-width: 3;
+        stroke-dasharray: 200;
+    }
+    path:nth-child(9){
+        stroke-width: 1.5;
+        stroke-dasharray: 3;
+    }
+    path:nth-child(6){
+        stroke-width: 1.5;
+        stroke-dasharray: 0;
+    }
+}
+
+@keyframes park-icon {
+    0%{
+        stroke-dashoffset: -200;
+    }
+
+    100%{
+        stroke-dashoffset: 0;
+    }
+}
+
+.product-container{
+    &:hover{
+        .signage-icon{ animation: signage-icon 2s infinite alternate; }
+        .vendex-icon{ animation: vendex-icon 2s infinite alternate; }
+        .track-icon{ animation: track-icon 2s infinite alternate; }
+        .smart-icon{ animation: smart-icon 2s infinite alternate; }
+        .evmeeter-icon{ animation: evmeeter-icon 2s infinite alternate; }
+        .park-icon{ animation: park-icon 2s infinite alternate; }
+    }
+ }
+
+ .icon-menu{
+    a:hover{
+        .signage-icon{ animation: signage-icon 2s infinite alternate; }
+        .vendex-icon{ animation: vendex-icon 2s infinite alternate; }
+        .track-icon{ animation: track-icon 2s infinite alternate; }
+        .smart-icon{ animation: smart-icon 2s infinite alternate; }
+        .evmeeter-icon{ animation: evmeeter-icon 2s infinite alternate; }
+        .park-icon{ animation: park-icon 2s infinite alternate; }
+    }
+ }
+
+
+
+

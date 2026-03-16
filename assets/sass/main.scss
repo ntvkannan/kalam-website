@@ -1,0 +1,23 @@
+// Import Custom fonts and variables;
+@import 'custom-fonts';
+@import 'custom-variable';
+
+
+// Bootstrap 5.3.3
+@import 'node_modules/bootstrap/scss/bootstrap';
+
+// Slick Slider
+@import 'slick';
+@import 'slick-theme';
+
+// Custom Scrollbar
+@import 'custom-scrollbar';
+
+// Own Custom CSS 
+@import 'loader';
+@import 'layout';
+@import 'mega-menu';
+@import 'slider';
+@import 'svg-animation';
+@import 'product';
+

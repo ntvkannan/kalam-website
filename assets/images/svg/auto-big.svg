@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600" height="646" viewBox="0 0 600 646" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#163247" flood-opacity="0.18"/>
+    </filter>
+
+    <filter id="glowBlue" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feColorMatrix in="b" type="matrix"
+        values="0 0 0 0 1.00
+                0 0 0 0 0.42
+                0 0 0 0 0.00
+                0 0 0 0.70 0" result="c"/>
+      <feMerge>
+        <feMergeNode in="c"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="glowGold" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feColorMatrix in="b" type="matrix"
+        values="0 0 0 0 1.00
+                0 0 0 0 0.35
+                0 0 0 0 0.00
+                0 0 0 0.72 0" result="c"/>
+      <feMerge>
+        <feMergeNode in="c"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <linearGradient id="baseGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#153A54"/>
+      <stop offset="100%" stop-color="#0A2434"/>
+    </linearGradient>
+
+    <radialGradient id="halo" cx="50%" cy="46%" r="58%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.20"/>
+      <stop offset="55%" stop-color="#FF8C00" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#FF6A00" stop-opacity="0"/>
+    </radialGradient>
+
+    <style><![CDATA[
+      .ring { fill:none; stroke:#FF9A3C; stroke-width:2.2; stroke-linecap:round; }
+      .ringSoft { fill:none; stroke:#FFD4A0; stroke-width:1.4; opacity:.45; }
+      .orbitDash { fill:none; stroke:#FF6B00; stroke-width:2.8; stroke-dasharray:5 12; stroke-linecap:round; }
+      .link { fill:none; stroke:#FF9A3C; stroke-width:1.8; opacity:.55; }
+      .iconStroke { fill:none; stroke:#F5FBFF; stroke-width:2.6; stroke-linecap:round; stroke-linejoin:round; }
+    ]]></style>
+  </defs>
+
+  <!-- transparent background -->
+
+  <!-- soft center halo -->
+  <circle cx="300" cy="323" r="176" fill="url(#halo)"/>
+
+  <!-- animated circular system around bulb -->
+  <g transform="translate(300 323)">
+    <g filter="url(#glowBlue)">
+      <circle r="176" class="ringSoft"/>
+      <circle r="148" class="ring" opacity="0.7"/>
+      <circle r="122" class="ringSoft"/>
+    </g>
+
+    <g opacity="0.75">
+      <g>
+        <line x1="0" y1="-188" x2="0" y2="-172" class="ring" opacity="0.7"/>
+        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="16s" repeatCount="indefinite"/>
+      </g>
+      <g>
+        <g transform="rotate(20)"><line x1="0" y1="-186" x2="0" y2="-175" class="ringSoft"/></g>
+        <g transform="rotate(40)"><line x1="0" y1="-186" x2="0" y2="-172" class="ring" opacity="0.7"/></g>
+        <g transform="rotate(60)"><line x1="0" y1="-186" x2="0" y2="-175" class="ringSoft"/></g>
+        <g transform="rotate(80)"><line x1="0" y1="-186" x2="0" y2="-172" class="ring" opacity="0.7"/></g>
+        <g transform="rotate(100)"><line x1="0" y1="-186" x2="0" y2="-175" class="ringSoft"/></g>
+        <g transform="rotate(120)"><line x1="0" y1="-186" x2="0" y2="-172" class="ring" opacity="0.7"/></g>
+        <g transform="rotate(140)"><line x1="0" y1="-186" x2="0" y2="-175" class="ringSoft"/></g>
+        <g transform="rotate(160)"><line x1="0" y1="-186" x2="0" y2="-172" class="ring" opacity="0.7"/></g>
+        <g transform="rotate(180)"><line x1="0" y1="-186" x2="0" y2="-175" class="ringSoft"/></g>
+        <g transform="rotate(200)"><line x1="0" y1="-186" x2="0" y2="-172" class="ring" opacity="0.7"/></g>
+        <g transform="rotate(220)"><line x1="0" y1="-186" x2="0" y2="-175" class="ringSoft"/></g>
+        <g transform="rotate(240)"><line x1="0" y1="-186" x2="0" y2="-172" class="ring" opacity="0.7"/></g>
+        <g transform="rotate(260)"><line x1="0" y1="-186" x2="0" y2="-175" class="ringSoft"/></g>
+        <g transform="rotate(280)"><line x1="0" y1="-186" x2="0" y2="-172" class="ring" opacity="0.7"/></g>
+        <g transform="rotate(300)"><line x1="0" y1="-186" x2="0" y2="-175" class="ringSoft"/></g>
+        <g transform="rotate(320)"><line x1="0" y1="-186" x2="0" y2="-172" class="ring" opacity="0.7"/></g>
+        <g transform="rotate(340)"><line x1="0" y1="-186" x2="0" y2="-175" class="ringSoft"/></g>
+        <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="22s" repeatCount="indefinite"/>
+      </g>
+    </g>
+
+    <g filter="url(#glowGold)">
+      <circle r="158" class="orbitDash">
+        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="10s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+
+    <!-- orbital nodes -->
+    <g>
+      <g transform="translate(0 -158)">
+        <circle r="6.5" fill="#FFC44D" filter="url(#glowGold)">
+          <animate attributeName="r" values="5.5;8;5.5" dur="1.8s" repeatCount="indefinite"/>
+        </circle>
+      </g>
+      <g transform="translate(136 -80)">
+        <circle r="5.5" fill="#FF8C2A" filter="url(#glowBlue)">
+          <animate attributeName="r" values="4.5;7;4.5" dur="2.2s" repeatCount="indefinite"/>
+        </circle>
+      </g>
+      <g transform="translate(152 40)">
+        <circle r="5.5" fill="#FFC44D" filter="url(#glowGold)">
+          <animate attributeName="r" values="4.5;7;4.5" dur="2.0s" repeatCount="indefinite"/>
+        </circle>
+      </g>
+      <g transform="translate(-142 72)">
+        <circle r="5.5" fill="#FF6B00" filter="url(#glowBlue)">
+          <animate attributeName="r" values="4.5;7;4.5" dur="2.4s" repeatCount="indefinite"/>
+        </circle>
+      </g>
+    </g>
+
+    <!-- small utility icons orbiting the bulb -->
+    <g opacity="0.95">
+      <g transform="translate(-102 -60)">
+        <circle r="27" fill="#0B1B2A" fill-opacity="0.12" stroke="#FFA040" stroke-opacity="0.55" stroke-width="2"/>
+        <path d="M-10 0h20M0 -10v20M-6 -6l12 12M6 -6L-6 6" class="iconStroke" opacity="0.78"/>
+      </g>
+      <g transform="translate(108 -44)">
+        <circle r="27" fill="#0B1B2A" fill-opacity="0.12" stroke="#FF6B00" stroke-opacity="0.58" stroke-width="2"/>
+        <path d="M-10 2h20M-10 -5h12M-10 9h15" class="iconStroke" opacity="0.86"/>
+        <circle cx="12" cy="-5" r="2.8" fill="#F5FBFF"/>
+      </g>
+      <g transform="translate(-84 102)">
+        <circle r="27" fill="#0B1B2A" fill-opacity="0.12" stroke="#FFA040" stroke-opacity="0.55" stroke-width="2"/>
+        <path d="M-10 8v-16h20v16M-5 2h10" class="iconStroke" opacity="0.82"/>
+      </g>
+      <g transform="translate(92 108)">
+        <circle r="27" fill="#0B1B2A" fill-opacity="0.12" stroke="#FF6B00" stroke-opacity="0.58" stroke-width="2"/>
+        <path d="M-12 4l8-8 7 6 11-12" class="iconStroke" opacity="0.86"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- centered light bulb -->
+  <g transform="translate(300 323)" filter="url(#shadow)">
+    <g>
+      <path d="M0 -112
+               C-52 -112 -94 -71 -94 -20
+               C-94 14 -80 42 -57 69
+               C-41 88 -28 104 -25 132
+               H25
+               C28 104 41 88 57 69
+               C80 42 94 14 94 -20
+               C94 -71 52 -112 0 -112Z"
+            fill="#FFFFFF"/>
+      <path d="M0 -112
+               C-52 -112 -94 -71 -94 -20
+               C-94 14 -80 42 -57 69
+               C-41 88 -28 104 -25 132
+               H25
+               C28 104 41 88 57 69
+               C80 42 94 14 94 -20
+               C94 -71 52 -112 0 -112Z"
+            fill="none" stroke="#DDECF5" stroke-width="2"/>
+    </g>
+
+    <!-- bulb quadrants -->
+    <g>
+      <path d="M0 -40V132H-25C-28 104 -41 88 -57 69C-80 42 -94 14 -94 -20C-94 -71 -52 -112 0 -112V-40Z" fill="#6BC476"/>
+      <path d="M0 -40V-112C52 -112 94 -71 94 -20C94 14 80 42 57 69C41 88 28 104 25 132H0V-40Z" fill="#E05535"/>
+      <path d="M0 -40H-94C-94 -71 -52 -112 0 -112V-40Z" fill="#F6A235" opacity="0.96"/>
+      <path d="M0 -40H94C94 14 80 42 57 69C41 88 28 104 25 132H0V-40Z" fill="#49A4E0" opacity="0.98"/>
+    </g>
+
+    <!-- subtle highlight -->
+    <path d="M-45 -76C-62 -60 -72 -39 -72 -18" fill="none" stroke="#FFFFFF" stroke-opacity="0.62" stroke-width="10" stroke-linecap="round"/>
+
+    <!-- internal idea filament -->
+    <g filter="url(#glowGold)">
+      <path d="M-18 20C-14 0 -2 -12 0 -28C2 -12 14 0 18 20" fill="none" stroke="#FFD15B" stroke-width="7" stroke-linecap="round"/>
+      <path d="M-20 22H20" fill="none" stroke="#FFD15B" stroke-width="6" stroke-linecap="round"/>
+      <path d="M-16 41H16" fill="none" stroke="#FFD15B" stroke-width="5" stroke-linecap="round" opacity="0.88"/>
+      <animate attributeName="opacity" values="0.84;1;0.84" dur="2.8s" repeatCount="indefinite"/>
+    </g>
+
+    <!-- bulb base -->
+    <g>
+      <rect x="-46" y="132" width="92" height="18" rx="9" fill="url(#baseGrad)"/>
+      <rect x="-50" y="155" width="100" height="20" rx="10" fill="url(#baseGrad)"/>
+      <rect x="-52" y="180" width="104" height="20" rx="10" fill="url(#baseGrad)"/>
+      <rect x="-48" y="205" width="96" height="18" rx="9" fill="url(#baseGrad)"/>
+      <path d="M-28 223H28L18 236C12 244 -12 244 -18 236L-28 223Z" fill="url(#baseGrad)"/>
+    </g>
+  </g>
+</svg>

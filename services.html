@@ -1,0 +1,802 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalam Digital - Services</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1L7FQC3PLS"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-1L7FQC3PLS');
+    </script>
+
+    <link rel="icon" type="image/png" href="./assets/images/logos/kalam-black.png">
+    <link rel="apple-touch-icon" href="./assets/images/logos/kalam-black.png">
+    <link rel="shortcut icon" href="./assets/images/logos/kalam-black.png">
+
+    <link href="./assets/css/limitless.css" rel="stylesheet" />
+    <style>
+        .main-nav a.active {
+            color: #22AEFF;
+        }
+
+        .uiux-bullets li::marker {
+            color: #bfc5c9;
+        }
+
+        .services-card .uiux-bullets li::marker,
+        .no-sep .uiux-bullets li::marker {
+            color: var(--card-accent, #bfc5c9);
+        }
+
+        .projects.services-card h1.main-heading,
+        .projects.no-sep h1.main-heading {
+            color: var(--card-accent, inherit);
+        }
+
+        .projects.services-card h1.main-heading span,
+        .projects.no-sep h1.main-heading span {
+            color: #000000;
+        }
+
+        .typewriter-subtitle {
+            position: relative;
+        }
+
+        .typewriter-subtitle.is-typing::after {
+            content: "";
+            display: inline-block;
+            width: 1px;
+            height: 1em;
+            margin-left: 3px;
+            background: #000000;
+            vertical-align: -0.12em;
+            animation: subtitle-caret-blink 0.8s steps(1, end) infinite;
+        }
+
+        @keyframes subtitle-caret-blink {
+            0%,
+            49% {
+                opacity: 1;
+            }
+            50%,
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .services-card {
+            border: 4px solid #bfc5c9;
+            border-radius: 24px;
+        }
+
+        .uiux-animation {
+            display: block;
+            width: 720px;
+            height: 310px;
+            margin: 0 auto;
+        }
+
+        .uiux-animated-visual {
+            transform-origin: center center;
+            margin-left: 48px;
+            margin-right: 48px;
+        }
+
+        .connect-logo-zoom {
+            transform-origin: center center;
+        }
+
+        .projects .border-top {
+            border-top: 0 !important;
+            position: relative;
+        }
+
+        .projects .border-top::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, transparent 0%, color-mix(in srgb, var(--card-accent, #bfc5c9) 40%, #ffffff 60%) 20%, var(--card-accent, #bfc5c9) 50%, color-mix(in srgb, var(--card-accent, #bfc5c9) 40%, #ffffff 60%) 80%, transparent 100%);
+            background-size: 200% 100%;
+            animation: footer-line-flow 2.8s linear infinite;
+        }
+
+        @keyframes footer-line-flow {
+            0% {
+                background-position: 0% 50%;
+            }
+            100% {
+                background-position: 200% 50%;
+            }
+        }
+
+            .scroll-up-btn {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            width: 44px;
+            height: 44px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 999px;
+            background: #87CEEB;
+            color: #ffffff;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.16);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(8px);
+            filter: saturate(72%) brightness(0.86);
+            transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease, filter 0.2s ease;
+            z-index: 999;
+        }
+
+        .scroll-up-btn.is-visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .scroll-up-btn:hover {
+            background: linear-gradient(135deg, #38bdf8 0%, #0ea5e9 52%, #0284c7 100%);
+            color: #ffffff;
+            filter: saturate(100%) brightness(1);
+        }
+
+        @media (max-width: 575.98px) {
+            .scroll-up-btn {
+                right: 16px;
+                bottom: 16px;
+            }
+        }
+    </style>
+</head>
+<body style="background: url('assets/images/gen_bg.jpg') no-repeat center center fixed; background-size: cover;">
+
+    <div class="mega-menu">
+        <span class="close-menu"><i class="las la-times"></i></span>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <div class="left-menu">
+                        <ul class="all-menu">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about-us.html">About us</a></li>
+                            <li><a href="products.html">Products</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="process.html">Process</a></li>
+                            <li><a href="careers.html">Careers</a></li>
+                            <li><a href="contact-us.html">Contact us</a></li>
+                        </ul>
+                        <div>
+                            <p class="menu-title" style="font-family: 'Poppins', sans-serif; font-weight: 100;">Our creative and valuable</p>
+                            <ul class="solution-menu">
+                                <li><a href="services.html#ui-ux-design-development">UI/UX Design &amp; Development</a></li>
+                                <li><a href="services.html#custom-web-applications">Custom Web Applications</a></li>
+                                <li><a href="services.html#mobile-app-development">Mobile App Development</a></li>
+                                <li><a href="services.html#architecture-and-devops-practice">Architecture and DevOps Practice</a></li>
+                                <li><a href="services.html#enterprise-consulting-automation">Enterprise Consulting &amp; Automation</a></li>
+                                <li><a href="services.html#erp-consulting-implementation">ERP Consulting &amp; Implementation</a></li>
+                                <li><a href="services.html#project-and-program-management">Project and Program Management</a></li>
+                                <li><a href="services.html#resource-augmentation">Resource Augmentation</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-8">
+                    <p class="menu-title">Our game-changing Products</p>
+                    <ul class="icon-menu">
+                        <li style="order: 1;">
+                            <a href="products.html#mitron-ai" class="vendex">
+                                <svg width="98" height="98" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg" class="mitron-icon">
+                                    <circle class="mitron-ring" cx="48" cy="48" r="42" stroke="black" stroke-width="2" />
+                                    <path class="mitron-bot" d="M38 18V24" stroke="black" stroke-width="2" stroke-linecap="round" />
+                                    <rect class="mitron-bot" x="23" y="24" width="30" height="24" rx="6" stroke="black" stroke-width="2" />
+                                    <circle class="mitron-msg" cx="33" cy="35.5" r="1.8" stroke="black" stroke-width="2" />
+                                    <circle class="mitron-msg" cx="43" cy="35.5" r="1.8" stroke="black" stroke-width="2" />
+                                    <path class="mitron-bot" d="M30 43H46" stroke="black" stroke-width="2" stroke-linecap="round" />
+                                    <path class="mitron-bubble" d="M56 36H74C77.3137 36 80 38.6863 80 42V54C80 57.3137 77.3137 60 74 60H66L60 66L61.5 60H56C52.6863 60 50 57.3137 50 54V42C50 38.6863 52.6863 36 56 36Z" stroke="black" stroke-width="2" stroke-linejoin="round" />
+                                    <circle class="mitron-dot" cx="58.5" cy="48" r="1.5" stroke="black" stroke-width="2" />
+                                    <circle class="mitron-dot" cx="65" cy="48" r="1.5" stroke="black" stroke-width="2" />
+                                    <circle class="mitron-dot" cx="71.5" cy="48" r="1.5" stroke="black" stroke-width="2" />
+                                </svg>
+                                <span style="text-transform: none;">Mitron AI</span>
+                            </a>
+                        </li>
+                        <li style="order: 3;">
+                            <a href="products.html#smartidfy" class="track">
+                                <svg width="99" height="100" viewBox="0 0 99 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="smartidfy-icon">
+                                    <circle class="sid-ring" cx="49.5" cy="50" r="44" stroke="black" stroke-width="2" />
+                                    <g clip-path="url(#sid-clip-menu)">
+                                        <path class="sid-pin" d="M60 18C65.5228 18 70 22.4772 70 28C70 34.5 63.5 40.9 60 44.7C56.5 40.9 50 34.5 50 28C50 22.4772 54.4772 18 60 18Z" stroke="black" stroke-width="2" stroke-linejoin="round" />
+                                        <circle class="sid-pin-center" cx="60" cy="28" r="3.4" stroke="black" stroke-width="2" />
+                                        <circle class="sid-face" cx="40" cy="66" r="12" stroke="black" stroke-width="2" />
+                                        <circle class="sid-eye" cx="35.5" cy="63.5" r="1.4" stroke="black" stroke-width="2" />
+                                        <circle class="sid-eye" cx="44.5" cy="63.5" r="1.4" stroke="black" stroke-width="2" />
+                                        <path class="sid-smile" d="M34.5 70.8C36 72.8 37.8 73.8 40 73.8C42.2 73.8 44 72.8 45.5 70.8" stroke="black" stroke-width="2" stroke-linecap="round" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="sid-clip-menu">
+                                            <circle cx="49.5" cy="50" r="40" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <span style="text-transform: none;">SmartIDfy</span>
+                            </a>
+                        </li>
+                        <li style="order: 2;">
+                            <a href="products.html#fathura" class="smart">
+                                <svg width="97" height="97" viewBox="0 0 97 97" fill="none" xmlns="http://www.w3.org/2000/svg" class="fathura-icon">
+                                    <circle class="fathura-ring" cx="48.5" cy="48.5" r="43" stroke="black" stroke-width="2" />
+                                    <g clip-path="url(#fathura-clip-menu)">
+                                        <rect class="fathura-pos" x="21" y="24" width="48" height="36" rx="5" stroke="black" stroke-width="2" />
+                                        <rect class="fathura-screen" x="27" y="30" width="26" height="12" rx="2" stroke="black" stroke-width="2" />
+                                        <path class="fathura-line" d="M29 47H53" stroke="black" stroke-width="2" stroke-linecap="round" />
+                                        <path class="fathura-line" d="M29 52H48" stroke="black" stroke-width="2" stroke-linecap="round" />
+                                        <rect class="fathura-card" x="56" y="34" width="10" height="16" rx="2" stroke="black" stroke-width="2" />
+                                        <rect class="fathura-base" x="36" y="60" width="18" height="6" rx="2" stroke="black" stroke-width="2" />
+                                        <path class="fathura-receipt" d="M61 22V30L58 28L55 30V22" stroke="black" stroke-width="2" stroke-linejoin="round" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="fathura-clip-menu">
+                                            <circle cx="48.5" cy="48.5" r="40" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <span style="text-transform: none;">Fathura</span>
+                            </a>
+                        </li>
+                        <li style="order: 4;">
+                            <a href="products.html#acadmaya" class="evmeeter">
+                                <svg width="98" height="98" viewBox="0 0 98 98" fill="none" xmlns="http://www.w3.org/2000/svg" class="acadmaya-icon">
+                                    <circle class="acadmaya-ring" cx="49" cy="49" r="44" stroke="black" stroke-width="2" />
+                                    <g clip-path="url(#acadmaya-clip-menu)">
+                                        <path class="acadmaya-roof" d="M18 42L49 26L80 42" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <rect class="acadmaya-body" x="24" y="42" width="50" height="34" rx="2" stroke="black" stroke-width="2" />
+                                        <rect class="acadmaya-door" x="44" y="56" width="10" height="20" rx="1.5" stroke="black" stroke-width="2" />
+                                        <rect class="acadmaya-win" x="30" y="50" width="8" height="8" rx="1" stroke="black" stroke-width="2" />
+                                        <rect class="acadmaya-win" x="60" y="50" width="8" height="8" rx="1" stroke="black" stroke-width="2" />
+                                        <path class="acadmaya-flag" d="M49 20V28" stroke="black" stroke-width="2" stroke-linecap="round" />
+                                        <path class="acadmaya-flag" d="M49 20H58L55 23L58 26H49" stroke="black" stroke-width="2" stroke-linejoin="round" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="acadmaya-clip-menu">
+                                            <circle cx="49" cy="49" r="40" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <span style="text-transform: none;">Acadmaya</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="page-header page-header--dynamic">
+        <div class="logo">
+            <a href="index.html"><img src="assets/images/logos/kalam-color.png" /></a>
+        </div>
+        <nav class="page-header__right">
+            <ul class="main-nav home-main-nav">
+                <li><a href="products.html">Products</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+            <li><a href="process.html">Process</a></li>
+            </ul>
+            <div class="toggle-menu"><i class="las la-bars"></i></div>
+        </nav>
+    </header>
+
+    <h1 class="main-heading mt-5"><span style="font-family: 'Poppins', sans-serif; font-weight: 100;">Our creative and valuable</span> <b style="font-family: 'Poppins', sans-serif;">Services</b></h1>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-8 fs-6 text-center">
+                <p class="fs-4" style="font-family: 'Poppins', sans-serif;">Design, build, automate, and scale with one delivery partner.</p>
+                <p style="font-family: 'Lato', sans-serif;">
+                    Kalam Digital helps businesses move from ideas to production with practical digital services shaped around product thinking, technical rigor, and measurable business value. Every engagement is built to reduce friction, accelerate execution, and create systems that remain useful long after launch.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="pt-5" id="ui-ux-design-development"></div>
+    <div class="container mt-5 py-5 projects services-card" style="background-image: url('assets/images/bg/shared.png'); background-size: cover; background-position: center; background-repeat: no-repeat; --card-accent: #bfc5c9;">
+        <h1 class="main-heading mt-0 mb-4" style="margin-bottom: 1.5rem !important; padding-bottom: 0;"><b style="font-family: 'Poppins', sans-serif;">UI/UX Design &amp; Development</b> <span style="font-family: 'Poppins', sans-serif; font-weight: 100;">Crafting digital experiences people understand instantly</span></h1>
+        <div class="row justify-content-center mt-0 mb-0">
+            <div class="col-12 col-lg-7 fs-6 text-center">
+                <img src="assets/images/services/uiux-design.png" class="img-fluid uiux-animation" alt="UI/UX Design and Development" onmouseover="this.src='assets/images/services/uiux-design1.png'" onmouseout="this.src='assets/images/services/uiux-design.png'" />
+                <p class="fs-4 mt-0 mb-5" style="font-family: 'Poppins', sans-serif; color: #000000;">Interfaces should feel clear, quick, and purposeful from the first interaction.</p>
+            </div>
+        </div>
+        <div class="row row-cols-1 row-cols-lg-2">
+            <div class="col">
+                <p style="font-family: 'Lora', serif; text-align: justify;">We design user journeys that translate business goals into products people can actually use. From discovery workshops and wireframes to polished interfaces and front-end implementation, we keep every decision grounded in usability, brand consistency, and conversion.</p>
+                <p style="font-family: 'Lora', serif; text-align: justify;">Our work covers responsive websites, internal platforms, dashboards, customer portals, and product interfaces that need to look refined while still performing under real-world constraints.</p>
+                <div class="fs-4" style="font-family: 'Poppins', sans-serif; font-weight: 700;">What we deliver</div>
+                <ul class="uiux-bullets" style="font-family: 'Lora', serif;">
+                    <li>User research, information architecture, and journey mapping.</li>
+                    <li>Wireframes, interactive prototypes, and design systems.</li>
+                    <li>Responsive front-end development for web products and portals.</li>
+                    <li>Accessibility-minded interactions and scalable component design.</li>
+                </ul>
+                <div class="fs-4" style="font-family: 'Poppins', sans-serif; font-weight: 700;">Why it matters</div>
+                <ul class="uiux-bullets" style="font-family: 'Lora', serif;">
+                    <li>Improves adoption by making complex workflows easier to complete.</li>
+                    <li>Creates a stronger brand impression across customer and internal tools.</li>
+                    <li>Reduces rework by aligning design, engineering, and business teams early.</li>
+                </ul>
+            </div>
+            <div class="col text-center">
+                <img src="assets/images/svg/design-big.svg" class="img-fluid uiux-animated-visual" alt="UI/UX Design and Development animation" onmouseover="this.src='assets/images/svg/design-colour.svg'" onmouseout="this.src='assets/images/svg/design-big.svg'" />
+            </div>
+        </div>
+        <div class="row justify-content-center mt-5">
+            <div class="col-12 col-lg-8 text-center border-top pt-5">
+                <p class="fs-5" style="font-family: 'Poppins', sans-serif;">Good design removes hesitation and makes every next step obvious.</p>
+                <a href="contact-us.html" aria-label="Go to Contact Us page" style="display: inline-block; margin-top: 10px;">
+                    <img src="assets/images/logos/kalam-black.png" alt="Let's connect with Kalam Digital" class="img-fluid connect-logo-zoom kalam-logo-flip" />
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="pt-5" id="custom-web-applications"></div>
+    <div class="container py-5 projects services-card" style="background-image: url('assets/images/bg/webapp.png'); background-size: cover; background-position: center; background-repeat: no-repeat; border-color: pink; --card-accent: pink;">
+        <h1 class="main-heading mt-0 mb-4" style="margin-bottom: 1.5rem !important; padding-bottom: 0;"><b style="font-family: 'Poppins', sans-serif;">Custom Web Applications</b> <span style="font-family: 'Poppins', sans-serif; font-weight: 100;">Building platforms tailored to your workflow, not the other way around</span></h1>
+        <div class="row justify-content-center mb-5">
+            <div class="col-12 col-lg-7 text-center">
+                <img src="assets/images/services/web-app.png" class="img-fluid" alt="Custom Web Applications" onmouseover="this.src='assets/images/services/web-app1.png'" onmouseout="this.src='assets/images/services/web-app.png'" />
+                <p class="fs-4" style="font-family: 'Poppins', sans-serif;">When off-the-shelf tools create friction, custom software becomes the advantage.</p>
+            </div>
+        </div>
+        <div class="row row-cols-1 row-cols-lg-2">
+            <div class="col order-1 order-lg-0">
+                <img src="assets/images/svg/webapp-big.svg" class="img-fluid" alt="Custom Web Applications" onmouseover="this.src='assets/images/svg/webapp-colour.svg'" onmouseout="this.src='assets/images/svg/webapp-big.svg'" />
+            </div>
+            <div class="col">
+                <p style="font-family: 'Lora', serif; text-align: justify;">We build web applications that support the way your business actually operates, whether that means digitizing manual processes, connecting teams through a shared operational layer, or launching customer-facing platforms that need to scale.</p>
+                <p style="font-family: 'Lora', serif; text-align: justify;">Our focus is on practical engineering: stable architecture, clean interfaces, integrations that hold up, and delivery cycles that keep momentum without sacrificing maintainability.</p>
+                <div class="fs-4" style="font-family: 'Poppins', sans-serif; font-weight: 700;">What we build</div>
+                <ul class="uiux-bullets" style="font-family: 'Lora', serif;">
+                    <li>Business portals, admin panels, dashboards, and workflow systems.</li>
+                    <li>Role-based applications with reporting, approvals, and auditability.</li>
+                    <li>API-driven systems that connect existing tools and data sources.</li>
+                    <li>Secure, cloud-ready applications with room to evolve.</li>
+                </ul>
+                <div class="fs-4" style="font-family: 'Poppins', sans-serif; font-weight: 700;">Business impact</div>
+                <ul class="uiux-bullets" style="font-family: 'Lora', serif;">
+                    <li>Removes duplicate work and disconnected spreadsheets.</li>
+                    <li>Creates a single source of truth across operations.</li>
+                    <li>Supports faster delivery of new services and internal capabilities.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row justify-content-center mt-5">
+            <div class="col-12 col-lg-8 text-center border-top pt-5">
+                <p class="fs-5" style="font-family: 'Poppins', sans-serif;">We turn process complexity into software that teams can trust every day.</p>
+                <a href="contact-us.html" aria-label="Go to Contact Us page" style="display: inline-block; margin-top: 10px;">
+                    <img src="assets/images/logos/kalam-black.png" alt="Let's connect with Kalam Digital" class="img-fluid connect-logo-zoom kalam-logo-flip" />
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="pt-5" id="mobile-app-development"></div>
+    <div class="container py-5 projects services-card" style="background-image: url('assets/images/bg/mobile.png'); background-size: cover; background-position: center; background-repeat: no-repeat; border-color: #c8a2ff; --card-accent: #c8a2ff;">
+        <h1 class="main-heading mt-5"><b style="font-family: 'Poppins', sans-serif;">Mobile App Development</b> <span style="font-family: 'Poppins', sans-serif; font-weight: 100;">Delivering high-utility apps for customers, teams, and field operations</span></h1>
+        <div class="row justify-content-center mb-5">
+            <div class="col-12 col-lg-8 text-center">
+                <img src="assets/images/services/mobile-app.png" class="img-fluid" alt="Mobile App Development" onmouseover="this.src='assets/images/services/mobile-app1.png'" onmouseout="this.src='assets/images/services/mobile-app.png'" />
+                <p class="fs-4" style="font-family: 'Poppins', sans-serif;">Mobile products succeed when they are fast, dependable, and built around real usage conditions.</p>
+            </div>
+        </div>
+        <div class="row row-cols-1 row-cols-lg-2">
+            <div class="col">
+                <p style="font-family: 'Lora', serif; text-align: justify;">We create mobile applications that support customer engagement, service delivery, on-the-go operations, and connected experiences. Whether the app is consumer-facing or built for enterprise teams, the goal stays the same: clear flows, dependable performance, and a release strategy that can keep improving.</p>
+                <p style="font-family: 'Lora', serif; text-align: justify;">Our teams align product design, API integration, device behavior, and rollout planning so the app is useful from day one and adaptable over time.</p>
+                <div class="fs-4" style="font-family: 'Poppins', sans-serif; font-weight: 700;">Capabilities</div>
+                <ul class="uiux-bullets" style="font-family: 'Lora', serif;">
+                    <li>Android and cross-platform mobile app development.</li>
+                    <li>Secure login, profile management, notifications, and offline behavior.</li>
+                    <li>Integration with web platforms, CRMs, ERPs, payment systems, and IoT devices.</li>
+                    <li>App modernization, performance tuning, and release support.</li>
+                </ul>
+                <div class="fs-4" style="font-family: 'Poppins', sans-serif; font-weight: 700;">Where it helps</div>
+                <ul class="uiux-bullets" style="font-family: 'Lora', serif;">
+                    <li>Extends services directly to customers and distributed teams.</li>
+                    <li>Improves response times for field, sales, and support operations.</li>
+                    <li>Creates a stronger connected experience across digital touchpoints.</li>
+                </ul>
+            </div>
+            <div class="col">
+                <img src="assets/images/svg/mobile-big.svg" class="img-fluid" alt="Mobile App Development" onmouseover="this.src='assets/images/svg/mobile-colour.svg'" onmouseout="this.src='assets/images/svg/mobile-big.svg'" />
+            </div>
+        </div>
+        <div class="row justify-content-center mt-5">
+            <div class="col-12 col-lg-8 text-center border-top pt-5">
+                <p class="fs-5" style="font-family: 'Poppins', sans-serif;">Mobile should move your business forward, not become another channel to manage.</p>
+                <a href="contact-us.html" aria-label="Go to Contact Us page" style="display: inline-block; margin-top: 10px;">
+                    <img src="assets/images/logos/kalam-black.png" alt="Let's connect with Kalam Digital" class="img-fluid connect-logo-zoom kalam-logo-flip" />
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="pt-5" id="architecture-and-devops-practice"></div>
+    <div class="container py-5 projects services-card" style="background-image: url('assets/images/bg/devops.png'); background-size: cover; background-position: center; background-repeat: no-repeat; border-color: #87CEEB; --card-accent: #87CEEB;">
+        <h1 class="main-heading mt-5"><b style="font-family: 'Poppins', sans-serif;">Architecture and DevOps Practice</b> <span style="font-family: 'Poppins', sans-serif; font-weight: 100;">Engineering resilient systems and reliable delivery pipelines</span></h1>
+        <div class="row justify-content-center mb-5">
+            <div class="col-12 col-lg-8 text-center">
+                <img src="assets/images/services/devops-arch.png" class="img-fluid" alt="Architecture and DevOps Practice" onmouseover="this.src='assets/images/services/devops-arch1.png'" onmouseout="this.src='assets/images/services/devops-arch.png'" />
+                <p class="fs-4" style="font-family: 'Poppins', sans-serif;">Modern software needs strong foundations, not just fast releases.</p>
+            </div>
+        </div>
+        <div class="row row-cols-1 row-cols-lg-2">
+            <div class="col order-1 order-lg-0">
+                <img src="assets/images/svg/devops-big.svg" class="img-fluid" alt="Architecture and DevOps Practice" onmouseover="this.src='assets/images/svg/devops-colour.svg'" onmouseout="this.src='assets/images/svg/devops-big.svg'" />
+            </div>
+            <div class="col">
+                <p style="font-family: 'Lora', serif; text-align: justify;">We help teams design systems that are maintainable, observable, and ready for growth. That includes solution architecture, deployment strategy, infrastructure planning, CI/CD pipelines, environment management, and the operational discipline needed to support production systems with confidence.</p>
+                <p style="font-family: 'Lora', serif; text-align: justify;">Our DevOps practice is built around reducing deployment friction, improving reliability, and making engineering velocity sustainable instead of fragile.</p>
+                <div class="fs-4" style="font-family: 'Poppins', sans-serif; font-weight: 700;">What we cover</div>
+                <ul class="uiux-bullets" style="font-family: 'Lora', serif;">
+                    <li>Application and platform architecture for scalability and security.</li>
+                    <li>CI/CD pipeline setup, automation, and release governance.</li>
+                    <li>Cloud infrastructure, containerization, and environment strategy.</li>
+                    <li>Monitoring, logging, incident readiness, and operational visibility.</li>
+                </ul>
+                <div class="fs-4" style="font-family: 'Poppins', sans-serif; font-weight: 700;">Outcomes</div>
+                <ul class="uiux-bullets" style="font-family: 'Lora', serif;">
+                    <li>Faster releases with fewer surprises in production.</li>
+                    <li>Clearer technical decision-making as systems grow in scope.</li>
+                    <li>Improved uptime, performance, and engineering confidence.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row justify-content-center mt-5">
+            <div class="col-12 col-lg-8 text-center border-top pt-5">
+                <p class="fs-5" style="font-family: 'Poppins', sans-serif;">Strong architecture and disciplined delivery create room for real growth.</p>
+                <a href="contact-us.html" aria-label="Go to Contact Us page" style="display: inline-block; margin-top: 10px;">
+                    <img src="assets/images/logos/kalam-black.png" alt="Let's connect with Kalam Digital" class="img-fluid connect-logo-zoom kalam-logo-flip" />
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="pt-5" id="enterprise-consulting-automation"></div>
+    <div class="container py-5 projects services-card" style="background-image: url('assets/images/bg/auto.png'); background-size: cover; background-position: center; background-repeat: no-repeat; border-color: orange; --card-accent: orange;">
+        <h1 class="main-heading mt-5"><b style="font-family: 'Poppins', sans-serif;">Enterprise Consulting &amp; Automation</b> <span style="font-family: 'Poppins', sans-serif; font-weight: 100;">Improving operations with practical transformation programs</span></h1>
+        <div class="row justify-content-center mb-5">
+            <div class="col-12 col-lg-8 text-center">
+                <img src="assets/images/services/consult.png" class="img-fluid" alt="Enterprise Consulting and Automation" onmouseover="this.src='assets/images/services/consult1.png'" onmouseout="this.src='assets/images/services/consult.png'" />
+                <p class="fs-4" style="font-family: 'Poppins', sans-serif;">Transformation works when strategy, process, and execution move together.</p>
+            </div>
+        </div>
+        <div class="row row-cols-1 row-cols-lg-2">
+            <div class="col">
+                <p style="font-family: 'Lora', serif; text-align: justify;">We work with enterprises to identify operational bottlenecks, redesign workflows, and apply automation where it creates measurable value. That may include process redesign, workflow orchestration, data movement, reporting modernization, or integration planning across business systems.</p>
+                <p style="font-family: 'Lora', serif; text-align: justify;">The emphasis is not automation for its own sake. We focus on the areas where speed, accuracy, and visibility can materially improve business performance.</p>
+                <div class="fs-4" style="font-family: 'Poppins', sans-serif; font-weight: 700;">Engagement areas</div>
+                <ul class="uiux-bullets" style="font-family: 'Lora', serif;">
+                    <li>Business process assessment and automation roadmaps.</li>
+                    <li>Workflow redesign across operations, finance, service, and internal teams.</li>
+                    <li>System integration planning and execution support.</li>
+                    <li>Operational dashboards and KPI-driven reporting layers.</li>
+                </ul>
+                <div class="fs-4" style="font-family: 'Poppins', sans-serif; font-weight: 700;">Why clients engage us</div>
+                <ul class="uiux-bullets" style="font-family: 'Lora', serif;">
+                    <li>Reduce manual effort and process inconsistencies.</li>
+                    <li>Improve turnaround time without adding coordination overhead.</li>
+                    <li>Build a clearer path from business intent to execution.</li>
+                </ul>
+            </div>
+            <div class="col">
+                <img src="assets/images/svg/auto-big.svg" class="img-fluid" alt="Enterprise Consulting and Automation" onmouseover="this.src='assets/images/svg/auto-colour.svg'" onmouseout="this.src='assets/images/svg/auto-big.svg'" />
+            </div>
+        </div>
+        <div class="row justify-content-center mt-5">
+            <div class="col-12 col-lg-8 text-center border-top pt-5">
+                <p class="fs-5" style="font-family: 'Poppins', sans-serif;">The best automation feels invisible because the business simply moves better.</p>
+                <a href="contact-us.html" aria-label="Go to Contact Us page" style="display: inline-block; margin-top: 10px;">
+                    <img src="assets/images/logos/kalam-black.png" alt="Let's connect with Kalam Digital" class="img-fluid connect-logo-zoom kalam-logo-flip" />
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="pt-5" id="erp-consulting-implementation"></div>
+    <div class="container py-5 projects services-card" style="background-image: url('assets/images/bg/enterprise.png'); background-size: cover; background-position: center; background-repeat: no-repeat; --card-accent: #bfc5c9;">
+        <h1 class="main-heading mt-5"><b style="font-family: 'Poppins', sans-serif;">ERP Consulting &amp; Implementation</b> <span style="font-family: 'Poppins', sans-serif; font-weight: 100;">Connecting business functions through structured systems</span></h1>
+        <div class="row justify-content-center mb-5">
+            <div class="col-12 col-lg-8 text-center">
+                <img src="assets/images/services/erpimp.png" class="img-fluid" alt="ERP Consulting and Implementation" onmouseover="this.src='assets/images/services/erpimp1.png'" onmouseout="this.src='assets/images/services/erpimp.png'" />
+                <p class="fs-4" style="font-family: 'Poppins', sans-serif;">An ERP initiative succeeds when process clarity and implementation discipline come first.</p>
+            </div>
+        </div>
+        <div class="row row-cols-1 row-cols-lg-2">
+            <div class="col">
+                <p style="font-family: 'Lora', serif; text-align: justify;">We support ERP programs from planning to rollout by aligning business workflows, data structures, integrations, and adoption needs. Whether you are implementing a new ERP, extending an existing setup, or cleaning up fragmented operations, we focus on making the platform useful for the teams who rely on it.</p>
+                <p style="font-family: 'Lora', serif; text-align: justify;">Our approach balances business process understanding with technical execution so finance, procurement, operations, inventory, HR, and reporting can work from the same operational backbone.</p>
+                <div class="fs-4" style="font-family: 'Poppins', sans-serif; font-weight: 700;">How we help</div>
+                <ul class="uiux-bullets" style="font-family: 'Lora', serif;">
+                    <li>ERP assessment, requirement mapping, and implementation planning.</li>
+                    <li>Module alignment, process design, and workflow configuration.</li>
+                    <li>Data migration, integrations, testing, and rollout support.</li>
+                    <li>Post-go-live optimization, reporting refinement, and user enablement.</li>
+                </ul>
+                <div class="fs-4" style="font-family: 'Poppins', sans-serif; font-weight: 700;">Business value</div>
+                <ul class="uiux-bullets" style="font-family: 'Lora', serif;">
+                    <li>Improves control across cross-functional operations.</li>
+                    <li>Reduces process duplication and reporting gaps.</li>
+                    <li>Creates stronger visibility for decision-makers.</li>
+                </ul>
+            </div>
+            <div class="col">
+                <img src="assets/images/svg/erp-big.svg" class="img-fluid" alt="ERP Consulting and Implementation" onmouseover="this.src='assets/images/svg/erp-colour.svg'" onmouseout="this.src='assets/images/svg/erp-big.svg'" />
+            </div>
+        </div>
+        <div class="row justify-content-center mt-5">
+            <div class="col-12 col-lg-8 text-center border-top pt-5">
+                <p class="fs-5" style="font-family: 'Poppins', sans-serif;">ERP should unify the business, not add another layer of complexity.</p>
+                <a href="contact-us.html" aria-label="Go to Contact Us page" style="display: inline-block; margin-top: 10px;">
+                    <img src="assets/images/logos/kalam-black.png" alt="Let's connect with Kalam Digital" class="img-fluid connect-logo-zoom kalam-logo-flip" />
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="pt-5" id="project-and-program-management"></div>
+    <div class="container py-5 projects services-card" style="background-image: url('assets/images/bg/project.png'); background-size: cover; background-position: center; background-repeat: no-repeat; border-color: #90EE90; --card-accent: #90EE90;">
+        <h1 class="main-heading mt-5"><b style="font-family: 'Poppins', sans-serif;">Project and Program Management</b> <span style="font-family: 'Poppins', sans-serif; font-weight: 100;">Keeping delivery aligned, visible, and accountable</span></h1>
+        <div class="row justify-content-center mb-5">
+            <div class="col-12 col-lg-8 text-center">
+                <img src="assets/images/services/program.png" class="img-fluid" alt="Project and Program Management" onmouseover="this.src='assets/images/services/program1.png'" onmouseout="this.src='assets/images/services/program.png'" />
+                <p class="fs-4" style="font-family: 'Poppins', sans-serif;">Execution quality is often the difference between good strategy and real results.</p>
+            </div>
+        </div>
+        <div class="row row-cols-1 row-cols-lg-2">
+            <div class="col order-1 order-lg-0">
+                <img src="assets/images/svg/program-big.svg" class="img-fluid" alt="Project and Program Management" onmouseover="this.src='assets/images/svg/program-colour.svg'" onmouseout="this.src='assets/images/svg/program-big.svg'" />
+            </div>
+            <div class="col">
+                <p style="font-family: 'Lora', serif; text-align: justify;">We help organizations structure and drive complex initiatives with the right mix of planning, coordination, risk control, and stakeholder communication. Our project and program management support is designed for environments where timelines matter, teams are cross-functional, and clarity is non-negotiable.</p>
+                <p style="font-family: 'Lora', serif; text-align: justify;">From single-workstream projects to broader transformation programs, we establish a delivery rhythm that keeps execution connected to business priorities.</p>
+                <div class="fs-4" style="font-family: 'Poppins', sans-serif; font-weight: 700;">What this includes</div>
+                <ul class="uiux-bullets" style="font-family: 'Lora', serif;">
+                    <li>Project planning, scope control, milestone management, and governance.</li>
+                    <li>Cross-team coordination, status reporting, and dependency tracking.</li>
+                    <li>Risk management, escalation handling, and delivery communication.</li>
+                    <li>Program-level oversight for multi-phase technology initiatives.</li>
+                </ul>
+                <div class="fs-4" style="font-family: 'Poppins', sans-serif; font-weight: 700;">Why it matters</div>
+                <ul class="uiux-bullets" style="font-family: 'Lora', serif;">
+                    <li>Improves delivery predictability and stakeholder confidence.</li>
+                    <li>Prevents execution drift across teams and vendors.</li>
+                    <li>Turns planning into consistent progress and visible outcomes.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row justify-content-center mt-5">
+            <div class="col-12 col-lg-8 text-center border-top pt-5">
+                <p class="fs-5" style="font-family: 'Poppins', sans-serif;">Strong program control keeps ambitious work moving without losing direction.</p>
+                <a href="contact-us.html" aria-label="Go to Contact Us page" style="display: inline-block; margin-top: 10px;">
+                    <img src="assets/images/logos/kalam-black.png" alt="Let's connect with Kalam Digital" class="img-fluid connect-logo-zoom kalam-logo-flip" />
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="pt-5" id="resource-augmentation"></div>
+    <div class="container py-5 projects no-sep" style="background-image: url('assets/images/bg/resouce.png'); background-size: cover; background-position: center; background-repeat: no-repeat; border-radius: 24px; border: 4px solid #ff7a18; --card-accent: #ff7a18;">
+        <h1 class="main-heading mt-5"><b style="font-family: 'Poppins', sans-serif; background: linear-gradient(90deg, #ff7a18 0%, #ffd200 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">Resource Augmentation</b> <span style="font-family: 'Poppins', sans-serif; font-weight: 100;">Extending your team with the right capability at the right time</span></h1>
+        <div class="row justify-content-center mb-5">
+            <div class="col-12 col-lg-7 text-center">
+                <img src="assets/images/services/resargm.png" class="img-fluid" alt="Resource Augmentation" onmouseover="this.src='assets/images/services/resargm1.png'" onmouseout="this.src='assets/images/services/resargm.png'" />
+                <p class="fs-4" style="font-family: 'Poppins', sans-serif;">Growth often depends on closing capability gaps without slowing delivery.</p>
+            </div>
+        </div>
+        <div class="row row-cols-1 row-cols-lg-2">
+            <div class="col">
+                <p style="font-family: 'Lora', serif; text-align: justify;">Our resource augmentation model helps businesses add experienced design, engineering, QA, DevOps, support, and delivery talent without the delay of traditional hiring cycles. We place people where they can contribute quickly and work effectively within your existing workflows.</p>
+                <p style="font-family: 'Lora', serif; text-align: justify;">This is not just about adding headcount. It is about increasing execution capacity with professionals who can integrate cleanly, communicate clearly, and maintain delivery standards.</p>
+                <div class="fs-4" style="font-family: 'Poppins', sans-serif; font-weight: 700;">Team extension options</div>
+                <ul class="uiux-bullets" style="font-family: 'Lora', serif;">
+                    <li>Dedicated specialists for short-term initiatives and urgent delivery needs.</li>
+                    <li>Longer-term embedded talent for ongoing product and platform work.</li>
+                    <li>Multi-role pods for design, development, testing, and release support.</li>
+                    <li>Flexible engagement models aligned to your roadmap and budget.</li>
+                </ul>
+                <div class="fs-4" style="font-family: 'Poppins', sans-serif; font-weight: 700;">Why it works</div>
+                <ul class="uiux-bullets" style="font-family: 'Lora', serif;">
+                    <li>Speeds up execution without expanding permanent overhead too early.</li>
+                    <li>Brings in targeted expertise where the roadmap is under pressure.</li>
+                    <li>Helps teams stay agile while protecting delivery quality.</li>
+                </ul>
+            </div>
+            <div class="col">
+                <img src="assets/images/svg/resource-big.svg" class="img-fluid" alt="Resource Augmentation" onmouseover="this.src='assets/images/svg/resource-colour.svg'" onmouseout="this.src='assets/images/svg/resource-big.svg'" />
+            </div>
+        </div>
+        <div class="row justify-content-center mt-5">
+            <div class="col-12 col-lg-8 text-center border-top pt-5">
+                <p class="fs-5" style="font-family: 'Poppins', sans-serif;">Bring in the expertise you need without losing delivery momentum.</p>
+                <a href="contact-us.html" aria-label="Go to Contact Us page" style="display: inline-block; margin-top: 10px;">
+                    <img src="assets/images/logos/kalam-black.png" alt="Let's connect with Kalam Digital" class="img-fluid connect-logo-zoom kalam-logo-flip" />
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="page-footer home-footer">
+    <div class="container">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; flex-wrap: wrap;">
+            <img src="assets/images/logos/kalam-color.png" class="logo-footer" />
+            <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 12px;">
+                <ul class="nav-foot" style="margin: 0; flex-direction: column; align-items: flex-end; gap: 0;">
+                    <li style="margin-left: 0;"><i class="las la-phone" style="margin-right: 8px; color: #9ca3af;"></i><a href="tel:+917358310221">+91 7358310221 (India)</a> <span style="color: #9ca3af;">|</span> <a href="tel:+971506608773">+971 506608773 (UAE)</a></li>
+                    <li style="margin-left: 0;"><i class="las la-envelope" style="margin-right: 8px; color: #9ca3af;"></i><a href="mailto:contact@kalamdigital.com">contact@kalamdigital.com</a></li>
+                    <li style="margin-left: 0;"><i class="lab la-whatsapp" style="margin-right: 8px; color: #9ca3af;"></i><a href="tel:+971506608773">+971 506608773</a></li>
+                </ul>
+            </div>
+        </div>
+        <ul class="nav-foot" style="display: flex; flex-wrap: wrap; width: 100%;">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about-us.html">About us</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="process.html">Process</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="contact-us.html">Contact us</a></li>
+            <li style="margin-left: auto;"><a href="disclaimer.html">Disclaimer</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        </ul>
+        <div class="copyright-row" style="margin-top: 8px; display: flex; justify-content: flex-end; width: 100%;">
+            <div class="copyright">
+                &copy; <span id="copyright-year"></span> Kalam Digital Solutions. All Rights Reserved.
+            </div>
+        </div>
+        <ul class="nav-foot nav-social" style="margin-top: -12px;">
+            <li><a href="#"><img src="assets/images/svg/social-media/linkedin.svg" /></a></li>
+            <li><a href="#"><img src="assets/images/svg/social-media/facebook.svg" /></a></li>
+            <li><a href="#"><img src="assets/images/svg/social-media/youtube.svg" /></a></li>
+            <li><a href="#"><img src="assets/images/svg/social-media/instagram.svg" /></a></li>
+        </ul>
+    </div>
+</footer>
+<button type="button" class="scroll-up-btn" id="scrollUpBtn" aria-label="Scroll to top">
+    <i class="las la-arrow-up" aria-hidden="true"></i>
+</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/limitless.js"></script>
+
+    <script>
+        const dynamicHeader = document.querySelector('.page-header--dynamic');
+        if (dynamicHeader) {
+            const EXPAND_AT = 8;
+            const SHRINK_AT = 20;
+            let isTicking = false;
+
+            const syncHeaderState = () => {
+                const y = window.scrollY || window.pageYOffset || 0;
+                if (dynamicHeader.classList.contains('is-scrolled')) {
+                    if (y <= EXPAND_AT) dynamicHeader.classList.remove('is-scrolled');
+                } else if (y >= SHRINK_AT) {
+                    dynamicHeader.classList.add('is-scrolled');
+                }
+            };
+
+            const onScroll = () => {
+                if (isTicking) return;
+                isTicking = true;
+                window.requestAnimationFrame(() => {
+                    syncHeaderState();
+                    isTicking = false;
+                });
+            };
+
+            syncHeaderState();
+            window.addEventListener('scroll', onScroll, { passive: true });
+        }
+
+        (() => {
+            const subtitles = Array.from(document.querySelectorAll('.projects h1.main-heading > span'));
+            if (!subtitles.length) return;
+
+            const typeSubtitle = (el, startDelay = 0) => {
+                if (el.dataset.loopStarted === 'true') return;
+                el.dataset.loopStarted = 'true';
+
+                const fullText = el.dataset.fullText || el.textContent;
+                el.dataset.fullText = fullText;
+                el.classList.add('typewriter-subtitle', 'is-typing');
+
+                const typeSpeedMs = 24;
+                const eraseSpeedMs = 14;
+                const holdAfterTypeMs = 1200;
+                const holdAfterEraseMs = 420;
+
+                const startLoop = () => {
+                    let index = 0;
+                    let isDeleting = false;
+
+                    const tick = () => {
+                        if (!isDeleting) {
+                            index += 1;
+                            el.textContent = fullText.slice(0, index);
+
+                            if (index >= fullText.length) {
+                                isDeleting = true;
+                                window.setTimeout(tick, holdAfterTypeMs);
+                                return;
+                            }
+
+                            window.setTimeout(tick, typeSpeedMs);
+                            return;
+                        }
+
+                        index -= 1;
+                        el.textContent = fullText.slice(0, Math.max(index, 0));
+
+                        if (index <= 0) {
+                            isDeleting = false;
+                            window.setTimeout(tick, holdAfterEraseMs);
+                            return;
+                        }
+
+                        window.setTimeout(tick, eraseSpeedMs);
+                    };
+
+                    tick();
+                };
+
+                el.textContent = '';
+                window.setTimeout(startLoop, startDelay);
+            };
+
+            if ('IntersectionObserver' in window) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach((entry) => {
+                        if (!entry.isIntersecting) return;
+                        typeSubtitle(entry.target, 60);
+                        observer.unobserve(entry.target);
+                    });
+                }, { threshold: 0.35, rootMargin: '0px 0px -12% 0px' });
+
+                subtitles.forEach((subtitle) => observer.observe(subtitle));
+                return;
+            }
+
+            subtitles.forEach((subtitle, idx) => typeSubtitle(subtitle, idx * 120));
+        })();
+
+    </script>
+
+<script>
+    const scrollUpBtn = document.getElementById('scrollUpBtn');
+    if (scrollUpBtn) {
+        const toggleScrollUpBtn = () => {
+            scrollUpBtn.classList.toggle('is-visible', window.scrollY > 220);
+        };
+        toggleScrollUpBtn();
+        window.addEventListener('scroll', toggleScrollUpBtn, { passive: true });
+        scrollUpBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+</script>
+</body>
+</html>
+
+
+
+

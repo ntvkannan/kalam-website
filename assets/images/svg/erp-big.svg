@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600" height="646" viewBox="0 0 600 646"
+     xmlns="http://www.w3.org/2000/svg">
+
+  <rect width="600" height="646" fill="none"/>
+
+  <defs>
+    <style>
+      .icon { stroke:#c0ffff; stroke-width:2.5; fill:none; stroke-linecap:round; stroke-linejoin:round; }
+      .module-label { font-family: Arial, sans-serif; font-size: 13px; fill:#333; text-anchor: middle; }
+      .center-text { font-family: Arial, sans-serif; font-size: 28px; font-weight: bold; fill: #222; text-anchor: middle; }
+      .rippleA { fill:none; stroke:#26C6DA; stroke-width:3; opacity:0; }
+      .rippleB { fill:none; stroke:#29B6F6; stroke-width:3; opacity:0; }
+      .rippleC { fill:none; stroke:#64DD17; stroke-width:3; opacity:0; }
+      .rippleD { fill:none; stroke:#C0D600; stroke-width:3; opacity:0; }
+      .rippleE { fill:none; stroke:#C07043; stroke-width:3; opacity:0; }
+      .rippleF { fill:none; stroke:#AB47BC; stroke-width:3; opacity:0; }
+      .connector { stroke:#D7E3E8; stroke-width:1.5; fill:none; stroke-dasharray:4 8; }
+    </style>
+
+    <radialGradient id="softGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#c0ffff" stop-opacity="0.95"/>
+      <stop offset="50%" stop-color="#B3E5FC" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#c0ffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Faster, more colorful ripple waves from center spreading outward -->
+  <g>
+    <circle cx="300" cy="350" r="18" fill="url(#softGlow)">
+      <animate attributeName="r" values="18;62;18" dur="2.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.8;0.2;0.8" dur="2.2s" repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="300" cy="350" r="24" class="rippleA">
+      <animate attributeName="r" values="24;430" dur="3.2s" begin="0s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.95;0" dur="3.2s" begin="0s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-width" values="3.8;0.4" dur="3.2s" begin="0s" repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="300" cy="350" r="34" class="rippleB">
+      <animate attributeName="r" values="34;438" dur="3.2s" begin="0.45s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.9;0" dur="3.2s" begin="0.45s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-width" values="3.6;0.4" dur="3.2s" begin="0.45s" repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="300" cy="350" r="44" class="rippleC">
+      <animate attributeName="r" values="44;446" dur="3.2s" begin="0.9s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.85;0" dur="3.2s" begin="0.9s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-width" values="3.4;0.4" dur="3.2s" begin="0.9s" repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="300" cy="350" r="54" class="rippleD">
+      <animate attributeName="r" values="54;454" dur="3.2s" begin="1.35s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.8;0" dur="3.2s" begin="1.35s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-width" values="3.2;0.4" dur="3.2s" begin="1.35s" repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="300" cy="350" r="64" class="rippleE">
+      <animate attributeName="r" values="64;462" dur="3.2s" begin="1.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.75;0" dur="3.2s" begin="1.8s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-width" values="3;0.4" dur="3.2s" begin="1.8s" repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="300" cy="350" r="74" class="rippleF">
+      <animate attributeName="r" values="74;470" dur="3.2s" begin="2.25s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.7;0" dur="3.2s" begin="2.25s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-width" values="2.8;0.4" dur="3.2s" begin="2.25s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Static connectors -->
+  <g opacity="0.8">
+    <path d="M300 310 L300 215" class="connector"/>
+    <path d="M340 325 L415 250" class="connector"/>
+    <path d="M360 350 L455 350" class="connector"/>
+    <path d="M340 380 L415 450" class="connector"/>
+    <path d="M300 390 L300 505" class="connector"/>
+    <path d="M260 380 L185 450" class="connector"/>
+    <path d="M240 350 L145 350" class="connector"/>
+    <path d="M260 325 L185 250" class="connector"/>
+  </g>
+
+  <!-- Module nodes (kept static, no rotation) -->
+  <g>
+    <g>
+      <circle cx="300" cy="150" r="45" fill="#B0C853"/>
+      <circle cx="300" cy="150" r="16" class="icon"/>
+      <line x1="300" y1="140" x2="300" y2="160" class="icon"/>
+      <text x="300" y="215" class="module-label">Finance</text>
+    </g>
+
+    <g>
+      <circle cx="450" cy="220" r="45" fill="#64DD17"/>
+      <path d="M435 220 L445 230 L465 210" class="icon"/>
+      <text x="450" y="285" class="module-label">Procurement</text>
+    </g>
+
+    <g>
+      <circle cx="500" cy="350" r="45" fill="#AEEA00"/>
+      <rect x="485" y="340" width="30" height="20" class="icon"/>
+      <circle cx="492" cy="365" r="4" class="icon"/>
+      <circle cx="508" cy="365" r="4" class="icon"/>
+      <text x="500" y="415" class="module-label">Manufacturing</text>
+    </g>
+
+    <g>
+      <circle cx="450" cy="480" r="45" fill="#C0D600"/>
+      <circle cx="450" cy="470" r="8" class="icon"/>
+      <path d="M435 495 Q450 485 465 495" class="icon"/>
+      <text x="450" y="545" class="module-label">Human Resources</text>
+    </g>
+
+    <g>
+      <circle cx="300" cy="550" r="45" fill="#C0AB40"/>
+      <rect x="285" y="535" width="30" height="25" class="icon"/>
+      <line x1="285" y1="548" x2="315" y2="548" class="icon"/>
+      <text x="300" y="615" class="module-label">Supply Chain</text>
+    </g>
+
+    <g>
+      <circle cx="150" cy="480" r="45" fill="#C07043"/>
+      <rect x="135" y="465" width="30" height="20" class="icon"/>
+      <line x1="135" y1="475" x2="165" y2="475" class="icon"/>
+      <text x="150" y="545" class="module-label">Inventory</text>
+    </g>
+
+    <g>
+      <circle cx="100" cy="350" r="45" fill="#26C6DA"/>
+      <rect x="85" y="335" width="30" height="25" class="icon"/>
+      <line x1="90" y1="345" x2="110" y2="345" class="icon"/>
+      <line x1="90" y1="355" x2="110" y2="355" class="icon"/>
+      <text x="100" y="415" class="module-label">Project Mgmt</text>
+    </g>
+
+    <g>
+      <circle cx="150" cy="220" r="45" fill="#29B6F6"/>
+      <circle cx="145" cy="215" r="6" class="icon"/>
+      <circle cx="160" cy="215" r="6" class="icon"/>
+      <path d="M138 235 Q150 225 162 235" class="icon"/>
+      <text x="150" y="285" class="module-label">CRM</text>
+    </g>
+  </g>
+
+  <!-- Center text only -->
+  <g>
+    <text x="300" y="360" class="center-text">ERP</text>
+    <text x="300" y="395" class="center-text">CONSULTING</text>
+  </g>
+
+</svg>

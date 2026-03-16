@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600" height="646" viewBox="0 0 600 646"
+     xmlns="http://www.w3.org/2000/svg"
+     role="img" aria-label="Animated Resource Augmentation graphic">
+
+  <!-- ░░ FULLY TRANSPARENT BACKGROUND ░░ -->
+  <rect width="600" height="646" fill="none"/>
+
+  <defs>
+    <style>
+      .iconW { stroke:#ffffff; stroke-width:2.6; fill:none;
+               stroke-linecap:round; stroke-linejoin:round; }
+      .dashed { stroke:rgba(0,0,0,.28); stroke-width:2; fill:none;
+                stroke-linecap:round; stroke-dasharray:6 5; }
+    </style>
+
+    <!-- Shadows / glow -->
+    <filter id="fShadow" x="-35%" y="-35%" width="170%" height="170%">
+      <feDropShadow dx="0" dy="6" stdDeviation="9"
+                    flood-color="#000" flood-opacity="0.15"/>
+    </filter>
+    <filter id="fGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="7" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="fPerson" x="-25%" y="-15%" width="150%" height="135%">
+      <feDropShadow dx="0" dy="5" stdDeviation="7"
+                    flood-color="#000" flood-opacity="0.18"/>
+    </filter>
+
+    <!-- Arrow marker -->
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 Z" fill="rgba(0,0,0,.30)"/>
+    </marker>
+
+    <!-- Person gradients -->
+    <radialGradient id="gSkin" cx="42%" cy="36%" r="62%">
+      <stop offset="0%"  stop-color="#FDDBB4"/>
+      <stop offset="100%" stop-color="#E8A56B"/>
+    </radialGradient>
+    <linearGradient id="gSuit" x1="0" y1="0" x2=".25" y2="1">
+      <stop offset="0%"  stop-color="#636e82"/>
+      <stop offset="100%" stop-color="#353d4e"/>
+    </linearGradient>
+    <linearGradient id="gLap" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#ccd4de"/>
+      <stop offset="100%" stop-color="#9eadbf"/>
+    </linearGradient>
+    <radialGradient id="gScreen" cx="50%" cy="45%" r="58%">
+      <stop offset="0%"  stop-color="#93d8f8"/>
+      <stop offset="100%" stop-color="#1565C0"/>
+    </radialGradient>
+    <linearGradient id="gHair" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#4a3626"/>
+      <stop offset="100%" stop-color="#2a1c0e"/>
+    </linearGradient>
+    <!-- Orbit ring gradient -->
+    <linearGradient id="gRing" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"  stop-color="rgba(0,0,0,.06)"/>
+      <stop offset="100%" stop-color="rgba(0,0,0,.14)"/>
+    </linearGradient>
+
+    <!-- Reusable spark -->
+    <g id="spark">
+      <circle r="3" fill="rgba(0,0,0,.18)"/>
+      <circle r="7" fill="none" stroke="rgba(0,0,0,.12)" stroke-width="2"/>
+    </g>
+  </defs>
+
+  <!-- ╔══════════════════════════════════════════╗ -->
+  <!-- ║  ORBIT RING (dashed circle)              ║ -->
+  <!-- ╚══════════════════════════════════════════╝ -->
+  <circle cx="300" cy="340" r="185"
+          fill="none" stroke="rgba(0,0,0,.18)"
+          stroke-width="2" stroke-dasharray="8 6"/>
+
+  <!-- Slow-rotate accent ring -->
+  <circle cx="300" cy="340" r="185"
+          fill="none" stroke="rgba(0,0,0,.06)" stroke-width="14">
+    <animateTransform attributeName="transform" type="rotate"
+      from="0 300 340" to="360 300 340" dur="40s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- ╔══════════════════════════════════════════╗ -->
+  <!-- ║  ANIMATED CONNECTORS                     ║ -->
+  <!-- ╚══════════════════════════════════════════╝ -->
+  <g>
+    <!-- Dev (top-left) -->
+    <path d="M175,224 C225,260 252,278 266,292" class="dashed" marker-end="url(#arr)">
+      <animate attributeName="stroke-dashoffset" from="0" to="-66" dur="2.5s" repeatCount="indefinite"/>
+    </path>
+    <!-- Design (top) -->
+    <path d="M300,188 C300,235 300,255 300,248" class="dashed" marker-end="url(#arr)">
+      <animate attributeName="stroke-dashoffset" from="0" to="-66" dur="2.7s" repeatCount="indefinite"/>
+    </path>
+    <!-- QA (top-right) -->
+    <path d="M425,224 C375,260 348,278 334,292" class="dashed" marker-end="url(#arr)">
+      <animate attributeName="stroke-dashoffset" from="0" to="-66" dur="2.9s" repeatCount="indefinite"/>
+    </path>
+    <!-- Analytics (right) -->
+    <path d="M497,340 C440,340 418,340 408,340" class="dashed" marker-end="url(#arr)">
+      <animate attributeName="stroke-dashoffset" from="0" to="-66" dur="2.6s" repeatCount="indefinite"/>
+    </path>
+    <!-- Support (bottom-right) -->
+    <path d="M425,456 C382,426 358,412 342,400" class="dashed" marker-end="url(#arr)">
+      <animate attributeName="stroke-dashoffset" from="0" to="-66" dur="2.8s" repeatCount="indefinite"/>
+    </path>
+    <!-- Delivery (bottom) -->
+    <path d="M300,492 C300,464 300,448 300,442" class="dashed" marker-end="url(#arr)">
+      <animate attributeName="stroke-dashoffset" from="0" to="-66" dur="2.4s" repeatCount="indefinite"/>
+    </path>
+    <!-- Hiring (bottom-left) -->
+    <path d="M175,456 C218,426 242,412 258,400" class="dashed" marker-end="url(#arr)">
+      <animate attributeName="stroke-dashoffset" from="0" to="-66" dur="3.0s" repeatCount="indefinite"/>
+    </path>
+    <!-- Security (left) -->
+    <path d="M103,340 C160,340 182,340 192,340" class="dashed" marker-end="url(#arr)">
+      <animate attributeName="stroke-dashoffset" from="0" to="-66" dur="2.55s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- Moving particles -->
+  <g opacity="0.8">
+    <circle r="4" fill="rgba(41,182,246,.7)">
+      <animateMotion dur="2.6s" repeatCount="indefinite"
+        path="M175,224 C225,260 252,278 266,292"/>
+    </circle>
+    <circle r="4" fill="rgba(171,71,188,.7)">
+      <animateMotion dur="2.9s" repeatCount="indefinite"
+        path="M425,224 C375,260 348,278 334,292"/>
+    </circle>
+    <circle r="4" fill="rgba(255,112,67,.7)">
+      <animateMotion dur="2.7s" repeatCount="indefinite"
+        path="M175,456 C218,426 242,412 258,400"/>
+    </circle>
+    <circle r="4" fill="rgba(0,200,83,.7)">
+      <animateMotion dur="2.4s" repeatCount="indefinite"
+        path="M497,340 C440,340 418,340 408,340"/>
+    </circle>
+    <circle r="4" fill="rgba(255,171,64,.7)">
+      <animateMotion dur="2.8s" repeatCount="indefinite"
+        path="M425,456 C382,426 358,412 342,400"/>
+    </circle>
+    <circle r="4" fill="rgba(38,198,218,.7)">
+      <animateMotion dur="2.5s" repeatCount="indefinite"
+        path="M300,492 C300,464 300,448 300,442"/>
+    </circle>
+  </g>
+
+  <!-- ╔══════════════════════════════════════════╗ -->
+  <!-- ║  SKILL NODES  (8 orbiting circles)       ║ -->
+  <!-- ╚══════════════════════════════════════════╝ -->
+
+  <!-- 1. DEV – top-left -->
+  <g filter="url(#fShadow)">
+    <animateTransform attributeName="transform" type="translate"
+      values="0,0; -5,-5; 0,0" dur="3.4s" repeatCount="indefinite"/>
+    <circle cx="155" cy="210" r="46" fill="#29B6F6"
+            stroke="rgba(0,0,0,.10)" stroke-width="2"/>
+    <!-- Code brackets icon -->
+    <polyline points="143,201 129,210 143,219" class="iconW"/>
+    <polyline points="167,201 181,210 167,219" class="iconW"/>
+    <line x1="149" y1="223" x2="161" y2="197" class="iconW"/>
+  </g>
+
+  <!-- 2. DESIGN – top -->
+  <g filter="url(#fShadow)">
+    <animateTransform attributeName="transform" type="translate"
+      values="0,0; 0,-7; 0,0" dur="3.7s" repeatCount="indefinite"/>
+    <circle cx="300" cy="168" r="46" fill="#AB47BC"
+            stroke="rgba(0,0,0,.10)" stroke-width="2"/>
+    <!-- Diamond / design icon -->
+    <path d="M280,179 L300,159 L320,179 L300,199 Z" class="iconW"/>
+    <circle cx="300" cy="159" r="4" fill="white" opacity="0.7"/>
+    <circle cx="280" cy="179" r="4" fill="white" opacity="0.7"/>
+    <circle cx="320" cy="179" r="4" fill="white" opacity="0.7"/>
+    <circle cx="300" cy="199" r="4" fill="white" opacity="0.7"/>
+  </g>
+
+  <!-- 3. QA – top-right -->
+  <g filter="url(#fShadow)">
+    <animateTransform attributeName="transform" type="translate"
+      values="0,0; 5,-5; 0,0" dur="3.3s" repeatCount="indefinite"/>
+    <circle cx="445" cy="210" r="46" fill="#FF7043"
+            stroke="rgba(0,0,0,.10)" stroke-width="2"/>
+    <!-- Shield + tick icon -->
+    <path d="M445,190 L462,198 V214 Q462,228 445,236 Q428,228 428,214 V198 Z" class="iconW"/>
+    <path d="M436,214 L442,220 L454,206" class="iconW"/>
+  </g>
+
+  <!-- 4. ANALYTICS – right -->
+  <g filter="url(#fShadow)">
+    <animateTransform attributeName="transform" type="translate"
+      values="0,0; 7,0; 0,0" dur="3.2s" repeatCount="indefinite"/>
+    <circle cx="497" cy="340" r="46" fill="#00C853"
+            stroke="rgba(0,0,0,.10)" stroke-width="2"/>
+    <!-- Bar chart + trend icon -->
+    <line x1="477" y1="358" x2="477" y2="322" class="iconW"/>
+    <line x1="491" y1="358" x2="491" y2="334" class="iconW"/>
+    <line x1="505" y1="358" x2="505" y2="316" class="iconW"/>
+    <polyline points="477,332 491,342 505,322" class="iconW"/>
+  </g>
+
+  <!-- 5. SUPPORT – bottom-right -->
+  <g filter="url(#fShadow)">
+    <animateTransform attributeName="transform" type="translate"
+      values="0,0; 5,5; 0,0" dur="3.6s" repeatCount="indefinite"/>
+    <circle cx="445" cy="490" r="46" fill="#FFAB40"
+            stroke="rgba(0,0,0,.10)" stroke-width="2"/>
+    <!-- Chat bubble icon -->
+    <path d="M426,474 H464 Q472,474 472,482 V496 Q472,504 464,504 H446 L436,514 V504 H426 Q418,504 418,496 V482 Q418,474 426,474 Z" class="iconW"/>
+    <line x1="432" y1="488" x2="462" y2="488" class="iconW"/>
+    <line x1="432" y1="496" x2="452" y2="496" class="iconW"/>
+  </g>
+
+  <!-- 6. DELIVERY – bottom -->
+  <g filter="url(#fShadow)">
+    <animateTransform attributeName="transform" type="translate"
+      values="0,0; 0,7; 0,0" dur="3.5s" repeatCount="indefinite"/>
+    <circle cx="300" cy="512" r="46" fill="#26C6DA"
+            stroke="rgba(0,0,0,.10)" stroke-width="2"/>
+    <!-- Rocket / delivery icon -->
+    <path d="M300,496 C310,486 320,490 320,500 L320,518 Q310,524 300,520 Q290,524 280,518 L280,500 C280,490 290,486 300,496 Z" class="iconW"/>
+    <circle cx="300" cy="506" r="4" class="iconW"/>
+    <path d="M282,514 L274,522" class="iconW"/>
+    <path d="M318,514 L326,522" class="iconW"/>
+  </g>
+
+  <!-- 7. HIRING – bottom-left -->
+  <g filter="url(#fShadow)">
+    <animateTransform attributeName="transform" type="translate"
+      values="0,0; -5,5; 0,0" dur="3.8s" repeatCount="indefinite"/>
+    <circle cx="155" cy="490" r="46" fill="#66BB6A"
+            stroke="rgba(0,0,0,.10)" stroke-width="2"/>
+    <!-- Person + plus icon -->
+    <circle cx="148" cy="476" r="9" class="iconW"/>
+    <path d="M132,504 Q148,490 164,504" class="iconW"/>
+    <line x1="170" y1="478" x2="182" y2="478" class="iconW"/>
+    <line x1="176" y1="472" x2="176" y2="484" class="iconW"/>
+  </g>
+
+  <!-- 8. SECURITY – left -->
+  <g filter="url(#fShadow)">
+    <animateTransform attributeName="transform" type="translate"
+      values="0,0; -7,0; 0,0" dur="3.1s" repeatCount="indefinite"/>
+    <circle cx="103" cy="340" r="46" fill="#3F51B5"
+            stroke="rgba(0,0,0,.10)" stroke-width="2"/>
+    <!-- Padlock icon -->
+    <rect x="88" y="338" width="30" height="24" rx="5" class="iconW"/>
+    <path d="M94,338 V330 Q94,318 103,318 Q112,318 112,330 V338" class="iconW"/>
+    <circle cx="103" cy="350" r="3" fill="white" opacity="0.85"/>
+    <line x1="103" y1="353" x2="103" y2="357" class="iconW"/>
+  </g>
+
+  <!-- ╔══════════════════════════════════════════╗ -->
+  <!-- ║  CENTRE — PERSON ILLUSTRATION            ║ -->
+  <!-- ╚══════════════════════════════════════════╝ -->
+
+  <!-- Outer pulse ring -->
+  <circle cx="300" cy="340" r="108" fill="none"
+          stroke="rgba(0,0,0,.10)" stroke-width="2">
+    <animate attributeName="opacity" values="0.2;0.8;0.2" dur="3.6s" repeatCount="indefinite"/>
+    <animate attributeName="r"       values="100;112;100"  dur="3.6s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Sparks at cardinal points -->
+  <g opacity="0.75">
+    <use href="#spark" x="300" y="232">
+      <animateTransform attributeName="transform" type="translate" additive="sum"
+        values="0,0; 0,-7; 0,0" dur="2.8s" repeatCount="indefinite"/>
+    </use>
+    <use href="#spark" x="408" y="340">
+      <animateTransform attributeName="transform" type="translate" additive="sum"
+        values="0,0; 7,0; 0,0" dur="3.0s" repeatCount="indefinite"/>
+    </use>
+    <use href="#spark" x="300" y="448">
+      <animateTransform attributeName="transform" type="translate" additive="sum"
+        values="0,0; 0,7; 0,0" dur="2.6s" repeatCount="indefinite"/>
+    </use>
+    <use href="#spark" x="192" y="340">
+      <animateTransform attributeName="transform" type="translate" additive="sum"
+        values="0,0; -7,0; 0,0" dur="2.9s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+  <!-- ─── PERSON (flat-style, suit + glasses + laptop) ─── -->
+  <g filter="url(#fPerson)">
+
+    <!-- BODY / SUIT -->
+    <!-- Jacket main -->
+    <path d="M258,428
+             C248,402 244,378 244,360
+             C244,344 256,332 272,328
+             L280,326 L300,344 L320,326 L328,328
+             C344,332 356,344 356,360
+             C356,378 352,402 342,428 Z"
+          fill="url(#gSuit)"/>
+
+    <!-- Shirt / inner white -->
+    <path d="M291,326 L300,344 L309,326 L305,320 L300,328 L295,320 Z"
+          fill="#f5f5f5"/>
+
+    <!-- Tie -->
+    <path d="M296,327 L300,344 L304,327 L302,321 L300,325 L298,321 Z"
+          fill="#c0392b"/>
+    <path d="M298,337 L300,348 L302,337 L300,334 Z"
+          fill="#96281b"/>
+
+    <!-- Lapels -->
+    <path d="M280,326 L268,316 L271,330 L283,334 Z" fill="#4a5568"/>
+    <path d="M320,326 L332,316 L329,330 L317,334 Z" fill="#4a5568"/>
+
+    <!-- Pocket square -->
+    <path d="M287,342 L294,340 L294,347 L287,346 Z" fill="white" opacity="0.8"/>
+
+    <!-- Suit buttons -->
+    <circle cx="300" cy="358" r="2.2" fill="#2d3748" opacity="0.55"/>
+    <circle cx="300" cy="368" r="2.2" fill="#2d3748" opacity="0.55"/>
+
+    <!-- LEFT ARM -->
+    <path d="M244,360
+             C237,364 229,375 226,390
+             C223,405 224,418 226,428
+             L244,428
+             C244,418 245,405 246,392
+             C247,379 247,368 244,360 Z"
+          fill="url(#gSuit)"/>
+
+    <!-- RIGHT ARM -->
+    <path d="M356,360
+             C363,364 371,375 374,390
+             C377,405 376,418 374,428
+             L356,428
+             C356,418 355,405 354,392
+             C353,379 353,368 356,360 Z"
+          fill="url(#gSuit)"/>
+
+    <!-- Sleeve cuffs -->
+    <rect x="223" y="425" width="21" height="6" rx="3" fill="#bdc8d6"/>
+    <rect x="356" y="425" width="21" height="6" rx="3" fill="#bdc8d6"/>
+
+    <!-- Hands -->
+    <ellipse cx="231" cy="434" rx="11" ry="7.5" fill="url(#gSkin)"/>
+    <ellipse cx="369" cy="434" rx="11" ry="7.5" fill="url(#gSkin)"/>
+
+    <!-- LAPTOP -->
+    <!-- Screen back -->
+    <path d="M246,392 L354,392 L349,428 L251,428 Z" fill="url(#gLap)"/>
+    <!-- Screen face -->
+    <path d="M253,396 L347,396 L343,425 L257,425 Z" fill="url(#gScreen)"/>
+    <!-- Screen glare -->
+    <path d="M259,399 L276,399 L274,409 L257,409 Z" fill="white" opacity="0.22"/>
+    <!-- Chart on screen -->
+    <polyline points="268,416 278,408 292,413 308,403 326,407"
+              fill="none" stroke="white" stroke-width="1.4" opacity="0.7"
+              stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="268" cy="416" r="1.8" fill="#7dd4fc" opacity="0.9"/>
+    <circle cx="278" cy="408" r="1.8" fill="#7dd4fc" opacity="0.9"/>
+    <circle cx="292" cy="413" r="1.8" fill="#7dd4fc" opacity="0.9"/>
+    <circle cx="308" cy="403" r="1.8" fill="#7dd4fc" opacity="0.9"/>
+    <circle cx="326" cy="407" r="1.8" fill="#7dd4fc" opacity="0.9"/>
+    <!-- Cursor blink -->
+    <rect x="328" y="402" width="1.8" height="7" fill="white" opacity="0.9">
+      <animate attributeName="opacity" values="0.9;0;0.9" dur="1.1s" repeatCount="indefinite"/>
+    </rect>
+    <!-- Laptop base -->
+    <path d="M246,428 L354,428 L366,437 L234,437 Z" fill="#9baab8"/>
+    <!-- Trackpad -->
+    <rect x="289" y="430" width="22" height="4" rx="2" fill="#b0bec5"/>
+
+    <!-- NECK -->
+    <rect x="292" y="314" width="16" height="18" rx="5" fill="url(#gSkin)"/>
+
+    <!-- HEAD -->
+    <ellipse cx="300" cy="291" rx="30" ry="33" fill="url(#gSkin)"/>
+
+    <!-- Ears -->
+    <ellipse cx="270" cy="293" rx="5.5" ry="7.5" fill="#e8a56b"/>
+    <ellipse cx="270" cy="293" rx="3"   ry="4.5" fill="#d4916a"/>
+    <ellipse cx="330" cy="293" rx="5.5" ry="7.5" fill="#e8a56b"/>
+    <ellipse cx="330" cy="293" rx="3"   ry="4.5" fill="#d4916a"/>
+
+    <!-- HAIR -->
+    <path d="M270,273 Q276,255 300,253 Q324,255 330,273
+             Q322,258 300,258 Q278,258 270,273 Z"
+          fill="url(#gHair)"/>
+    <path d="M270,273 Q268,265 270,260
+             Q276,248 300,246 Q324,248 330,260 Q332,265 330,273
+             Q322,262 300,262 Q278,262 270,273 Z"
+          fill="url(#gHair)"/>
+    <!-- Side taper -->
+    <path d="M270,273 L268,285 Q267,276 270,268 Z" fill="url(#gHair)"/>
+    <path d="M330,273 L332,285 Q333,276 330,268 Z" fill="url(#gHair)"/>
+
+    <!-- GLASSES -->
+    <!-- Left frame -->
+    <rect x="276" y="285" width="16" height="11" rx="4.5"
+          fill="none" stroke="#444" stroke-width="1.9"/>
+    <rect x="276" y="285" width="16" height="11" rx="4.5"
+          fill="#a8d8ea" opacity="0.25"/>
+    <!-- Right frame -->
+    <rect x="308" y="285" width="16" height="11" rx="4.5"
+          fill="none" stroke="#444" stroke-width="1.9"/>
+    <rect x="308" y="285" width="16" height="11" rx="4.5"
+          fill="#a8d8ea" opacity="0.25"/>
+    <!-- Bridge -->
+    <line x1="292" y1="290" x2="308" y2="290" stroke="#444" stroke-width="1.9"/>
+    <!-- Temples -->
+    <line x1="276" y1="290" x2="268" y2="292" stroke="#444" stroke-width="1.9"/>
+    <line x1="324" y1="290" x2="332" y2="292" stroke="#444" stroke-width="1.9"/>
+
+    <!-- EYES -->
+    <circle cx="284" cy="290" r="3.8" fill="#2c1f14"/>
+    <circle cx="316" cy="290" r="3.8" fill="#2c1f14"/>
+    <circle cx="285" cy="289" r="1.2" fill="white"/>
+    <circle cx="317" cy="289" r="1.2" fill="white"/>
+
+    <!-- EYEBROWS -->
+    <path d="M278,282 Q284,278 290,281"
+          fill="none" stroke="#2c1f14" stroke-width="1.9" stroke-linecap="round"/>
+    <path d="M310,281 Q316,278 322,282"
+          fill="none" stroke="#2c1f14" stroke-width="1.9" stroke-linecap="round"/>
+
+    <!-- NOSE -->
+    <path d="M298,296 Q296,304 294,306 Q298,309 300,308 Q302,309 306,306 Q304,304 302,296"
+          fill="none" stroke="#c8885a" stroke-width="1.4" stroke-linecap="round"/>
+
+    <!-- MOUTH (smile) -->
+    <path d="M293,312 Q300,318 307,312"
+          fill="none" stroke="#b56848" stroke-width="1.7" stroke-linecap="round"/>
+
+  </g>
+  <!-- END PERSON -->
+
+  <!-- Laptop screen ambient pulse -->
+  <ellipse cx="298" cy="411" rx="46" ry="16" fill="#7dd4fc" opacity="0">
+    <animate attributeName="opacity" values="0;0.07;0" dur="2.4s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Green "plus" hire badge (top-right of centre) -->
+  <g transform="translate(368,293)" filter="url(#fGlow)">
+    <circle r="19" fill="#00C853" stroke="rgba(0,0,0,.10)" stroke-width="2"/>
+    <line x1="-7" y1="0" x2="7" y2="0"
+          stroke="white" stroke-width="2.6" stroke-linecap="round"/>
+    <line x1="0" y1="-7" x2="0" y2="7"
+          stroke="white" stroke-width="2.6" stroke-linecap="round"/>
+    <!-- Pulse ring -->
+    <circle r="22" fill="none" stroke="rgba(0,200,83,.4)" stroke-width="9" opacity="0">
+      <animate attributeName="opacity" values="0;0.7;0" dur="2.6s" repeatCount="indefinite"/>
+      <animate attributeName="r"       values="22;34;22"  dur="2.6s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+</svg>

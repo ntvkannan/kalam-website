@@ -1,0 +1,329 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Animated Gantt Chart for Project Management</title>
+  <desc id="desc">A colorful transparent SVG showing a project management gantt chart with animated progress bars, milestones, and connecting flows.</desc>
+
+  <defs>
+    <linearGradient id="headerGlow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0ea5e9" stop-opacity="0.95"/>
+      <stop offset="50%" stop-color="#6366f1" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#14b8a6" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="barA" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#0ea5e9"/>
+    </linearGradient>
+    <linearGradient id="barB" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+    <linearGradient id="barC" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <linearGradient id="barD" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#ef4444"/>
+    </linearGradient>
+    <linearGradient id="barE" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#ec4899"/>
+    </linearGradient>
+    <linearGradient id="sheen" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="tinyGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <symbol id="calendarIcon" viewBox="0 0 64 64">
+      <rect x="10" y="14" width="44" height="38" rx="9" fill="#0f172a" fill-opacity="0.18" stroke="#7dd3fc" stroke-width="2.5"/>
+      <rect x="10" y="20" width="44" height="10" rx="4" fill="#38bdf8" fill-opacity="0.85"/>
+      <line x1="22" y1="10" x2="22" y2="22" stroke="#e0f2fe" stroke-width="4" stroke-linecap="round"/>
+      <line x1="42" y1="10" x2="42" y2="22" stroke="#e0f2fe" stroke-width="4" stroke-linecap="round"/>
+      <circle cx="23" cy="39" r="4" fill="#22d3ee"/>
+      <circle cx="34" cy="39" r="4" fill="#a78bfa"/>
+      <circle cx="45" cy="39" r="4" fill="#34d399"/>
+    </symbol>
+    <symbol id="checkIcon" viewBox="0 0 64 64">
+      <circle cx="32" cy="32" r="24" fill="#10b981" fill-opacity="0.2" stroke="#34d399" stroke-width="3"/>
+      <path d="M21 33l8 8 15-17" fill="none" stroke="#d1fae5" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="teamIcon" viewBox="0 0 64 64">
+      <circle cx="22" cy="24" r="8" fill="#60a5fa"/>
+      <circle cx="42" cy="24" r="8" fill="#a78bfa"/>
+      <circle cx="32" cy="18" r="8" fill="#22d3ee"/>
+      <path d="M15 48c0-6 5-11 11-11h12c6 0 11 5 11 11" fill="none" stroke="#e0f2fe" stroke-width="4" stroke-linecap="round"/>
+      <path d="M8 48c0-4 3-8 8-9" fill="none" stroke="#bfdbfe" stroke-width="4" stroke-linecap="round"/>
+      <path d="M56 48c0-4-3-8-8-9" fill="none" stroke="#ddd6fe" stroke-width="4" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="flagIcon" viewBox="0 0 64 64">
+      <line x1="18" y1="10" x2="18" y2="54" stroke="#e2e8f0" stroke-width="4" stroke-linecap="round"/>
+      <path d="M20 14h24l-6 10 6 10H20z" fill="#f59e0b" stroke="#fde68a" stroke-width="2" stroke-linejoin="round"/>
+    </symbol>
+  </defs>
+
+  <!-- Ambient animated orbs -->
+  <g opacity="0.95">
+    <circle cx="110" cy="120" r="26" fill="#22d3ee" fill-opacity="0.18" filter="url(#softGlow)">
+      <animate attributeName="cy" values="120;95;120" dur="7s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.55;0.95;0.55" dur="7s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1065" cy="140" r="22" fill="#a78bfa" fill-opacity="0.20" filter="url(#softGlow)">
+      <animate attributeName="cy" values="140;165;140" dur="6.4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.45;0.9;0.45" dur="6.4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1040" cy="785" r="28" fill="#34d399" fill-opacity="0.18" filter="url(#softGlow)">
+      <animate attributeName="cx" values="1040;1000;1040" dur="8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="150" cy="770" r="18" fill="#f59e0b" fill-opacity="0.18" filter="url(#softGlow)">
+      <animate attributeName="cy" values="770;740;770" dur="5.8s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Title block -->
+  <g transform="translate(56 42)">
+    <rect x="0" y="0" width="1088" height="92" rx="26" fill="#081a2c" fill-opacity="0.58"/>
+    <rect x="0" y="0" width="320" height="92" rx="26" fill="url(#headerGlow)" fill-opacity="0.22" filter="url(#tinyGlow)">
+      <animate attributeName="width" values="320;380;320" dur="6s" repeatCount="indefinite"/>
+    </rect>
+    <text x="28" y="56" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" fill="#f8fafc">Gantt Chart</text>
+    <text x="860" y="56" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#dbeafe">Project Management</text>
+  </g>
+
+  <!-- Legend / side icons -->
+  <g transform="translate(58 162)">
+    <rect x="0" y="0" width="190" height="620" rx="28" fill="#081a2c" fill-opacity="0.45"/>
+    <text x="28" y="42" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" fill="#f8fafc">Task Flow</text>
+    <text x="28" y="74" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#bae6fd">Plan • Track • Deliver</text>
+
+    <g transform="translate(24 112)">
+      <use xlink:href="#calendarIcon" width="54" height="54"/>
+      <text x="70" y="22" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#e0f2fe">Schedule</text>
+      <text x="70" y="43" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#93c5fd">Timeboxed workstreams</text>
+    </g>
+    <g transform="translate(24 214)">
+      <use xlink:href="#teamIcon" width="54" height="54"/>
+      <text x="70" y="22" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#e0f2fe">Resources</text>
+      <text x="70" y="43" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#c4b5fd">Aligned teams &amp; owners</text>
+    </g>
+    <g transform="translate(24 316)">
+      <use xlink:href="#checkIcon" width="54" height="54"/>
+      <text x="70" y="22" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#e0f2fe">Progress</text>
+      <text x="70" y="43" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#86efac">Milestones completed</text>
+    </g>
+    <g transform="translate(24 418)">
+      <use xlink:href="#flagIcon" width="54" height="54"/>
+      <text x="70" y="22" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#e0f2fe">Delivery</text>
+      <text x="70" y="43" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#fdba74">Launch checkpoints</text>
+    </g>
+
+    <g transform="translate(24 530)">
+      <rect x="0" y="0" width="140" height="14" rx="7" fill="#0f2540"/>
+      <rect x="0" y="0" width="62" height="14" rx="7" fill="url(#barC)">
+        <animate attributeName="width" values="62;90;62" dur="4.5s" repeatCount="indefinite"/>
+      </rect>
+      <text x="0" y="36" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#cbd5e1">Animated progress</text>
+    </g>
+  </g>
+
+  <!-- Gantt board -->
+  <g transform="translate(272 162)">
+    <rect x="0" y="0" width="870" height="620" rx="28" fill="#071726" fill-opacity="0.5"/>
+
+    <!-- Month header -->
+    <g transform="translate(18 18)">
+      <rect x="0" y="0" width="834" height="54" rx="18" fill="#0a2745" fill-opacity="0.85"/>
+      <g font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#f8fafc" text-anchor="middle">
+        <text x="78" y="34">Jan</text>
+        <text x="186" y="34">Feb</text>
+        <text x="294" y="34">Mar</text>
+        <text x="402" y="34">Apr</text>
+        <text x="510" y="34">May</text>
+        <text x="618" y="34">Jun</text>
+        <text x="726" y="34">Jul</text>
+      </g>
+    </g>
+
+    <!-- Grid -->
+    <g transform="translate(18 92)">
+      <rect x="0" y="0" width="834" height="500" rx="18" fill="#08233c" fill-opacity="0.62"/>
+      <g stroke="#60a5fa" stroke-opacity="0.18" stroke-width="1.2">
+        <line x1="0" y1="0" x2="0" y2="500"/>
+        <line x1="119" y1="0" x2="119" y2="500"/>
+        <line x1="238" y1="0" x2="238" y2="500"/>
+        <line x1="357" y1="0" x2="357" y2="500"/>
+        <line x1="476" y1="0" x2="476" y2="500"/>
+        <line x1="595" y1="0" x2="595" y2="500"/>
+        <line x1="714" y1="0" x2="714" y2="500"/>
+        <line x1="834" y1="0" x2="834" y2="500"/>
+
+        <line x1="0" y1="0" x2="834" y2="0"/>
+        <line x1="0" y1="71" x2="834" y2="71"/>
+        <line x1="0" y1="142" x2="834" y2="142"/>
+        <line x1="0" y1="213" x2="834" y2="213"/>
+        <line x1="0" y1="284" x2="834" y2="284"/>
+        <line x1="0" y1="355" x2="834" y2="355"/>
+        <line x1="0" y1="426" x2="834" y2="426"/>
+        <line x1="0" y1="500" x2="834" y2="500"/>
+      </g>
+
+      <!-- Task labels -->
+      <g font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#dbeafe">
+        <text x="16" y="42">Discovery &amp; goals</text>
+        <text x="16" y="113">Requirements</text>
+        <text x="16" y="184">Design sprint</text>
+        <text x="16" y="255">Build &amp; integrate</text>
+        <text x="16" y="326">Testing</text>
+        <text x="16" y="397">Deployment</text>
+        <text x="16" y="468">Review &amp; closeout</text>
+      </g>
+
+      <!-- Bars -->
+      <g transform="translate(150 16)" font-family="Arial, Helvetica, sans-serif">
+        <!-- Row 1 -->
+        <g transform="translate(0 0)">
+          <rect x="0" y="0" width="210" height="38" rx="19" fill="#0b1f35" fill-opacity="0.8"/>
+          <rect x="0" y="0" width="210" height="38" rx="19" fill="url(#barA)" filter="url(#tinyGlow)">
+            <animate attributeName="width" values="18;210;210" dur="3.8s" repeatCount="indefinite"/>
+          </rect>
+          <rect x="-34" y="0" width="42" height="38" rx="19" fill="url(#sheen)" opacity="0.6">
+            <animate attributeName="x" values="-34;212" dur="2.8s" repeatCount="indefinite"/>
+          </rect>
+          <text x="18" y="24" font-size="14" fill="#f0f9ff">Kickoff</text>
+        </g>
+
+        <!-- Row 2 -->
+        <g transform="translate(110 71)">
+          <rect x="0" y="0" width="240" height="38" rx="19" fill="#0b1f35" fill-opacity="0.8"/>
+          <rect x="0" y="0" width="240" height="38" rx="19" fill="url(#barB)" filter="url(#tinyGlow)">
+            <animate attributeName="width" values="16;240;240" dur="4.4s" repeatCount="indefinite"/>
+          </rect>
+          <rect x="-34" y="0" width="42" height="38" rx="19" fill="url(#sheen)" opacity="0.55">
+            <animate attributeName="x" values="-34;242" dur="3.1s" repeatCount="indefinite"/>
+          </rect>
+          <text x="18" y="24" font-size="14" fill="#f8fafc">Scope confirmed</text>
+        </g>
+
+        <!-- Row 3 -->
+        <g transform="translate(120 142)">
+          <rect x="0" y="0" width="285" height="38" rx="19" fill="#0b1f35" fill-opacity="0.8"/>
+          <rect x="0" y="0" width="285" height="38" rx="19" fill="url(#barE)" filter="url(#tinyGlow)">
+            <animate attributeName="width" values="20;285;285" dur="5.1s" repeatCount="indefinite"/>
+          </rect>
+          <rect x="-34" y="0" width="42" height="38" rx="19" fill="url(#sheen)" opacity="0.55">
+            <animate attributeName="x" values="-34;287" dur="3.3s" repeatCount="indefinite"/>
+          </rect>
+          <text x="18" y="24" font-size="14" fill="#f8fafc">UX + workflow</text>
+        </g>
+
+        <!-- Row 4 -->
+        <g transform="translate(270 213)">
+          <rect x="0" y="0" width="320" height="38" rx="19" fill="#0b1f35" fill-opacity="0.8"/>
+          <rect x="0" y="0" width="320" height="38" rx="19" fill="url(#barC)" filter="url(#tinyGlow)">
+            <animate attributeName="width" values="18;320;320" dur="5.7s" repeatCount="indefinite"/>
+          </rect>
+          <rect x="-34" y="0" width="42" height="38" rx="19" fill="url(#sheen)" opacity="0.55">
+            <animate attributeName="x" values="-34;322" dur="3.5s" repeatCount="indefinite"/>
+          </rect>
+          <text x="18" y="24" font-size="14" fill="#f8fafc">Development phase</text>
+        </g>
+
+        <!-- Row 5 -->
+        <g transform="translate(460 284)">
+          <rect x="0" y="0" width="180" height="38" rx="19" fill="#0b1f35" fill-opacity="0.8"/>
+          <rect x="0" y="0" width="180" height="38" rx="19" fill="url(#barD)" filter="url(#tinyGlow)">
+            <animate attributeName="width" values="14;180;180" dur="3.9s" repeatCount="indefinite"/>
+          </rect>
+          <rect x="-34" y="0" width="42" height="38" rx="19" fill="url(#sheen)" opacity="0.55">
+            <animate attributeName="x" values="-34;182" dur="2.7s" repeatCount="indefinite"/>
+          </rect>
+          <text x="18" y="24" font-size="14" fill="#fff7ed">QA cycle</text>
+        </g>
+
+        <!-- Row 6 -->
+        <g transform="translate(560 355)">
+          <rect x="0" y="0" width="190" height="38" rx="19" fill="#0b1f35" fill-opacity="0.8"/>
+          <rect x="0" y="0" width="190" height="38" rx="19" fill="url(#barA)" filter="url(#tinyGlow)">
+            <animate attributeName="width" values="10;190;190" dur="4.2s" repeatCount="indefinite"/>
+          </rect>
+          <rect x="-34" y="0" width="42" height="38" rx="19" fill="url(#sheen)" opacity="0.55">
+            <animate attributeName="x" values="-34;192" dur="2.8s" repeatCount="indefinite"/>
+          </rect>
+          <text x="18" y="24" font-size="14" fill="#f0f9ff">Go-live</text>
+        </g>
+
+        <!-- Row 7 -->
+        <g transform="translate(645 426)">
+          <rect x="0" y="0" width="130" height="38" rx="19" fill="#0b1f35" fill-opacity="0.8"/>
+          <rect x="0" y="0" width="130" height="38" rx="19" fill="url(#barB)" filter="url(#tinyGlow)">
+            <animate attributeName="width" values="8;130;130" dur="3.1s" repeatCount="indefinite"/>
+          </rect>
+          <rect x="-34" y="0" width="42" height="38" rx="19" fill="url(#sheen)" opacity="0.55">
+            <animate attributeName="x" values="-34;132" dur="2.1s" repeatCount="indefinite"/>
+          </rect>
+          <text x="18" y="24" font-size="14" fill="#eff6ff">Closure</text>
+        </g>
+      </g>
+
+      <!-- Dependency line -->
+      <path d="M356 35 C400 35, 380 106, 446 106 S520 177, 563 177 S640 248, 690 248" fill="none" stroke="#67e8f9" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="10 10" opacity="0.75">
+        <animate attributeName="stroke-dashoffset" values="0;-40" dur="2.5s" repeatCount="indefinite"/>
+      </path>
+      <path d="M740 319 C760 319, 748 390, 795 390 S828 461, 818 461" fill="none" stroke="#a78bfa" stroke-width="3" stroke-linecap="round" stroke-dasharray="8 8" opacity="0.8">
+        <animate attributeName="stroke-dashoffset" values="0;-32" dur="2.3s" repeatCount="indefinite"/>
+      </path>
+
+      <!-- Milestones -->
+      <g filter="url(#tinyGlow)">
+        <g transform="translate(361 35)">
+          <circle cx="0" cy="0" r="7" fill="#22d3ee">
+            <animate attributeName="r" values="7;10;7" dur="1.9s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="0" cy="0" r="16" fill="#22d3ee" fill-opacity="0.12">
+            <animate attributeName="r" values="12;22;12" dur="1.9s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="0.6;0;0.6" dur="1.9s" repeatCount="indefinite"/>
+          </circle>
+        </g>
+        <g transform="translate(692 248)">
+          <circle cx="0" cy="0" r="7" fill="#34d399">
+            <animate attributeName="r" values="7;10;7" dur="1.7s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="0" cy="0" r="16" fill="#34d399" fill-opacity="0.12">
+            <animate attributeName="r" values="12;22;12" dur="1.7s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="0.6;0;0.6" dur="1.7s" repeatCount="indefinite"/>
+          </circle>
+        </g>
+        <g transform="translate(817 461)">
+          <circle cx="0" cy="0" r="7" fill="#f59e0b">
+            <animate attributeName="r" values="7;10;7" dur="1.5s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="0" cy="0" r="16" fill="#f59e0b" fill-opacity="0.12">
+            <animate attributeName="r" values="12;22;12" dur="1.5s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="0.6;0;0.6" dur="1.5s" repeatCount="indefinite"/>
+          </circle>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <!-- Footer callouts -->
+  <g transform="translate(344 806)">
+    <rect x="0" y="0" width="512" height="48" rx="24" fill="#081a2c" fill-opacity="0.5"/>
+    <circle cx="36" cy="24" r="7" fill="#22d3ee">
+      <animate attributeName="r" values="7;9;7" dur="1.8s" repeatCount="indefinite"/>
+    </circle>
+    <text x="58" y="29" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#e2e8f0">Interactive timeline • Resource alignment • Milestone tracking</text>
+  </g>
+</svg>

@@ -1,0 +1,1369 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalam Digital - About us</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1L7FQC3PLS"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-1L7FQC3PLS');
+    </script>
+
+    <link rel="icon" type="image/png" href="./assets/images/logos/kalam-black.png">
+    <link rel="apple-touch-icon" href="./assets/images/logos/kalam-black.png">
+    <link rel="shortcut icon" href="./assets/images/logos/kalam-black.png">
+
+    <link href="./assets/css/limitless.css" rel="stylesheet" />
+
+    <style>
+        .process-card {
+            background-color: #f7f7f7;
+            border: 1px solid #e8e8e8;
+            border-radius: 16px;
+            transition: transform 0.35s ease, box-shadow 0.35s ease, background-color 0.35s ease;
+            cursor: default;
+        }
+
+        .process-card:hover {
+            transform: translateY(-10px) scale(1.03);
+            background-color: #fff;
+        }
+
+        /* Orbit animation keyframe */
+        @keyframes orbit-spin {
+            0% {
+                transform: rotate(0deg) translateX(36px) rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg) translateX(36px) rotate(-360deg);
+            }
+        }
+
+        .process-icon-wrap {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem auto;
+            position: relative;
+            /* anchor for pseudo orbit dot */
+            transition: box-shadow 0.35s ease, transform 0.35s ease;
+        }
+
+        /* The orbiting dot ï¿½ sits at centre of the wrap, then pushed outward */
+        .process-icon-wrap::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 7px;
+            height: 7px;
+            margin: -3.5px 0 0 -3.5px;
+            /* centre on the rotation origin */
+            border-radius: 50%;
+            background: linear-gradient(135deg, #7c3aed, #38bdf8);
+            box-shadow: 0 0 5px 1px rgba(56, 189, 248, 0.65);
+            opacity: 0;
+            /* hidden by default */
+            transform: rotate(0deg) translateX(36px) rotate(0deg);
+            transition: opacity 0.25s ease;
+        }
+
+        /* On card hover ï¿½ reveal dot and spin it */
+        .process-card:hover .process-icon-wrap::after {
+            opacity: 1;
+            animation: orbit-spin 1.4s linear infinite;
+        }
+
+        .process-card:hover .process-icon-wrap {
+            transform: scale(1.08);
+        }
+
+        .process-icon-wrap i {
+            font-size: 2rem;
+            color: #7c3aed;
+        }
+
+        /* Per-card hover shadows ï¿½ unified skyblue */
+        .card-red:hover,
+        .card-blue:hover,
+        .card-yellow:hover,
+        .card-green:hover {
+            box-shadow: 0 16px 40px rgba(56, 189, 248, 0.28);
+        }
+
+        /* Why Choose Us - Horizontal Scroll Carousel */
+        .why-carousel-wrapper {
+            position: relative;
+            width: 100%;
+            margin-top: 1.5rem;
+        }
+
+        .why-scroll-track {
+            display: flex;
+            flex-direction: row;
+            gap: 1.25rem;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-padding-inline: 0.75rem;
+            -webkit-overflow-scrolling: touch;
+            padding: 1.25rem 0.75rem 0.75rem;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            cursor: grab;
+        }
+
+        .why-scroll-track.is-dragging {
+            cursor: grabbing;
+            scroll-snap-type: none;
+            user-select: none;
+        }
+
+        .why-scroll-track::-webkit-scrollbar {
+            display: none;
+        }
+
+        .why-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            flex: 0 0 calc((100% - 2.5rem) / 3);
+            min-width: calc((100% - 2.5rem) / 3);
+            min-height: 320px;
+            scroll-snap-align: start;
+            padding: 1.5rem !important;
+            background: linear-gradient(180deg, #f8fafc 0%, #f5f5f5 100%);
+            border: 1px solid #dbe3ec;
+            border-radius: 20px;
+            transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease, background 0.35s ease;
+            cursor: default;
+            text-align: center;
+        }
+
+        .why-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 24px 60px rgba(15, 23, 42, 0.12);
+            border-color: rgba(34, 174, 255, 0.18);
+            background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+        }
+
+        .why-icon-wrap {
+            width: 68px;
+            height: 68px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.15rem;
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+        }
+
+        .why-card:hover .why-icon-wrap {
+            transform: scale(1.12) rotate(-4deg);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+        }
+
+        .why-icon-wrap i {
+            font-size: 1.8rem;
+            color: #fff;
+        }
+
+        /* Individual icon gradient colours ï¿½ each card a distinct colour */
+        .why-icon-1 {
+            background: linear-gradient(135deg, #f857a6, #ff5858);
+            box-shadow: 0 4px 14px rgba(248, 87, 166, 0.4);
+        }
+
+        .why-icon-2 {
+            background: linear-gradient(135deg, #f7971e, #ffd200);
+            box-shadow: 0 4px 14px rgba(247, 151, 30, 0.4);
+        }
+
+        .why-icon-3 {
+            background: linear-gradient(135deg, #11998e, #38ef7d);
+            box-shadow: 0 4px 14px rgba(17, 153, 142, 0.4);
+        }
+
+        .why-icon-4 {
+            background: linear-gradient(135deg, #4776e6, #8e54e9);
+            box-shadow: 0 4px 14px rgba(71, 118, 230, 0.4);
+        }
+
+        .why-icon-5 {
+            background: linear-gradient(135deg, #f953c6, #b91d73);
+            box-shadow: 0 4px 14px rgba(249, 83, 198, 0.4);
+        }
+
+        .why-icon-6 {
+            background: linear-gradient(135deg, #00c6ff, #0072ff);
+            box-shadow: 0 4px 14px rgba(0, 114, 255, 0.4);
+        }
+
+        .why-icon-7 {
+            background: linear-gradient(135deg, #f857a6, #ff5858);
+            box-shadow: 0 4px 14px rgba(248, 87, 166, 0.4);
+        }
+
+        .why-icon-8 {
+            background: linear-gradient(135deg, #f7971e, #ffd200);
+            box-shadow: 0 4px 14px rgba(247, 151, 30, 0.4);
+        }
+
+        .why-icon-9 {
+            background: linear-gradient(135deg, #11998e, #38ef7d);
+            box-shadow: 0 4px 14px rgba(17, 153, 142, 0.4);
+        }
+
+        .why-icon-10 {
+            background: linear-gradient(135deg, #4776e6, #8e54e9);
+            box-shadow: 0 4px 14px rgba(71, 118, 230, 0.4);
+        }
+
+        .why-icon-11 {
+            background: linear-gradient(135deg, #f953c6, #b91d73);
+            box-shadow: 0 4px 14px rgba(249, 83, 198, 0.4);
+        }
+
+        .why-icon-12 {
+            background: linear-gradient(135deg, #00c6ff, #0072ff);
+            box-shadow: 0 4px 14px rgba(0, 114, 255, 0.4);
+        }
+
+        .why-title {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 0.96rem;
+            line-height: 1.45;
+            color: #0f172a;
+            margin-bottom: 0.75rem;
+            min-height: 3.1em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .why-desc {
+            font-family: 'Lora', serif;
+            font-size: 0.84rem;
+            color: #475569;
+            margin-bottom: 0;
+            line-height: 1.72;
+            text-wrap: pretty;
+        }
+
+        @media (max-width: 1199.98px) {
+            .why-card {
+                flex-basis: calc((100% - 1.25rem) / 2);
+                min-width: calc((100% - 1.25rem) / 2);
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            .why-scroll-track {
+                gap: 1rem;
+                scroll-padding-inline: 0.35rem;
+                padding: 1rem 0.35rem 0.5rem;
+            }
+
+            .why-card {
+                flex-basis: calc(100% - 0.7rem);
+                min-width: calc(100% - 0.7rem);
+                min-height: 0;
+                border-radius: 18px;
+            }
+
+            .why-title {
+                min-height: 0;
+            }
+        }
+
+        /* Arrow Buttons */
+        .why-arrow {
+            position: absolute;
+            top: calc(50% - 6px);
+            transform: translateY(-50%);
+            z-index: 10;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+            transition: background 0.2s, box-shadow 0.2s;
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+        .why-arrow:hover {
+            background: #000;
+            color: #fff;
+            border-color: #fff;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .why-arrow-left {
+            left: -52px;
+        }
+
+        .why-arrow-right {
+            right: -52px;
+        }
+
+        /* Key Offerings animation */
+        @keyframes key-offer-fade-up {
+            from {
+                opacity: 0;
+                transform: translateY(18px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .key-offering-card {
+            transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+            animation: key-offer-fade-up 0.65s ease both;
+            height: auto;
+            min-height: 0;
+        }
+
+        .key-offering-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 16px 40px rgba(56, 189, 248, 0.22) !important;
+        }
+
+        .key-offering-card-inner {
+            position: relative;
+            width: 100%;
+            height: auto;
+            min-height: 100%;
+            transition: none;
+            display: flex;
+            flex-direction: column;
+            border: 2.5px solid transparent;
+            border-radius: 0.5rem;
+            overflow: visible;
+            background:
+                linear-gradient(#f6f7f9, #f6f7f9) padding-box,
+                linear-gradient(135deg, #7c3aed, #1e3a8a, #38bdf8) border-box;
+        }
+
+        .key-offering-card:hover .key-offering-card-inner {
+            transform: none;
+        }
+
+        .key-offering-face {
+            position: static;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            gap: 0;
+            overflow: visible;
+        }
+
+        .key-offering-back {
+            transform: none;
+            border-top: 1px solid rgba(15, 23, 42, 0.08);
+        }
+
+        .key-offering-card h5,
+        .key-offering-card p {
+            color: #222 !important;
+        }
+
+        .key-offering-card h5 {
+            font-size: 0.95rem !important;
+            line-height: 1.45 !important;
+            margin-bottom: 0 !important;
+        }
+
+        .key-offering-card p {
+            font-size: 0.86rem !important;
+            line-height: 1.4 !important;
+            color: #475569 !important;
+            text-wrap: pretty;
+            margin-bottom: 0 !important;
+        }
+
+        .key-offering-back p {
+            padding-top: 0;
+        }
+
+        .key-offering-card.ko-1 .key-offering-face {
+            background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 50%, #fdba74 100%);
+            border-radius: 0.5rem;
+        }
+
+        .key-offering-card.ko-2 .key-offering-face {
+            background: linear-gradient(135deg, #fefce8 0%, #fef9c3 50%, #fde047 100%);
+            border-radius: 0.5rem;
+        }
+
+        .key-offering-card.ko-3 .key-offering-face {
+            background: linear-gradient(135deg, #ecfdf5 0%, #bbf7d0 50%, #4ade80 100%);
+            border-radius: 0.5rem;
+        }
+
+        .key-offering-card.ko-1 .key-offering-card-inner {
+            background:
+                linear-gradient(#f6f7f9, #f6f7f9) padding-box,
+                linear-gradient(135deg, #ff7a18, #ff9f1c, #ffb347) border-box !important;
+        }
+
+        .key-offering-card.ko-1:hover .key-offering-card-inner {
+            background:
+                linear-gradient(#f6f7f9, #f6f7f9) padding-box,
+                linear-gradient(135deg, #ff7a18, #ff9f1c, #ffb347) border-box !important;
+        }
+
+        .key-offering-card.ko-2 .key-offering-card-inner {
+            border: 2.5px solid #facc15 !important;
+            background: #f6f7f9 !important;
+        }
+
+        .key-offering-card.ko-2:hover .key-offering-card-inner {
+            border: 2.5px solid #facc15 !important;
+            background: #f6f7f9 !important;
+        }
+
+        .key-offering-card.ko-3 .key-offering-card-inner {
+            border: 2.5px solid #22c55e !important;
+            background: #f6f7f9 !important;
+        }
+
+        .key-offering-card.ko-3:hover .key-offering-card-inner {
+            border: 2.5px solid #22c55e !important;
+            background: #f6f7f9 !important;
+        }
+
+        .key-offering-card.ko-1 {
+            animation-delay: 0.05s;
+        }
+
+        .key-offering-card.ko-2 {
+            animation-delay: 0.15s;
+        }
+
+        .key-offering-card.ko-3 {
+            animation-delay: 0.25s;
+        }
+
+        .key-offering-item {
+            padding: 0.25rem 0.25rem 0.5rem;
+        }
+
+        .key-offering-item h5 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            color: #222;
+            font-size: 1rem;
+            line-height: 1.45;
+            margin-bottom: 0.7rem;
+            text-align: left;
+        }
+
+        .key-offering-item p {
+            font-family: 'Lora', serif;
+            color: #475569;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-bottom: 0.7rem;
+            text-align: left;
+        }
+
+        .key-offering-item p:last-child {
+            margin-bottom: 0;
+        }
+
+        .focus-area-grid {
+            margin-top: 1.25rem;
+        }
+
+        .focus-area-card {
+            height: 100%;
+            padding: 1.5rem;
+            border-radius: 18px;
+            border: 3px solid #9ca3af;
+            background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+            box-shadow: 0 14px 34px rgba(15, 23, 42, 0.06);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        .focus-area-card:hover {
+            transform: translateY(-6px) scale(1.03);
+            box-shadow: 0 18px 42px rgba(15, 23, 42, 0.1);
+        }
+
+        .focus-area-card--orange:hover {
+            box-shadow: 0 0 0 1px rgba(249, 115, 22, 0.12), 0 18px 42px rgba(249, 115, 22, 0.22);
+        }
+
+        .focus-area-card--yellow:hover {
+            box-shadow: 0 0 0 1px rgba(234, 179, 8, 0.12), 0 18px 42px rgba(234, 179, 8, 0.22);
+        }
+
+        .focus-area-card--green:hover {
+            box-shadow: 0 0 0 1px rgba(34, 197, 94, 0.12), 0 18px 42px rgba(34, 197, 94, 0.22);
+        }
+
+        .focus-area-card--orange {
+            border: 3px solid #f97316;
+            background: linear-gradient(135deg, #fffaf5 0%, #ffedd5 55%, #fed7aa 100%);
+        }
+
+        .focus-area-card--yellow {
+            border: 3px solid #eab308;
+            background: linear-gradient(135deg, #fffef2 0%, #fef9c3 55%, #fde68a 100%);
+        }
+
+        .focus-area-card--green {
+            border: 3px solid #22c55e;
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 55%, #bbf7d0 100%);
+        }
+
+        .focus-area-card h5 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            line-height: 1.45;
+            color: #0f172a;
+            margin-bottom: 0.85rem;
+            text-align: center;
+        }
+
+        .focus-area-card p {
+            font-family: 'Lora', serif;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: #475569;
+            margin-bottom: 0.8rem;
+            text-wrap: pretty;
+            text-align: center;
+        }
+
+        .focus-area-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .connect-logo-zoom {
+            transform-origin: center center;
+        }
+
+        .home-connect-logo .kalam-logo-flip {
+            filter: drop-shadow(0 0 10px rgba(107, 114, 128, 0.22)) drop-shadow(0 0 20px rgba(75, 85, 99, 0.16));
+        }
+
+        .home-connect-logo .kalam-logo-flip:hover,
+        .home-connect-logo .kalam-logo-flip:focus-visible {
+            filter: drop-shadow(0 0 14px rgba(107, 114, 128, 0.36)) drop-shadow(0 0 26px rgba(75, 85, 99, 0.24)) drop-shadow(0 8px 18px rgba(55, 65, 81, 0.16));
+        }
+
+        .about-section-heading {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.75rem;
+            border-bottom: 2px solid #ff6600;
+            display: inline-block;
+        }
+            .scroll-up-btn {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            width: 44px;
+            height: 44px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 999px;
+            background: #87CEEB;
+            color: #ffffff;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.16);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(8px);
+            filter: saturate(72%) brightness(0.86);
+            transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease, filter 0.2s ease;
+            z-index: 999;
+        }
+
+        .scroll-up-btn.is-visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .scroll-up-btn:hover {
+            background: linear-gradient(135deg, #38bdf8 0%, #0ea5e9 52%, #0284c7 100%);
+            color: #ffffff;
+            filter: saturate(100%) brightness(1);
+        }
+
+        @media (max-width: 575.98px) {
+            .scroll-up-btn {
+                right: 16px;
+                bottom: 16px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="mega-menu">
+        <span class="close-menu"><i class="las la-times"></i></span>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <div class="left-menu">
+                        <ul class="all-menu">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about-us.html">About us</a></li>
+                            <li><a href="products.html">Products</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="process.html">Process</a></li>
+                            <li><a href="careers.html">Careers</a></li>
+                            <li><a href="contact-us.html">Contact us</a></li>
+                        </ul>
+                        <div>
+                            <p class="menu-title" style="font-family: 'Poppins', sans-serif; font-weight: 100;">Our Creative and Valuable</p>
+                            <ul class="solution-menu">
+                                <li><a href="services.html#ui-ux-design-development">UI/UX Design & Development</a></li>
+                                <li><a href="services.html#custom-web-applications">Custom Web Applications</a></li>
+                                <li><a href="services.html#mobile-app-development">Mobile App Development</a></li>
+                                <li><a href="services.html#architecture-and-devops-practice">Architecture and DevOps Practice</a></li>
+                                <li><a href="services.html#enterprise-consulting-automation">Enterprise Consulting & Automation</a>
+                                </li>
+                                <li><a href="services.html#erp-consulting-implementation">ERP Consulting & Implementation</a>
+                                </li>
+                                <li><a href="services.html#project-and-program-management">Project and Program Management</a>
+                                </li>
+                                <li><a href="services.html#resource-augmentation">Resource Augmentation</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-8">
+                    <p class="menu-title">Our game-changing Products</p>
+                    <ul class="icon-menu">
+                        <li style="order: 1;">
+                            <a href="products.html#mitron-ai" class="vendex">
+                                <svg width="98" height="98" viewBox="0 0 96 96" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" class="mitron-icon">
+                                    <circle class="mitron-ring" cx="48" cy="48" r="42" stroke="black"
+                                        stroke-width="2" />
+                                    <path class="mitron-bot" d="M38 18V24" stroke="black" stroke-width="2"
+                                        stroke-linecap="round" />
+                                    <rect class="mitron-bot" x="23" y="24" width="30" height="24" rx="6" stroke="black"
+                                        stroke-width="2" />
+                                    <circle class="mitron-msg" cx="33" cy="35.5" r="1.8" stroke="black"
+                                        stroke-width="2" />
+                                    <circle class="mitron-msg" cx="43" cy="35.5" r="1.8" stroke="black"
+                                        stroke-width="2" />
+                                    <path class="mitron-bot" d="M30 43H46" stroke="black" stroke-width="2"
+                                        stroke-linecap="round" />
+                                    <path class="mitron-bubble"
+                                        d="M56 36H74C77.3137 36 80 38.6863 80 42V54C80 57.3137 77.3137 60 74 60H66L60 66L61.5 60H56C52.6863 60 50 57.3137 50 54V42C50 38.6863 52.6863 36 56 36Z"
+                                        stroke="black" stroke-width="2" stroke-linejoin="round" />
+                                    <circle class="mitron-dot" cx="58.5" cy="48" r="1.5" stroke="black"
+                                        stroke-width="2" />
+                                    <circle class="mitron-dot" cx="65" cy="48" r="1.5" stroke="black"
+                                        stroke-width="2" />
+                                    <circle class="mitron-dot" cx="71.5" cy="48" r="1.5" stroke="black"
+                                        stroke-width="2" />
+                                </svg>
+                                <span style="text-transform: none;">
+                                    Mitron AI
+                                </span>
+                            </a>
+                        </li>
+                        <li style="order: 3;">
+                            <a href="products.html#smartidfy" class="track">
+                                <svg width="99" height="100" viewBox="0 0 99 100" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" class="smartidfy-icon">
+                                    <circle class="sid-ring" cx="49.5" cy="50" r="44" stroke="black" stroke-width="2" />
+                                    <g clip-path="url(#sid-clip-menu)">
+                                        <path class="sid-pin"
+                                            d="M60 18C65.5228 18 70 22.4772 70 28C70 34.5 63.5 40.9 60 44.7C56.5 40.9 50 34.5 50 28C50 22.4772 54.4772 18 60 18Z"
+                                            stroke="black" stroke-width="2" stroke-linejoin="round" />
+                                        <circle class="sid-pin-center" cx="60" cy="28" r="3.4" stroke="black"
+                                            stroke-width="2" />
+                                        <circle class="sid-face" cx="40" cy="66" r="12" stroke="black"
+                                            stroke-width="2" />
+                                        <circle class="sid-eye" cx="35.5" cy="63.5" r="1.4" stroke="black"
+                                            stroke-width="2" />
+                                        <circle class="sid-eye" cx="44.5" cy="63.5" r="1.4" stroke="black"
+                                            stroke-width="2" />
+                                        <path class="sid-smile"
+                                            d="M34.5 70.8C36 72.8 37.8 73.8 40 73.8C42.2 73.8 44 72.8 45.5 70.8"
+                                            stroke="black" stroke-width="2" stroke-linecap="round" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="sid-clip-menu">
+                                            <circle cx="49.5" cy="50" r="40" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <span style="text-transform: none;">
+                                    SmartIDfy
+                                </span>
+                            </a>
+                        </li>
+                        <li style="order: 2;">
+                            <a href="products.html#fathura" class="smart">
+                                <svg width="97" height="97" viewBox="0 0 97 97" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" class="fathura-icon">
+                                    <circle class="fathura-ring" cx="48.5" cy="48.5" r="43" stroke="black"
+                                        stroke-width="2" />
+                                    <g clip-path="url(#fathura-clip-menu)">
+                                        <rect class="fathura-pos" x="21" y="24" width="48" height="36" rx="5"
+                                            stroke="black" stroke-width="2" />
+                                        <rect class="fathura-screen" x="27" y="30" width="26" height="12" rx="2"
+                                            stroke="black" stroke-width="2" />
+                                        <path class="fathura-line" d="M29 47H53" stroke="black" stroke-width="2"
+                                            stroke-linecap="round" />
+                                        <path class="fathura-line" d="M29 52H48" stroke="black" stroke-width="2"
+                                            stroke-linecap="round" />
+                                        <rect class="fathura-card" x="56" y="34" width="10" height="16" rx="2"
+                                            stroke="black" stroke-width="2" />
+                                        <rect class="fathura-base" x="36" y="60" width="18" height="6" rx="2"
+                                            stroke="black" stroke-width="2" />
+                                        <path class="fathura-receipt" d="M61 22V30L58 28L55 30V22" stroke="black"
+                                            stroke-width="2" stroke-linejoin="round" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="fathura-clip-menu">
+                                            <circle cx="48.5" cy="48.5" r="40" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <span style="text-transform: none;">
+                                    Fathura
+                                </span>
+                            </a>
+                        </li>
+                        <li style="order: 4;">
+                            <a href="products.html#acadmaya" class="evmeeter">
+                                <svg width="98" height="98" viewBox="0 0 98 98" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" class="acadmaya-icon">
+                                    <circle class="acadmaya-ring" cx="49" cy="49" r="44" stroke="black"
+                                        stroke-width="2" />
+                                    <g clip-path="url(#acadmaya-clip-menu)">
+                                        <path class="acadmaya-roof" d="M18 42L49 26L80 42" stroke="black"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <rect class="acadmaya-body" x="24" y="42" width="50" height="34" rx="2"
+                                            stroke="black" stroke-width="2" />
+                                        <rect class="acadmaya-door" x="44" y="56" width="10" height="20" rx="1.5"
+                                            stroke="black" stroke-width="2" />
+                                        <rect class="acadmaya-win" x="30" y="50" width="8" height="8" rx="1"
+                                            stroke="black" stroke-width="2" />
+                                        <rect class="acadmaya-win" x="60" y="50" width="8" height="8" rx="1"
+                                            stroke="black" stroke-width="2" />
+                                        <path class="acadmaya-flag" d="M49 20V28" stroke="black" stroke-width="2"
+                                            stroke-linecap="round" />
+                                        <path class="acadmaya-flag" d="M49 20H58L55 23L58 26H49" stroke="black"
+                                            stroke-width="2" stroke-linejoin="round" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="acadmaya-clip-menu">
+                                            <circle cx="49" cy="49" r="40" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <span style="text-transform: none;">
+                                    Acadmaya
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==============================
+    Header
+    ============================== -->
+    <header class="page-header page-header--dynamic">
+        <div class="logo">
+            <a href="index.html"><img src="assets/images/logos/kalam-color.png" /></a>
+        </div>
+        <nav class="page-header__right">
+            <ul class="main-nav home-main-nav">
+                <li><a href="products.html">Products</a></li>
+                <li><a href="services.html">Services</a></li>
+            <li><a href="process.html">Process</a></li>
+            </ul>
+            <div class="toggle-menu"><i class="las la-bars"></i></div>
+        </nav>
+    </header>
+
+    <div class="text-center mt-5">
+        <h3 class="about-section-heading" style="padding-bottom: 0px; margin-bottom: 10px;">
+            About Us</h3> <br>
+        <h1 style="font-family: 'Poppins', sans-serif; display: inline-block; margin-bottom: 0px;">
+            <b>Kalam Digital Solutions</b>
+        </h1>
+    </div>
+    <p class="text-center mb-5"
+        style="margin-top: 0px; font-family: 'Lora', serif; color: gray; font-size: 1rem; font-weight: 300;">
+        Build Better.
+        Automate Faster. Scale Smarter.</p>
+    <div class="text-center mb-5">
+        <img src="assets/images/kalam-portrait.jpg" class="img-fluid" style="max-height: 500px; width: auto;"
+            alt="Dr. APJ Abdul Kalam" />
+        <h3 class="mb-3 mt-4" style="font-family: 'Poppins', sans-serif;">Kalam - Your Digital Transformation Catalyst
+        </h3>
+        <div class="container text-center mt-4 mb-5">
+            <p class="fs-6" style="font-family: 'Lato', sans-serif; font-size: 1rem !important;">
+                We are a leading full-service software development and consulting firm committed to transforming legacy
+                systems into agile, future-ready digital ecosystems. With a strong emphasis on timeliness, security,
+                scalability, and performance, we deliver innovative solutions that drive operational excellence and
+                seamless user experiences. From intelligent communication automation to location tracking systems, our
+                AI-powered products and services empower organizations to accelerate growth, optimize efficiency, and
+                stay ahead in an ever-evolving digital landscape.
+            </p>
+            <p class="fs-6" style="font-family: 'Lato', sans-serif; font-size: 1rem !important;">
+                Kalam was founded with a clear vision: to bridge the gap between elegant product experiences and
+                enterprise-grade execution. We are more than a technology company - we are innovation partners who
+                transform complex business challenges into seamless, scalable digital solutions.
+            </p>
+            <div class="row align-items-center text-start mt-5">
+                <div class="col-lg-8">
+                    <h3 class="about-section-heading" style="margin-bottom: 20px;">Our Vision
+                    </h3>
+                    <p class="fs-6" style="text-align: justify; font-family: 'Lato', sans-serif; font-size: 1rem !important;">
+                        <i class="fas fa-quote-left"
+                            style="color: #ddd; font-size: 2rem; display: block; margin-bottom: 10px;"></i>
+                        Kalam Digital Solutions is a technology-driven organization committed to empowering businesses
+                        with expert solutions tailored to their unique environments. Our mission is to enhance
+                        productivity, accelerate growth, and deliver measurable business impact through innovation and
+                        precision. Rooted in strong business ethics, uncompromising quality, and complete client
+                        satisfaction, we operate through an augmented global delivery model and a forward-thinking
+                        software platforming approach. Combined with deep industry expertise, we deliver high-value IT
+                        services that enable our clients to improve performance, reduce time-to-market, and achieve
+                        sustainable productivity gains.
+                    </p>
+                    <p class="fs-6" style="text-align: justify; font-family: 'Lato', sans-serif; font-size: 1rem !important;">
+                        Our team of seasoned professionals brings deep expertise in the latest technologies to deliver
+                        innovative web and application development solutions that go beyond conventional boundaries. We
+                        specialize in solving complex business and technology challenges with precision and creativity.
+                        From concept to deployment and beyond, we stand by our clients at every stage of the journey -
+                        ensuring reliability, transparency, and measurable success every step of the way.
+                    </p>
+                </div>
+                <div class="col-lg-4 mb-4 mb-lg-0 text-center">
+                    <img src="assets/images/vision.jpg" class="img-fluid rounded" alt="Our Vision"
+                        style="max-width: 100%; max-height: 380px; object-fit: cover;">
+                </div>
+            </div>
+
+            <div class="row align-items-center text-start mt-5">
+                <div class="col-lg-6 mb-4 mb-lg-0 text-center">
+                    <img src="assets/images/values.png" class="img-fluid rounded"
+                        alt="Values - Wireframe Hand Connection">
+                </div>
+                <div class="col-lg-6">
+                    <h3 class="about-section-heading" style="margin-bottom: 20px;">Our Values
+                    </h3>
+
+                    <div class="d-flex align-items-start mb-4">
+                        <div class="me-3" style="width: 110px; flex-shrink: 0; text-align: center;">
+                            <h1
+                                style="font-size: 7.5rem; background: linear-gradient(135deg, #ff7a18 0%, #ff9f1c 52%, #ffb347 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; font-family: 'Poppins', sans-serif; font-weight: 700; margin: 0; line-height: 1;">
+                                1</h1>
+                        </div>
+                        <div style="flex: 1; min-width: 0;">
+                            <h4
+                                style="font-family: 'Poppins', sans-serif; font-weight: 600; margin: 0; font-size: 2.5rem;">
+                                Clarity</h4>
+                            <p class="text-muted mb-0" style="font-family: 'Lora', serif; font-size: 0.92rem;">We translate business
+                                intent into precise, actionable, and scalable technology solutions - ensuring
+                                alignment from strategy to execution.</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-start mb-4">
+                        <div class="me-3" style="width: 110px; flex-shrink: 0; text-align: center;">
+                            <h1
+                                style="font-size: 7.5rem; background: linear-gradient(135deg, #facc15 0%, #fde047 52%, #fef08a 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; font-family: 'Poppins', sans-serif; font-weight: 700; margin: 0; line-height: 1;">
+                                2</h1>
+                        </div>
+                        <div style="flex: 1; min-width: 0;">
+                            <h4
+                                style="font-family: 'Poppins', sans-serif; font-weight: 600; margin: 0; font-size: 2.5rem;">
+                                Velocity</h4>
+                            <p class="text-muted mb-0" style="font-family: 'Lora', serif; font-size: 0.92rem;">Our senior Agile teams
+                                accelerate delivery cycles, enabling faster innovation, reduced time-to-market, and
+                                measurable business outcomes.</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-start mb-4">
+                        <div class="me-3" style="width: 110px; flex-shrink: 0; text-align: center;">
+                            <h1
+                                style="font-size: 7.5rem; background: linear-gradient(135deg, #22c55e 0%, #4ade80 52%, #86efac 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; font-family: 'Poppins', sans-serif; font-weight: 700; margin: 0; line-height: 1;">
+                                3</h1>
+                        </div>
+                        <div style="flex: 1; min-width: 0;">
+                            <h4
+                                style="font-family: 'Poppins', sans-serif; font-weight: 600; margin: 0; font-size: 2.5rem;">
+                                Reliability</h4>
+                            <p class="text-muted mb-0" style="font-family: 'Lora', serif; font-size: 0.92rem;">Every solution is built
+                                on robust architecture, disciplined DevOps practices, and strong governance
+                                frameworks - ensuring stability, security, and long-term performance.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-12">
+                    <p class="mb-2" style="font-family: 'Poppins', sans-serif; font-size: 1.3rem;">Kalam Digital is a
+                        hub of revolutionary thinking, where tomorrow's solutions are envisioned, engineered, and
+                        brought to life.</p>
+                </div>
+                <div class="col-12">
+                    <p class="mb-3" style="font-family: 'Lato', sans-serif; font-size: 1rem; color: gray;">
+                        Headquartered in India, we are a dynamic community of entrepreneurs, developers, thought
+                        leaders, and industry professionals dedicated to pushing the boundaries of technological
+                        disruption every single day. United by innovation and driven by purpose, we continuously
+                        challenge conventions to create transformative digital solutions that shape the future.</p>
+                    <!-- Why Choose Us - Horizontal Scroll Carousel -->
+                    <div class="why-carousel-wrapper">
+                        <button class="why-arrow why-arrow-left" id="whyPrev" aria-label="Scroll left">
+                            <i class="las la-angle-left"></i>
+                        </button>
+
+                        <div class="why-scroll-track" id="why-choose-us">
+                            <div class="why-card p-4">
+                                <div class="why-icon-wrap why-icon-1">
+                                    <i class="las la-sync"></i>
+                                </div>
+                                <h5 class="why-title">Agile &amp; DevOps Excellence</h5>
+                                <p class="why-desc">We operate with full adoption of Agile/Scrum methodologies and a mature DevOps framework, enabling faster releases, continuous integration, and predictable, high-quality delivery.</p>
+                            </div>
+
+                            <div class="why-card p-4">
+                                <div class="why-icon-wrap why-icon-2">
+                                    <i class="las la-bullseye"></i>
+                                </div>
+                                <h5 class="why-title">Outcome-Driven Delivery</h5>
+                                <p class="why-desc">Every engagement is aligned with measurable business objectives, supported by strong program governance and disciplined execution to ensure tangible results.</p>
+                            </div>
+
+                            <div class="why-card p-4">
+                                <div class="why-icon-wrap why-icon-3">
+                                    <i class="las la-shield-alt"></i>
+                                </div>
+                                <h5 class="why-title">Enterprise-Grade Expertise</h5>
+                                <p class="why-desc">With proven experience in delivering large-scale, mission-critical enterprise solutions, we design systems that are robust, secure, and future-ready.</p>
+                            </div>
+
+                            <div class="why-card p-4">
+                                <div class="why-icon-wrap why-icon-4">
+                                    <i class="las la-users-cog"></i>
+                                </div>
+                                <h5 class="why-title">Highly Skilled Engineering Team</h5>
+                                <p class="why-desc">Our technical workforce consists entirely of engineering graduates and certified professionals, bringing deep technical capability and structured problem-solving to every project.</p>
+                            </div>
+
+                            <div class="why-card p-4">
+                                <div class="why-icon-wrap why-icon-5">
+                                    <i class="las la-user-tie"></i>
+                                </div>
+                                <h5 class="why-title">Experienced Technology Specialists</h5>
+                                <p class="why-desc">With an average of 8+ years of industry experience, our developers and architects provide strategic insight along with technical precision.</p>
+                            </div>
+
+                            <div class="why-card p-4">
+                                <div class="why-icon-wrap why-icon-6">
+                                    <i class="las la-medal"></i>
+                                </div>
+                                <h5 class="why-title">Exceptional Talent Stability</h5>
+                                <p class="why-desc">An industry-leading attrition rate of just 0.3% ensures long-term continuity, knowledge retention, and consistent delivery excellence.</p>
+                            </div>
+
+                            <div class="why-card p-4">
+                                <div class="why-icon-wrap why-icon-7">
+                                    <i class="las la-handshake"></i>
+                                </div>
+                                <h5 class="why-title">Client-Centric Commitment</h5>
+                                <p class="why-desc">With 95% client retention, our long-standing partnerships reflect trust, performance consistency, and value-driven service.</p>
+                            </div>
+
+                            <div class="why-card p-4">
+                                <div class="why-icon-wrap why-icon-8">
+                                    <i class="las la-layer-group"></i>
+                                </div>
+                                <h5 class="why-title">Next-Generation Technology Stack</h5>
+                                <p class="why-desc">We leverage modern web, mobile, cloud, and mobility technologies to build scalable, high-performance digital ecosystems.</p>
+                            </div>
+
+                            <div class="why-card p-4">
+                                <div class="why-icon-wrap why-icon-9">
+                                    <i class="las la-lock"></i>
+                                </div>
+                                <h5 class="why-title">Secure-by-Design Architecture</h5>
+                                <p class="why-desc">Security is embedded at every layer, reinforced by governance frameworks, compliance standards, and DevOps best practices.</p>
+                            </div>
+
+                            <div class="why-card p-4">
+                                <div class="why-icon-wrap why-icon-10">
+                                    <i class="las la-expand-arrows-alt"></i>
+                                </div>
+                                <h5 class="why-title">Tailored &amp; Scalable Solutions</h5>
+                                <p class="why-desc">Our solutions are customized to your environment and built to scale seamlessly as your business grows without technology constraints.</p>
+                            </div>
+
+                            <div class="why-card p-4">
+                                <div class="why-icon-wrap why-icon-11">
+                                    <i class="las la-wifi"></i>
+                                </div>
+                                <h5 class="why-title">Reliable Connectivity &amp; Mobility</h5>
+                                <p class="why-desc">We deliver systems designed for uninterrupted connectivity, enabling operations anytime, anywhere even in demanding environments.</p>
+                            </div>
+
+                            <div class="why-card p-4">
+                                <div class="why-icon-wrap why-icon-12">
+                                    <i class="las la-coins"></i>
+                                </div>
+                                <h5 class="why-title">Cost-Effective Value Delivery</h5>
+                                <p class="why-desc">By combining operational efficiency with uncompromising quality, we help organizations maximize ROI while maintaining technological excellence.</p>
+                            </div>
+                        </div>
+
+                        <button class="why-arrow why-arrow-right" id="whyNext" aria-label="Scroll right">
+                            <i class="las la-angle-right"></i>
+                        </button>
+                    </div>
+
+                    <p class="mt-4 mb-0 text-center"
+                        style="font-family: 'Poppins', sans-serif; font-size: 1.3rem; color: black;">
+                        In a world where mobility drives both personal and professional growth, Kalam Digital stands
+                        out as your trusted and forward-thinking technology partner.</p>
+                    <p class="mt-3 mb-0 text-center" style="font-family: 'Lato', sans-serif; font-size: 1rem; color: gray;">
+                        Every journey is unique, and our innovative, tailor-made solutions are crafted to align
+                        seamlessly with your specific goals and challenges. Choose Kalam Digital Solutions and unlock
+                        the freedom to explore your full potential - without limits.</p>
+
+                    <!-- Why Kalam? -->
+                    <div class="mt-3 mb-4 text-center">
+                        <h3 class="about-section-heading" style="margin-bottom: 20px;">Why Kalam?</h3>
+                        <ul class="mb-0 list-unstyled"
+                            style="font-family: 'Lato', sans-serif; color: #555; font-size: 1rem; line-height: 1.8;">
+                            <li>Outcome-driven delivery powered by robust program and project management excellence.</li>
+                            <li>Modern, scalable technology stacks spanning web, mobile, and cloud ecosystems.</li>
+                            <li>Secure-by-design architecture reinforced by strong governance frameworks and DevOps best practices.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Key Offerings -->
+                    <div class="mt-4 mb-4 text-center">
+                        <h3 class="about-section-heading" style="margin-bottom: 20px;">Key Offerings</h3>
+                        <p class="mb-3" style="font-family: 'Lato', sans-serif; font-size: 1rem; color: gray;">
+                            The unique ideation ecosystem at Kalam Digital is purpose-built to ignite innovation through
+                            collaboration, research and development, strategic consultation, and incubation. We
+                            cultivate an environment where transformative ideas are explored, validated, and engineered
+                            into impactful solutions.
+                            <br><br>
+                            By carefully analysing an idea's value proposition and defining the most effective path
+                            forward, we enable our partners to stay ahead of the digital curve and lead with confidence
+                            in a rapidly evolving marketplace.
+                        </p>
+                        <div class="row row-cols-1 row-cols-lg-3 g-4 mt-1 text-start focus-area-grid">
+                            <div class="col">
+                                <div class="focus-area-card focus-area-card--orange">
+                                    <h5>Products for Enterprises, Institutions &amp; End Users</h5>
+                                    <p>We design and deliver intelligent, ready-to-deploy products that power daily operations for small businesses, individuals and institutions.</p>
+                                    <p>Our portfolio includes Communication Automation, GPS Tracking Solutions, POS/ ERP systems that streamline business operations, safety and tracking solutions that enhance security and mobility, and digital engagement platforms tailored to modern operational challenges.</p>
+                                    <p>Built for reliability, ease of use, and scalability, our products help SMEs, educational institutions, and service providers operate efficiently while staying digitally competitive.</p>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="focus-area-card focus-area-card--yellow">
+                                    <h5>Digital Services &amp; Enterprise Consulting</h5>
+                                    <p>We provide end-to-end technology services that enable organizations to build, modernize, and scale their digital ecosystems.</p>
+                                    <p>Our expertise spans web and mobile application development, structured project management, DevOps implementation, and comprehensive ERP consulting and deployment. From architecture design to cloud enablement, we engineer secure, scalable, and high-performance solutions aligned with enterprise goals.</p>
+                                    <p>With strong governance frameworks and agile execution, we ensure predictable delivery and measurable business outcomes.</p>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="focus-area-card focus-area-card--green">
+                                    <h5>AI-driven Automation &amp; Software Development</h5>
+                                    <p>We harness the power of Artificial Intelligence to redefine how organizations build and operate software systems.</p>
+                                    <p>Through AI-assisted software development, intelligent workflow automation, smart assistants, and personalization engines, we accelerate development cycles and enhance operational efficiency. Our AI-driven enterprise automation solutions transform engagement models, optimize decision-making, and unlock new growth opportunities.</p>
+                                    <p>By integrating AI into core systems and processes, we help organizations move beyond digitization toward intelligent transformation.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Let's innovate together -->
+                    <div class="text-center mt-5 mb-2">
+                        <p style="
+                            font-family: 'Poppins', sans-serif;
+                            font-size: 1.75rem;
+                            font-weight: 400;
+                            background: linear-gradient(135deg, #7c3aed, #38bdf8);
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                            background-clip: text;
+                            display: inline-block;
+                            letter-spacing: -0.3px;
+                            margin-bottom: 0.25rem;
+                        ">Let's innovate together!</p>
+                        <div style="
+                            width: 60px;
+                            height: 3px;
+                            background: linear-gradient(135deg, #7c3aed, #38bdf8);
+                            border-radius: 99px;
+                            margin: 0.4rem auto 0;
+                        "></div>
+                    </div>
+
+                    <!-- Contact image -->
+                    <div class="text-center" style="padding-bottom: 24px;">
+                        <a href="contact-us.html" class="home-connect-logo" aria-label="Go to Contact Us page" style="display: inline-block; margin-top: 10px;">
+                            <img src="assets/images/logos/kalam-black.png" alt="Let's connect with Kalam Digital"
+                                class="img-fluid connect-logo-zoom kalam-logo-flip" style="
+                                    margin: 0 auto;
+                                " />
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- ==============================
+    Footer
+    ============================== -->
+    <footer class="page-footer home-footer">
+    <div class="container">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; flex-wrap: wrap;">
+            <img src="assets/images/logos/kalam-color.png" class="logo-footer" />
+            <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 12px;">
+                <ul class="nav-foot" style="margin: 0; flex-direction: column; align-items: flex-end; gap: 0;">
+                    <li style="margin-left: 0;"><i class="las la-phone" style="margin-right: 8px; color: #9ca3af;"></i><a href="tel:+917358310221">+91 7358310221 (India)</a> <span style="color: #9ca3af;">|</span> <a href="tel:+971506608773">+971 506608773 (UAE)</a></li>
+                    <li style="margin-left: 0;"><i class="las la-envelope" style="margin-right: 8px; color: #9ca3af;"></i><a href="mailto:contact@kalamdigital.com">contact@kalamdigital.com</a></li>
+                    <li style="margin-left: 0;"><i class="lab la-whatsapp" style="margin-right: 8px; color: #9ca3af;"></i><a href="tel:+971506608773">+971 506608773</a></li>
+                </ul>
+            </div>
+        </div>
+        <ul class="nav-foot" style="display: flex; flex-wrap: wrap; width: 100%;">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about-us.html">About us</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="process.html">Process</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="contact-us.html">Contact us</a></li>
+            <li style="margin-left: auto;"><a href="disclaimer.html">Disclaimer</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        </ul>
+        <div class="copyright-row" style="margin-top: 8px; display: flex; justify-content: flex-end; width: 100%;">
+            <div class="copyright">
+                &copy; <span id="copyright-year"></span> Kalam Digital Solutions. All Rights Reserved.
+            </div>
+        </div>
+        <ul class="nav-foot nav-social" style="margin-top: -12px;">
+            <li><a href="#"><img src="assets/images/svg/social-media/linkedin.svg" /></a></li>
+            <li><a href="#"><img src="assets/images/svg/social-media/facebook.svg" /></a></li>
+            <li><a href="#"><img src="assets/images/svg/social-media/youtube.svg" /></a></li>
+            <li><a href="#"><img src="assets/images/svg/social-media/instagram.svg" /></a></li>
+        </ul>
+    </div>
+</footer>
+<button type="button" class="scroll-up-btn" id="scrollUpBtn" aria-label="Scroll to top">
+    <i class="las la-arrow-up" aria-hidden="true"></i>
+</button>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./assets/js/contactus.js"></script>
+
+    <script>
+        /* -- Mega Menu -- */
+        const megaMenu = document.querySelector('.mega-menu');
+        const toggleMenu = document.querySelector('.toggle-menu');
+        toggleMenu.addEventListener('click', function () {
+            megaMenu.classList.add('show');
+        });
+
+        const closeMenu = document.querySelector('.close-menu');
+        closeMenu.addEventListener('click', function () {
+            megaMenu.classList.remove('show');
+        });
+
+        const dynamicHeader = document.querySelector('.page-header--dynamic');
+        if (dynamicHeader) {
+            const EXPAND_AT = 8;
+            const SHRINK_AT = 20;
+            let isTicking = false;
+
+            const syncHeaderState = () => {
+                const y = window.scrollY || window.pageYOffset || 0;
+                if (dynamicHeader.classList.contains('is-scrolled')) {
+                    if (y <= EXPAND_AT) dynamicHeader.classList.remove('is-scrolled');
+                } else if (y >= SHRINK_AT) {
+                    dynamicHeader.classList.add('is-scrolled');
+                }
+            };
+
+            const onScroll = () => {
+                if (isTicking) return;
+                isTicking = true;
+                window.requestAnimationFrame(() => {
+                    syncHeaderState();
+                    isTicking = false;
+                });
+            };
+
+            syncHeaderState();
+            window.addEventListener('scroll', onScroll, { passive: true });
+        }
+
+        (function () {
+            const track = document.getElementById('why-choose-us');
+            const btnPrev = document.getElementById('whyPrev');
+            const btnNext = document.getElementById('whyNext');
+
+            if (!track || !btnPrev || !btnNext) return;
+
+            let autoScrollTimer = null;
+            let isDown = false;
+            let startX = 0;
+            let scrollLeft = 0;
+
+            const getScrollAmount = function () {
+                const firstCard = track.querySelector('.why-card');
+                if (!firstCard) return track.clientWidth;
+                const cardWidth = firstCard.getBoundingClientRect().width;
+                const gap = parseFloat(window.getComputedStyle(track).columnGap || window.getComputedStyle(track).gap || '0');
+                return cardWidth + gap;
+            };
+
+            const scrollByCard = function (direction) {
+                track.scrollBy({ left: getScrollAmount() * direction, behavior: 'smooth' });
+            };
+
+            const startAutoScroll = function () {
+                if (autoScrollTimer) return;
+                autoScrollTimer = window.setInterval(function () {
+                    const maxScrollLeft = track.scrollWidth - track.clientWidth;
+                    const nextLeft = track.scrollLeft + getScrollAmount();
+
+                    if (nextLeft >= maxScrollLeft - 4) {
+                        track.scrollTo({ left: 0, behavior: 'smooth' });
+                        return;
+                    }
+
+                    track.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
+                }, 3200);
+            };
+
+            const stopAutoScroll = function () {
+                if (!autoScrollTimer) return;
+                window.clearInterval(autoScrollTimer);
+                autoScrollTimer = null;
+            };
+
+            btnPrev.addEventListener('click', function () {
+                scrollByCard(-1);
+            });
+
+            btnNext.addEventListener('click', function () {
+                scrollByCard(1);
+            });
+
+            track.addEventListener('mousedown', function (e) {
+                stopAutoScroll();
+                isDown = true;
+                track.classList.add('is-dragging');
+                startX = e.pageX - track.offsetLeft;
+                scrollLeft = track.scrollLeft;
+            });
+
+            track.addEventListener('mouseleave', function () {
+                isDown = false;
+                track.classList.remove('is-dragging');
+                startAutoScroll();
+            });
+
+            track.addEventListener('mouseup', function () {
+                isDown = false;
+                track.classList.remove('is-dragging');
+                startAutoScroll();
+            });
+
+            track.addEventListener('mousemove', function (e) {
+                if (!isDown) return;
+                e.preventDefault();
+                const x = e.pageX - track.offsetLeft;
+                const walk = (x - startX) * 1.5;
+                track.scrollLeft = scrollLeft - walk;
+            });
+
+            track.addEventListener('mouseenter', stopAutoScroll);
+            track.addEventListener('touchstart', stopAutoScroll, { passive: true });
+            track.addEventListener('touchend', startAutoScroll, { passive: true });
+            track.addEventListener('focusin', stopAutoScroll);
+            track.addEventListener('focusout', startAutoScroll);
+
+            startAutoScroll();
+        })();
+
+    </script>
+
+
+
+
+<script>
+    const scrollUpBtn = document.getElementById('scrollUpBtn');
+    if (scrollUpBtn) {
+        const toggleScrollUpBtn = () => {
+            scrollUpBtn.classList.toggle('is-visible', window.scrollY > 220);
+        };
+        toggleScrollUpBtn();
+        window.addEventListener('scroll', toggleScrollUpBtn, { passive: true });
+        scrollUpBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+</script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
